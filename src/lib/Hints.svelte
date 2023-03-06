@@ -25,7 +25,7 @@
 
 <style>
 	#hintbutton {
-		background-color: #fff2bf;
+		background-color: #f5f2e4;
 		width: 100%;
 		margin: 0.5rem 0;
 		box-sizing: border-box;
@@ -36,7 +36,7 @@
 	}
 
 	.hintbox {
-		background-color: #fff2bf;
+		background-color: #f5f2e4;
 		width: 100%;
 		box-sizing: border-box;
 		border-radius: 10px;
