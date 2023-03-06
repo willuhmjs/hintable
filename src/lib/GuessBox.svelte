@@ -8,7 +8,7 @@
 </script>
 
 <form id="guessForm" on:submit={submitGuess}>
-	<input type="text" class="guessInput" id="guessInput" placeholder="type a word" />
+	<input type="text" class="guessInput" id="guessInput" autocomplete="off" placeholder="type a word" />
 </form>
 
 <style>
