@@ -21,23 +21,24 @@
     }
 
     .hintbox p {
-        display: inline-block;
         margin-left: 1rem;
     }
-
 </style>
 <script lang="ts">
+    let word = "hint";
+    let hintDb = ["I am four letters long.", "'Why won't you just give me a ______?!'", "I am a discreet cue that can help point someone in the right direction.", "I start with the letter 'h'."];
     let hints: string[] = [];
     const getHint = () => {
-        hints = [...hints, `hint ${hints.length+1}`]
+        if (hints.length >= hintDb.length)
+            return alert("No more hints available.");
+        hints = [...hints, `${hintDb[hints.length]}`]
     }
 </script>
 
 <button id="hintbutton" on:click={getHint}><i class="fa-regular fa-lightbulb"></i></button>
 {#if hints.length > 0}
-    {#each hints.reverse() as hint}
+    {#each hints as hint}
         <div class="hintbox">
-            <p>{hints.indexOf(hint)+1}</p>
             <p class="hinttext">{hint}</p>
         </div>
     {/each}

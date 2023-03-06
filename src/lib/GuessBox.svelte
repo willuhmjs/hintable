@@ -13,7 +13,15 @@
         margin-bottom: 1rem;
     }
 </style>
+<script lang="ts">
+    const submitGuess = (e: SubmitEvent) => {
+        e.preventDefault();
+        /* please shut up typescript */
+        /* @ts-ignore */
+        const guess = document.getElementById("guessInput").value;
+}
+</script>
 
-<form id="guessForm">
-    <input type="text" class= "guessInput" placeholder="type a word" />
+<form id="guessForm" on:submit={submitGuess}>
+    <input type="text" class= "guessInput" id="guessInput" placeholder="type a word" />
 </form>
