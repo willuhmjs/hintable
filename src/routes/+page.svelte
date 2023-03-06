@@ -5,7 +5,6 @@
         padding: 15px;
         text-align: center;
         font-family: sans-serif;
-        border: 1px solid black;
     }
 
     input {
