@@ -1,11 +1,12 @@
 <script lang="ts">
 	let word = 'hint';
 	let hintDb = [
+		"I start with the letter 'h'.",
 		'I am four letters long.',
 		"'Why won't you just give me a ______?!'",
 		'I am a discreet cue that can help point someone in the right direction.',
-		"I start with the letter 'h'."
-	];
+        "I am in the name of this website."
+    ];
 	let hints: string[] = [];
 	const getHint = () => {
 		if (hints.length >= hintDb.length) return alert('No more hints available.');
