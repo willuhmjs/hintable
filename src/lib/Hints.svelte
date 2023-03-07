@@ -8,21 +8,21 @@
 	export let data;
 	const { word, hintDb } = data;
 	let hints: string[] = [hintDb[0]];
-	export let hintnumber = 1;
+	export let hintnumber = 4;
 	let hintButton: HTMLButtonElement;
 	let hintIcon: HTMLElement;
-	let lastHint = false;
+	export let noHints = false;
 
 	const getHint = () => {
 		if (hints.length == hintDb.length - 1) {
 			setStatus('fa-regular fa-face-sad-tear', false);
 		} else if (hints.length == hintDb.length) {
-			lastHint = true;
+			noHints = true;
 			hintButton.disabled = true;
 			dispatch("endgame", { won: false });
 			return;
 		}
-		hintnumber++;
+		hintnumber--;
 		hints = [hintDb[hints.length].toString(), ...hints];
 	};
 
@@ -30,12 +30,12 @@
 		hintIcon.className = className;
 		hintButton.disabled = disabled;
 	};
+
 </script>
 
 <button id="hintbutton" on:click={getHint} bind:this={hintButton}
-	><i bind:this={hintIcon} class="fa-regular fa-lightbulb" /></button
->
-{#if lastHint}
+	><i bind:this={hintIcon} class="fa-regular fa-lightbulb" /></button>
+{#if noHints}
 	<div id="hint-5" class="hintbox">
 		<p class="hinttext">I am <b>{word}</b>. Thanks for playing!</p>
 	</div>

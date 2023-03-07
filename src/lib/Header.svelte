@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let guesses = 0;
-	export let hintnumber = 1;
+	export let hintnumber = 4;
 </script>
 
 <h2 class="title"><span id="glow">hint</span>able</h2>
