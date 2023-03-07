@@ -5,7 +5,7 @@
 
 <h2 class="title"><span id="glow">hint</span>able</h2>
 <div class="databox">
-	<h3>hints: {hintnumber}</h3>
+	<h3>hints remaining: {hintnumber}</h3>
 	<h3>guesses: {guesses}</h3>
 </div>
 
