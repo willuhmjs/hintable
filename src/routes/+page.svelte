@@ -33,18 +33,7 @@
 	<Hints on:endgame={endGame} {noHints} bind:this={hints} {data} bind:hintnumber />
 
 	{#if confettiTime}
-		<div
-			style="
-	position: fixed;
-	top: -10px;
-	left: 0;
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	justify-content: center;
-	overflow: hidden;
-	pointer-events: none;"
-		>
+		<div class="confettibox">
 			<Confetti
 				x={[-5, 5]}
 				y={[0, 0.1]}
@@ -63,5 +52,17 @@
 		max-width: 480px;
 		margin: auto;
 		padding: 1rem;
+	}
+
+	.confettibox {
+		position: fixed;
+		top: -10px;
+		left: 0;
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+		pointer-events: none;
 	}
 </style>
