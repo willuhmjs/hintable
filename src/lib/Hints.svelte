@@ -1,13 +1,7 @@
 <script lang="ts">
 	export let endGame: (won: boolean) => void;
-	let word = 'hint';
-	let hintDb = [
-		"I start with the letter 'h'.",
-		'I am four letters long.',
-		"'Why won't you just give me a ______?!'",
-		'I am a discreet cue that can help point someone in the right direction.',
-		'I am in the name of this website.'
-	];
+	export let data;
+	const { word, hintDb } = data;
 	let hints: string[] = [hintDb[0]];
 	export let hintnumber = 1;
 	let hintButton: HTMLButtonElement;

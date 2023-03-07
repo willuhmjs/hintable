@@ -17,14 +17,15 @@
 		}
 		guessbox.disable();
 	};
+	export let data: { word: string; hintDb: string[] };
 </script>
 
 <div class="wrapper">
 	<Header {guesses} {hintnumber} />
 	<!-- in guessbox, -->
-	<GuessBox {endGame} bind:this={guessbox} bind:guesses />
+	<GuessBox {endGame} {data} bind:this={guessbox} bind:guesses />
 	<!-- in hints, we need to change the button icon -->
-	<Hints {endGame} bind:this={hints} bind:hintnumber />
+	<Hints {endGame} bind:this={hints} {data} bind:hintnumber />
 
 	{#if confettiTime}
 		<div

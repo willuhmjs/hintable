@@ -1,12 +1,15 @@
 <script lang="ts">
 	export let endGame: (won: boolean) => void;
+
+	export let data;
+	let word = data.word;
+
 	export let guesses = 0;
 	export const disable = () => {
 		guessInput.disabled = true;
 		guessInput.value = word;
 	};
 	let guessInput: HTMLInputElement;
-	let word = 'hint';
 	let guess: string = '';
 	let isAnswerIncorrect = false;
 	const submitGuess = (e: SubmitEvent) => {
