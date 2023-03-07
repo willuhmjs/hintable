@@ -7,7 +7,7 @@ export const load: PageLoad = () => {
 		hintDb: [
 			"I start with the letter 'h'.",
 			'I am four letters long.',
-			"'Why won't you just give me a ______?!'",
+			"'He got a ______, but he still lost the word game.'",
 			'I am a discreet cue that can help point someone in the right direction.',
 			'I am in the name of this website.'
 		]
