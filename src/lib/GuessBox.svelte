@@ -1,19 +1,31 @@
 <script lang="ts">
+	export let endGame: (won: boolean) => void;
+	export const disable = () => {
+		guessInput.disabled = true;
+		guessInput.value = word;
+	};
+	let guessInput: HTMLInputElement;
+	let word = 'hint';
+	let guess: string = "";
 	let isAnswerIncorrect = false;
 	const submitGuess = (e: SubmitEvent) => {
 		e.preventDefault();
-		/* please shut up typescript */
-		if (!isAnswerIncorrect) {
-			isAnswerIncorrect = true;
-			setTimeout(() => isAnswerIncorrect = false, 700);
+		if (guess !== "" && guess.toLowerCase() !== word) {
+			if (!isAnswerIncorrect) {
+				isAnswerIncorrect = true;
+				guess = "";
+				setTimeout(() => isAnswerIncorrect = false, 700);
+			}
+		} else if (guess.toLowerCase() == word) {
+			endGame(true);
 		}
-	};
+	}
+	
 </script>
 
-<form id="guessForm" on:submit={submitGuess}>
-	<input type="text" class="guessInput {isAnswerIncorrect ? "incorrect" : ""}" id="guessInput" autocomplete="off" placeholder="type a word" />
+<form on:submit={submitGuess}>
+	<input type="text" autocorrect="off" autocapitalize="off" bind:value={guess} class="guessInput {isAnswerIncorrect ? "incorrect" : ""}" bind:this={guessInput} autocomplete="off" placeholder="type a word" />
 </form>
-
 <style>
 	@keyframes shake {
     0% { transform: translateX(0); }
@@ -36,9 +48,8 @@
 		border-radius: 10px;
 		border: 1px solid slategray;
 		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		text-transform: lowercase;
 	}
 
-	#guessForm {
-		margin-bottom: 1rem;
-	}
 </style>
