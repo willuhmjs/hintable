@@ -12,22 +12,23 @@
 	let hintnumber = 1;
 	const endGame = (won: boolean) => {
 		if (won) {
-			hints.setStatus("fa-regular fa-face-laugh-beam", true);
+			hints.setStatus('fa-regular fa-face-laugh-beam', true);
 			confettiTime = true;
 		}
 		guessbox.disable();
-	}
+	};
 </script>
 
 <div class="wrapper">
 	<Header {guesses} {hintnumber} />
 	<!-- in guessbox, -->
-	<GuessBox {endGame} bind:this={guessbox} bind:guesses={guesses}/>
+	<GuessBox {endGame} bind:this={guessbox} bind:guesses />
 	<!-- in hints, we need to change the button icon -->
-	<Hints {endGame} bind:this={hints} bind:hintnumber={hintnumber}/>
-	
+	<Hints {endGame} bind:this={hints} bind:hintnumber />
+
 	{#if confettiTime}
-	<div style="
+		<div
+			style="
 	position: fixed;
 	top: -10px;
 	left: 0;
@@ -36,9 +37,18 @@
 	display: flex;
 	justify-content: center;
 	overflow: hidden;
-	pointer-events: none;">
-	<Confetti x={[-5, 5]} y={[0, 0.1]} delay={[500, 2000]} infinite duration=5000 amount=300 fallDistance="100vh" />
-	</div>
+	pointer-events: none;"
+		>
+			<Confetti
+				x={[-5, 5]}
+				y={[0, 0.1]}
+				delay={[500, 2000]}
+				infinite
+				duration="5000"
+				amount="300"
+				fallDistance="100vh"
+			/>
+		</div>
 	{/if}
 </div>
 

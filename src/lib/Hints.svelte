@@ -6,16 +6,16 @@
 		'I am four letters long.',
 		"'Why won't you just give me a ______?!'",
 		'I am a discreet cue that can help point someone in the right direction.',
-        "I am in the name of this website."
-    ];
+		'I am in the name of this website.'
+	];
 	let hints: string[] = [hintDb[0]];
 	export let hintnumber = 1;
 	let hintButton: HTMLButtonElement;
 	let hintIcon: HTMLElement;
 	let lastHint: boolean = false;
 	const getHint = () => {
-		if (hints.length == hintDb.length-1) {
-			setStatus("fa-regular fa-face-sad-tear", false);
+		if (hints.length == hintDb.length - 1) {
+			setStatus('fa-regular fa-face-sad-tear', false);
 		} else if (hints.length == hintDb.length) {
 			lastHint = true;
 			hintButton.disabled = true;
@@ -29,10 +29,12 @@
 	export const setStatus = (className: string, disabled: boolean) => {
 		hintIcon.className = className;
 		hintButton.disabled = disabled;
-	}
+	};
 </script>
 
-<button id="hintbutton" on:click={getHint} bind:this={hintButton}><i bind:this={hintIcon} class="fa-regular fa-lightbulb" /></button>
+<button id="hintbutton" on:click={getHint} bind:this={hintButton}
+	><i bind:this={hintIcon} class="fa-regular fa-lightbulb" /></button
+>
 {#if lastHint}
 	<div id="hint-5" class="hintbox">
 		<p class="hinttext">I am <b>{word}</b>. Thanks for playing!</p>
