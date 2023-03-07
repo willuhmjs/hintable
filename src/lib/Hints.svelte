@@ -8,13 +8,30 @@
         "I am in the name of this website."
     ];
 	let hints: string[] = [];
+	let hintButton: HTMLButtonElement;
+	let hintIcon: HTMLElement;
+	let lastHint: boolean = false;
 	const getHint = () => {
-		if (hints.length >= hintDb.length) return alert('No more hints available.');
-		hints = [...hints, `${hintDb[hints.length]}`];
+		if (lastHint == true) {
+			
+		} else if (hints.length == hintDb.length-1) {
+			hintIcon.className = `fa-regular fa-face-sad-tear`;
+		} else if (hints.length == hintDb.length) {
+			lastHint = true;
+			hintButton.disabled = true;
+			return;
+		}
+		hints = [`${hintDb[hints.length]}`, ...hints];
+
 	};
 </script>
 
-<button id="hintbutton" on:click={getHint}><i class="fa-regular fa-lightbulb" /></button>
+<button id="hintbutton" on:click={getHint} bind:this={hintButton}><i bind:this={hintIcon} class="fa-regular fa-lightbulb" /></button>
+{#if lastHint}
+	<div id="hint-5" class="hintbox">
+		<p class="hinttext">I am <b>{word}</b>. Thanks for playing!</p>
+	</div>
+{/if}
 {#if hints.length > 0}
 	{#each hints as hint}
 		<div class="hintbox">
@@ -31,7 +48,7 @@
 		box-sizing: border-box;
 		padding: 0.6rem;
 		border-radius: 10px;
-		border: 1px solid slategray;
+		border: 1px solid transparent;
 		font-size: 1.8rem;
 	}
 
@@ -40,12 +57,22 @@
 		width: 100%;
 		box-sizing: border-box;
 		border-radius: 10px;
-		border: 1px solid slategray;
+		border: 1px solid transparent;
 		font-size: 1rem;
-		margin: 0.5rem 0;
+		margin: 0.3rem 0;
 	}
 
 	.hintbox p {
 		margin-left: 1rem;
+	}
+
+	#hint-5 {
+		background-color: lightyellow;
+		width: 100%;
+		box-sizing: border-box;
+		border-radius: 10px;
+		border: 1px solid transparent;
+		font-size: 1rem;
+		margin: 0.3rem 0;
 	}
 </style>
