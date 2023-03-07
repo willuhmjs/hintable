@@ -1,23 +1,29 @@
 <script lang="ts">
-	export let endGame: (won: boolean) => void;
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher<{
+		success: { won: boolean };
+	}>();
+
 	export let data;
 	const { word, hintDb } = data;
 	let hints: string[] = [hintDb[0]];
 	export let hintnumber = 1;
 	let hintButton: HTMLButtonElement;
 	let hintIcon: HTMLElement;
-	let lastHint: boolean = false;
+	let lastHint = false;
+
 	const getHint = () => {
 		if (hints.length == hintDb.length - 1) {
 			setStatus('fa-regular fa-face-sad-tear', false);
 		} else if (hints.length == hintDb.length) {
 			lastHint = true;
 			hintButton.disabled = true;
-			endGame(false);
+			dispatch("success", { won: false });
 			return;
 		}
 		hintnumber++;
-		hints = [`${hintDb[hints.length]}`, ...hints];
+		hints = [hintDb[hints.length].toString(), ...hints];
 	};
 
 	export const setStatus = (className: string, disabled: boolean) => {
@@ -34,6 +40,7 @@
 		<p class="hinttext">I am <b>{word}</b>. Thanks for playing!</p>
 	</div>
 {/if}
+
 {#if hints.length > 0}
 	{#each hints as hint}
 		<div class="hintbox">

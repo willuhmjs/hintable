@@ -1,14 +1,18 @@
 <script lang="ts">
-	export let endGame: (won: boolean) => void;
+	import { createEventDispatcher } from 'svelte';
 
-	export let data;
-	let word = data.word;
+	const dispatch = createEventDispatcher<{
+		success: { won: boolean };
+	}>();
+
+	export let word: string;
 
 	export let guesses = 0;
 	export const disable = () => {
 		guessInput.disabled = true;
 		guessInput.value = word;
 	};
+
 	let guessInput: HTMLInputElement;
 	let guess: string = '';
 	let isAnswerIncorrect = false;
@@ -23,7 +27,7 @@
 				setTimeout(() => (isAnswerIncorrect = false), 700);
 			}
 		} else if (guess.toLowerCase() == word) {
-			endGame(true);
+			dispatch('success', { won: true });
 		}
 	};
 </script>

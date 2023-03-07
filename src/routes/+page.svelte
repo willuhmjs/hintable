@@ -4,28 +4,32 @@
 	import Hints from '../lib/Hints.svelte';
 	// @ts-ignore
 	import Confetti from 'svelte-confetti';
+
+	import type { PageData } from './$types';
+
 	let hints: Hints;
 	let guessbox: GuessBox;
 	let confettiTime = false;
 
 	let guesses = 0;
 	let hintnumber = 1;
-	const endGame = (won: boolean) => {
-		if (won) {
+	const endGame = (e: CustomEvent<{ won: boolean }>) => {
+		if (e.detail.won) {
 			hints.setStatus('fa-regular fa-face-laugh-beam', true);
 			confettiTime = true;
 		}
 		guessbox.disable();
 	};
-	export let data: { word: string; hintDb: string[] };
+
+	export let data: PageData;
 </script>
 
 <div class="wrapper">
 	<Header {guesses} {hintnumber} />
 	<!-- in guessbox, -->
-	<GuessBox {endGame} {data} bind:this={guessbox} bind:guesses />
+	<GuessBox on:success={endGame} word={data.word} bind:this={guessbox} bind:guesses />
 	<!-- in hints, we need to change the button icon -->
-	<Hints {endGame} bind:this={hints} {data} bind:hintnumber />
+	<Hints on:success={endGame} bind:this={hints} {data} bind:hintnumber />
 
 	{#if confettiTime}
 		<div
