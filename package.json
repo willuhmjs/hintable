@@ -32,5 +32,7 @@
 		"vitest": "^0.25.3"
 	},
 	"type": "module",
-	"dependencies": {}
+	"dependencies": {
+		"svelte-confetti": "^1.2.2"
+	}
 }

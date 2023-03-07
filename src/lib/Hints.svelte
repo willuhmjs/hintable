@@ -1,4 +1,5 @@
 <script lang="ts">
+	export let endGame: (won: boolean) => void;
 	let word = 'hint';
 	let hintDb = [
 		"I start with the letter 'h'.",
@@ -12,18 +13,21 @@
 	let hintIcon: HTMLElement;
 	let lastHint: boolean = false;
 	const getHint = () => {
-		if (lastHint == true) {
-			
-		} else if (hints.length == hintDb.length-1) {
-			hintIcon.className = `fa-regular fa-face-sad-tear`;
+		if (hints.length == hintDb.length-1) {
+			setStatus("fa-regular fa-face-sad-tear", false);
 		} else if (hints.length == hintDb.length) {
 			lastHint = true;
 			hintButton.disabled = true;
+			endGame(false);
 			return;
 		}
 		hints = [`${hintDb[hints.length]}`, ...hints];
-
 	};
+
+	export const setStatus = (className: string, disabled: boolean) => {
+		hintIcon.className = className;
+		hintButton.disabled = disabled;
+	}
 </script>
 
 <button id="hintbutton" on:click={getHint} bind:this={hintButton}><i bind:this={hintIcon} class="fa-regular fa-lightbulb" /></button>
@@ -50,6 +54,7 @@
 		border-radius: 10px;
 		border: 1px solid transparent;
 		font-size: 1.8rem;
+		color: black;
 	}
 
 	.hintbox {
@@ -62,8 +67,22 @@
 		margin: 0.3rem 0;
 	}
 
+	#hintbutton:disabled {
+		color: #b3b3b3;
+	}
+
+	#hintbutton:hover:enabled {
+		cursor: pointer;
+		filter: brightness(95%);
+	}
+
+	#hintbutton:active {
+		filter: brightness(90%);
+	}
+
 	.hintbox p {
 		margin-left: 1rem;
+		margin-right: 1rem;
 	}
 
 	#hint-5 {

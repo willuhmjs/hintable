@@ -1,13 +1,42 @@
-<script>
+<script lang="ts">
 	import Header from '../lib/Header.svelte';
 	import GuessBox from '../lib/GuessBox.svelte';
 	import Hints from '../lib/Hints.svelte';
+	// @ts-ignore
+	import Confetti from 'svelte-confetti';
+	let hints: Hints;
+	let guessbox: GuessBox;
+	let confettiTime = false;
+	const endGame = (won: boolean) => {
+		if (won) {
+			hints.setStatus("fa-regular fa-face-laugh-beam", true);
+			confettiTime = true;
+		}
+		guessbox.disable();
+	}
 </script>
 
 <div class="wrapper">
 	<Header />
-	<GuessBox />
-	<Hints />
+	<!-- in guessbox, -->
+	<GuessBox {endGame} bind:this={guessbox}/>
+	<!-- in hints, we need to change the button icon -->
+	<Hints {endGame} bind:this={hints}/>
+	
+	{#if confettiTime}
+	<div style="
+	position: fixed;
+	top: -10px;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	pointer-events: none;">
+	<Confetti x={[-5, 5]} y={[0, 0.1]} delay={[500, 2000]} infinite duration=5000 amount=300 fallDistance="100vh" />
+	</div>
+	{/if}
 </div>
 
 <style>
