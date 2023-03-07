@@ -66,7 +66,7 @@
 		border-radius: 10px;
 		border: 1px solid transparent;
 		font-size: 1rem;
-		margin: 0.3rem 0;
+		margin: 0.35rem 0;
 	}
 
 	#hintbutton:disabled {
