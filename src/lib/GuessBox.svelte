@@ -1,17 +1,33 @@
 <script lang="ts">
+	let isAnswerIncorrect = false;
 	const submitGuess = (e: SubmitEvent) => {
 		e.preventDefault();
 		/* please shut up typescript */
-		/* @ts-ignore */
-		const guess = document.getElementById('guessInput').value;
+		if (!isAnswerIncorrect) {
+			isAnswerIncorrect = true;
+			setTimeout(() => isAnswerIncorrect = false, 700);
+		}
 	};
 </script>
 
 <form id="guessForm" on:submit={submitGuess}>
-	<input type="text" class="guessInput" id="guessInput" autocomplete="off" placeholder="type a word" />
+	<input type="text" class="guessInput {isAnswerIncorrect ? "incorrect" : ""}" id="guessInput" autocomplete="off" placeholder="type a word" />
 </form>
 
 <style>
+	@keyframes shake {
+    0% { transform: translateX(0); }
+    10%, 90% { transform: translateX(-8px); }
+    20%, 80% { transform: translateX(8px); }
+    30%, 50%, 70% { transform: translateX(-8px); }
+    40%, 60% { transform: translateX(8px); }
+    100% { transform: translateX(0); }
+  }
+
+	.incorrect {
+	  animation: shake 0.7s ease-in-out;
+	}
+	
 	.guessInput {
 		width: 100%;
 		margin: 0;
