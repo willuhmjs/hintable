@@ -2,7 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 
 	const dispatch = createEventDispatcher<{
-		success: { won: boolean };
+		endgame: { won: boolean };
 	}>();
 
 	export let word: string;
@@ -27,7 +27,7 @@
 				setTimeout(() => (isAnswerIncorrect = false), 700);
 			}
 		} else if (guess.toLowerCase() == word) {
-			dispatch('success', { won: true });
+			dispatch('endgame', { won: true });
 		}
 	};
 </script>

@@ -26,10 +26,9 @@
 
 <div class="wrapper">
 	<Header {guesses} {hintnumber} />
-	<!-- in guessbox, -->
-	<GuessBox on:success={endGame} word={data.word} bind:this={guessbox} bind:guesses />
+	<GuessBox on:endgame={endGame} word={data.word} bind:this={guessbox} bind:guesses />
 	<!-- in hints, we need to change the button icon -->
-	<Hints on:success={endGame} bind:this={hints} {data} bind:hintnumber />
+	<Hints on:endgame={endGame} bind:this={hints} {data} bind:hintnumber />
 
 	{#if confettiTime}
 		<div

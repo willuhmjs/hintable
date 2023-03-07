@@ -2,7 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 
 	const dispatch = createEventDispatcher<{
-		success: { won: boolean };
+		endgame: { won: boolean };
 	}>();
 
 	export let data;
@@ -19,7 +19,7 @@
 		} else if (hints.length == hintDb.length) {
 			lastHint = true;
 			hintButton.disabled = true;
-			dispatch("success", { won: false });
+			dispatch("endgame", { won: false });
 			return;
 		}
 		hintnumber++;
