@@ -76,7 +76,7 @@
 		filter: brightness(95%);
 	}
 
-	#hintbutton:active {
+	#hintbutton:active:enabled {
 		filter: brightness(90%);
 	}
 
