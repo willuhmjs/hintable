@@ -1,5 +1,6 @@
 <script lang="ts">
 	export let endGame: (won: boolean) => void;
+	export let guesses = 0;
 	export const disable = () => {
 		guessInput.disabled = true;
 		guessInput.value = word;
@@ -10,7 +11,9 @@
 	let isAnswerIncorrect = false;
 	const submitGuess = (e: SubmitEvent) => {
 		e.preventDefault();
-		if (guess !== "" && guess.toLowerCase() !== word) {
+		if (guess == "" || guess == null) return;
+		guesses++;
+		if (guess.toLowerCase() !== word) {
 			if (!isAnswerIncorrect) {
 				isAnswerIncorrect = true;
 				guess = "";

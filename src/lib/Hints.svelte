@@ -8,7 +8,8 @@
 		'I am a discreet cue that can help point someone in the right direction.',
         "I am in the name of this website."
     ];
-	let hints: string[] = [];
+	let hints: string[] = [hintDb[0]];
+	export let hintnumber = 1;
 	let hintButton: HTMLButtonElement;
 	let hintIcon: HTMLElement;
 	let lastHint: boolean = false;
@@ -21,6 +22,7 @@
 			endGame(false);
 			return;
 		}
+		hintnumber++;
 		hints = [`${hintDb[hints.length]}`, ...hints];
 	};
 

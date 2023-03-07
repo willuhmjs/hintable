@@ -7,6 +7,9 @@
 	let hints: Hints;
 	let guessbox: GuessBox;
 	let confettiTime = false;
+
+	let guesses = 0;
+	let hintnumber = 1;
 	const endGame = (won: boolean) => {
 		if (won) {
 			hints.setStatus("fa-regular fa-face-laugh-beam", true);
@@ -17,11 +20,11 @@
 </script>
 
 <div class="wrapper">
-	<Header />
+	<Header {guesses} {hintnumber} />
 	<!-- in guessbox, -->
-	<GuessBox {endGame} bind:this={guessbox}/>
+	<GuessBox {endGame} bind:this={guessbox} bind:guesses={guesses}/>
 	<!-- in hints, we need to change the button icon -->
-	<Hints {endGame} bind:this={hints}/>
+	<Hints {endGame} bind:this={hints} bind:hintnumber={hintnumber}/>
 	
 	{#if confettiTime}
 	<div style="
