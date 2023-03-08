@@ -4,17 +4,18 @@
 	export let hintnumber = 4;
 	let menuActivated = false;
 </script>
+
 <div>
-<div class="titlebox">
-	<h2 class="title" aria-label="title"><span id="glow">hint</span>able</h2>
-	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div id="menubutton" on:click={() => (menuActivated = !menuActivated)}>
-		<i class="fa-solid fa-ellipsis-vertical {menuActivated ? "menubuttonactive" : ""}" />
-		{#if menuActivated}
-			<Menu/>
-		{/if}
+	<div class="titlebox">
+		<h2 class="title" aria-label="title"><span id="glow">hint</span>able</h2>
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<div id="menubutton" on:click={() => (menuActivated = !menuActivated)}>
+			<i class="fa-solid fa-ellipsis-vertical {menuActivated ? 'menubuttonactive' : ''}" />
+			{#if menuActivated}
+				<Menu />
+			{/if}
+		</div>
 	</div>
-</div>
 </div>
 <div class="databox">
 	<h3>hints remaining: {hintnumber}</h3>
@@ -38,7 +39,6 @@
 		margin-left: 35px;
 	}
 
-
 	/* despite my best efforts, a gray box appears on mobile browsers (maybe due to focus)
 	 TODO: deal with the pain of mobile web development */
 	#menubutton {
@@ -59,7 +59,8 @@
 		height: 100%;
 	}
 
-	#menubutton i:hover, .menubuttonactive {
+	#menubutton i:hover,
+	.menubuttonactive {
 		cursor: pointer;
 		background-color: #f5f2e4;
 	}
