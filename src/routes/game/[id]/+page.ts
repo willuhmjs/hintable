@@ -1,4 +1,4 @@
-import words from '../../data/words';
+import words from '../../../data/words';
 
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
