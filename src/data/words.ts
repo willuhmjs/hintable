@@ -37,11 +37,11 @@ const words: Word[] = [
 	{
 		word: 'pizza',
 		hintDb: [
-			"I can be customized to individual preferences.",
-			"I have become a staple in many countries.",
-			"I come in different shapes and sizes.",
-			"I originated in Italy.",
-			"I am a popular food choice for many people."
+			'I can be customized to individual preferences.',
+			'I have become a staple in many countries.',
+			'I come in different shapes and sizes.',
+			'I originated in Italy.',
+			'I am a popular food choice for many people.'
 		]
 	}
 ];
