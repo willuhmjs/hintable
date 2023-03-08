@@ -37,6 +37,9 @@
 		margin-left: 35px;
 	}
 
+
+	/* despite my best efforts, a gray box appears on mobile browsers (maybe due to focus)
+	 TODO: deal with the pain of mobile web development */
 	#menubutton {
 		display: inline;
 		position: relative;
