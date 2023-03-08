@@ -7,6 +7,7 @@
 <div>
 <div class="titlebox">
 	<h2 class="title"><span id="glow">hint</span>able</h2>
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div id="menubutton" on:click={() => (menuActivated = !menuActivated)}>
 		<i class="fa-solid fa-ellipsis-vertical {menuActivated ? "menubuttonactive" : ""}" />
 		{#if menuActivated}
