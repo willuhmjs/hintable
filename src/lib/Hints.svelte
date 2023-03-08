@@ -38,7 +38,7 @@
 >
 {#if noHints}
 	<div id="hint-5" class="hintbox">
-		<p class="hinttext">I am <b>{word}</b>. Thanks for playing!</p>
+		<p class="hinttext">I am "<b>{word}</b>." Thanks for playing!</p>
 	</div>
 {/if}
 
