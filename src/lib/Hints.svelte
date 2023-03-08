@@ -5,9 +5,10 @@
 		endgame: { won: boolean };
 	}>();
 
+	// totally not bad code :-)
 	export let data;
 	const { word, hintDb } = data;
-	let hints: string[] = [hintDb[0]];
+	let hints = [hintDb[0]];
 	export let hintnumber = 4;
 	let hintButton: HTMLButtonElement;
 	let hintIcon: HTMLElement;
@@ -19,7 +20,7 @@
 		} else if (hints.length == hintDb.length) {
 			noHints = true;
 			hintButton.disabled = true;
-			dispatch("endgame", { won: false });
+			dispatch('endgame', { won: false });
 			return;
 		}
 		hintnumber--;
@@ -30,14 +31,14 @@
 		hintIcon.className = className;
 		hintButton.disabled = disabled;
 	};
-
 </script>
 
 <button id="hintbutton" on:click={getHint} bind:this={hintButton}
-	><i bind:this={hintIcon} class="fa-regular fa-lightbulb" /></button>
+	><i bind:this={hintIcon} class="fa-regular fa-lightbulb" /></button
+>
 {#if noHints}
 	<div id="hint-5" class="hintbox">
-		<p class="hinttext">I am <b>{word}</b>. Thanks for playing!</p>
+		<p class="hinttext">I am a(n) <b>{word}</b>. Thanks for playing!</p>
 	</div>
 {/if}
 
