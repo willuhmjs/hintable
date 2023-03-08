@@ -52,7 +52,7 @@
 
 <style>
 	#hintbutton {
-		background-color: #f5f2e4;
+		background-color: #fff3e0;
 		width: 100%;
 		margin: 0.5rem 0;
 		box-sizing: border-box;
@@ -64,7 +64,7 @@
 	}
 
 	.hintbox {
-		background-color: #f5f2e4;
+		background-color: #fff3e0;
 		width: 100%;
 		box-sizing: border-box;
 		border-radius: 10px;
@@ -92,7 +92,7 @@
 	}
 
 	#hint-5 {
-		background-color: lightyellow;
+		background-color: #ffebcc;
 		width: 100%;
 		box-sizing: border-box;
 		border-radius: 10px;
