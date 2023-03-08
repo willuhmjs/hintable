@@ -34,7 +34,6 @@
 	.title {
 		font-size: 2rem;
 		text-align: center;
-		font-style: italic;
 		flex-grow: 1;
 		margin-left: 35px;
 	}

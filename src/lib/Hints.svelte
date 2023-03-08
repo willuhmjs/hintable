@@ -86,9 +86,10 @@
 		filter: brightness(90%);
 	}
 
-	.hintbox p {
+	.hinttext {
 		margin-left: 1rem;
 		margin-right: 1rem;
+		font-size: 1.1rem;
 	}
 
 	#hint-5 {
@@ -97,7 +98,6 @@
 		box-sizing: border-box;
 		border-radius: 10px;
 		border: 1px solid transparent;
-		font-size: 1rem;
 		margin: 0.3rem 0;
 	}
 </style>
