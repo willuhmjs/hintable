@@ -5,8 +5,6 @@
 	// @ts-ignore
 	import Confetti from 'svelte-confetti';
 
-	import type { PageData } from '../routes/$types';
-
 	let hints: Hints;
 	let guessbox: GuessBox;
 	let confettiTime = false;
