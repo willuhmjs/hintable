@@ -18,7 +18,7 @@
 	let isAnswerIncorrect = false;
 	const submitGuess = (e: SubmitEvent) => {
 		e.preventDefault();
-		if (guess == '' || guess == null) return;
+		if (!guess || (guess = guess.replaceAll(" ", "")).length === 0) return;
 		guesses++;
 		if (guess.toLowerCase() !== word) {
 			if (!isAnswerIncorrect) {
