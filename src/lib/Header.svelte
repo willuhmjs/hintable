@@ -4,7 +4,7 @@
 	export let hintnumber = 4;
 	let menuActivated = false;
 </script>
-
+<div>
 <div class="titlebox">
 	<h2 class="title"><span id="glow">hint</span>able</h2>
 	<div id="menubutton" on:click={() => (menuActivated = !menuActivated)}>
@@ -13,6 +13,7 @@
 			<Menu/>
 		{/if}
 	</div>
+</div>
 </div>
 <div class="databox">
 	<h3>hints remaining: {hintnumber}</h3>
@@ -24,6 +25,8 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		margin-bottom: -0.8rem;
+		margin-top: -0.8rem;
 	}
 
 	.title {
