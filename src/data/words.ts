@@ -87,7 +87,7 @@ const words: Word[] = [
 		hintDb: [
 			'I am named after a famous battle in greek history.',
 			'I am held in many cities around the world, including Boston, New York, and London.',
-			'I have a rich history and cultural significance, dating back to the Olypmic games in 1896.',
+			'I have a rich history and cultural significance, dating back to the Olympic games in 1896.',
 			'I am 26.2 miles long.',
 			'I am a long-distance race that tests endurance.'
 		],
