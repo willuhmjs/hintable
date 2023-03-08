@@ -4,8 +4,8 @@
 
 <div id="wrapper" bind:this={wrapper} style="top: 10px; right: 160px;">
 	<ul>
-		<li><a href="/">Give Up</a></li>
-		<li><a href="/">Previous Games</a></li>
+		<li><a href="/"><i class="fa-duotone fa-flag"></i>Give Up</a></li>
+		<li><a href="/"><i class="fa-duotone fa-backward"></i>Previous Games</a></li>
 	</ul>
 </div>
 
@@ -16,14 +16,14 @@
 		border: 1px solid transparent;
 		border-radius: 10px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		width: 175px;
+		width: 185px;
 	}
 
 	#wrapper ul {
 		list-style: none;
 		margin: 0;
 		padding: 8px;
-		font-size: 18px;
+		font-size: 17px;
 		font-weight: bold;
 	}
 
@@ -42,5 +42,9 @@
 		text-decoration: none;
 		display: block;
 		padding: .5rem;
+	}
+
+	#wrapper li a i {
+		margin-right: 0.65rem;
 	}
 </style>
