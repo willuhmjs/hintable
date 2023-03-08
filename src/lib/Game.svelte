@@ -23,7 +23,7 @@
 		noHints = true;
 	};
 
-	export let data: PageData;
+	export let data: { word: string; hints: [string, string, string, string] };
 </script>
 
 <div class="wrapper">
