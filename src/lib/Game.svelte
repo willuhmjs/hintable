@@ -23,7 +23,12 @@
 		noHints = true;
 	};
 
-	export let data: { word: string; hints: [string, string, string, string] };
+	interface Word {
+		word: string;
+		hintDb: [string, string, string, string, string];
+		difficulty: 'easy' | 'medium' | 'hard';
+	}
+	export let data: Word;
 </script>
 
 <div class="wrapper">
