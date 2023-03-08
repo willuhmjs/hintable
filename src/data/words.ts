@@ -33,6 +33,16 @@ const words: Word[] = [
 			"I am essential to earth's ecosystem.",
 			"I cover most of the Earth's surface."
 		]
+	},
+	{
+		word: 'pizza',
+		hintDb: [
+			"I can be customized to individual preferences.",
+			"I have become a staple in many countries.",
+			"I come in different shapes and sizes.",
+			"I originated in Italy.",
+			"I am a popular food choice for many people."
+		]
 	}
 ];
 
