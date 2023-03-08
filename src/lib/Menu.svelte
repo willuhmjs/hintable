@@ -3,10 +3,10 @@
 </script>
 
 <div id="wrapper" bind:this={wrapper} style="top: 10px; right: 160px;">
-	text!
-	<br />
-	<br />
-	more text
+	<ul>
+		<li><a href="/">Give Up</a></li>
+		<li><a href="/">Previous Games</a></li>
+	</ul>
 </div>
 
 <style>
@@ -15,5 +15,10 @@
 		background-color: white;
 		border: 1px solid black;
 		width: 175px;
+	}
+
+	a {
+		width: 100%;
+		border: 0;
 	}
 </style>

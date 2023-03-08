@@ -14,6 +14,9 @@ const config = {
 		adapter: adapter(),
 		prerender: {
 			entries: ['/game/[id]', '/', '/random']
+		},
+		paths: {
+			base: '/hintable'
 		}
 	}
 };
