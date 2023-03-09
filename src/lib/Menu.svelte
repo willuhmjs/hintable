@@ -1,5 +1,5 @@
 <script lang="ts">
-	let wrapper;
+	let wrapper: HTMLDivElement;
 </script>
 
 <div id="wrapper" bind:this={wrapper} style="top: 10px; right: 160px;">

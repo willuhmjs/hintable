@@ -1,9 +1,5 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
-
-	const dispatch = createEventDispatcher<{
-		endgame: { won: boolean };
-	}>();
+	import { ended, won } from "./gameState";
 
 	// totally not bad code :-)
 	export let data;
@@ -20,7 +16,8 @@
 		} else if (hints.length == hintDb.length) {
 			noHints = true;
 			hintButton.disabled = true;
-			dispatch('endgame', { won: false });
+			$ended = true;
+			$won = false;
 			return;
 		}
 		hintnumber--;

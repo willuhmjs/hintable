@@ -1,10 +1,5 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
-
-	const dispatch = createEventDispatcher<{
-		endgame: { won: boolean };
-	}>();
-
+	import { won, ended } from "./gameState";
 	export let word: string;
 
 	export let guesses = 0;
@@ -16,8 +11,8 @@
 	let guessInput: HTMLInputElement;
 	let guess: string = '';
 	let isAnswerIncorrect = false;
-	const submitGuess = (e: SubmitEvent) => {
-		e.preventDefault();
+
+	const submitGuess = () => {
 		if (!guess || (guess = guess.replaceAll(' ', '')).length === 0) return;
 		guesses++;
 		if (guess.toLowerCase() !== word) {
@@ -27,12 +22,13 @@
 				setTimeout(() => (isAnswerIncorrect = false), 700);
 			}
 		} else if (guess.toLowerCase() == word) {
-			dispatch('endgame', { won: true });
+			$ended = true;
+			$won = true;
 		}
 	};
 </script>
 
-<form on:submit={submitGuess}>
+<form on:submit|preventDefault={submitGuess}>
 	<input
 		type="text"
 		autocorrect="off"

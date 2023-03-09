@@ -1,3 +1,4 @@
 import { writable } from "svelte/store";
 
-export const gameEnded = writable(false)
+export const ended = writable(false)
+export const won = writable(false)

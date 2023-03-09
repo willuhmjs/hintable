@@ -2,6 +2,9 @@
 	import Header from './Header.svelte';
 	import GuessBox from './GuessBox.svelte';
 	import Hints from './Hints.svelte';
+	
+	import { ended, won } from '$lib/gameState';
+
 	// @ts-ignore
 	import Confetti from 'svelte-confetti';
 
@@ -12,8 +15,8 @@
 	let guesses = 0;
 	let hintnumber = 4;
 	let noHints = false;
-	const endGame = (e: CustomEvent<{ won: boolean }>) => {
-		if (e.detail.won) {
+	$: if ($ended) {
+		if ($won) {
 			hints.setStatus('fa-regular fa-face-laugh-beam', true);
 			confettiTime = true;
 		}
@@ -31,9 +34,9 @@
 
 <div class="wrapper">
 	<Header {guesses} {hintnumber} />
-	<GuessBox on:endgame={endGame} word={data.word} bind:this={guessbox} bind:guesses />
+	<GuessBox word={data.word} bind:this={guessbox} bind:guesses />
 	<!-- in hints, we need to change the button icon -->
-	<Hints on:endgame={endGame} {noHints} bind:this={hints} {data} bind:hintnumber />
+	<Hints {noHints} bind:this={hints} {data} bind:hintnumber />
 
 	{#if confettiTime}
 		<div class="confettibox">
