@@ -4,8 +4,8 @@
 
 <div id="wrapper" bind:this={wrapper} style="top: 10px; right: 160px;">
 	<ul>
-		<li><a href="/"><i class="fa-duotone fa-flag"></i>Give Up</a></li>
-		<li><a href="/"><i class="fa-duotone fa-backward"></i>Previous Games</a></li>
+		<li><a href="/"><i class="fa-duotone fa-flag" />Give Up</a></li>
+		<li><a href="/"><i class="fa-duotone fa-backward" />Previous Games</a></li>
 	</ul>
 </div>
 
@@ -41,7 +41,7 @@
 		color: #333;
 		text-decoration: none;
 		display: block;
-		padding: .5rem;
+		padding: 0.5rem;
 	}
 
 	#wrapper li a i {
