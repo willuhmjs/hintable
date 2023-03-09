@@ -9,8 +9,8 @@
 
 <div id="wrapper" style="top: 10px; right: 160px;">
 	<ul>
-		<li><a href="#" on:click={giveUp}><i class="fa-duotone fa-flag" />Give Up</a></li>
-		<li><a href="/"><i class="fa-duotone fa-backward" />Previous Games</a></li>
+		<li><button on:click={giveUp} class="menubutton"><i class="fa-duotone fa-flag" />Give Up</button></li>
+		<li><a href="/games" class="menubutton"><i class="fa-duotone fa-backward" />Previous Games</a></li>
 	</ul>
 </div>
 
@@ -29,13 +29,14 @@
 		list-style: none;
 		margin: 0;
 		padding: 8px;
-		font-size: 17px;
-		font-weight: bold;
+		
 	}
 
 	#wrapper li {
 		border: 1px solid transparent;
 		border-radius: 7px;
+		font-size: 17px;
+		font-weight: bold;
 	}
 
 	#wrapper li:hover {
@@ -43,14 +44,20 @@
 		border: 1px solid #ddd;
 	}
 
-	#wrapper li a {
+	.menubutton {
 		color: #333;
 		text-decoration: none;
 		display: block;
 		padding: 0.5rem;
+		border: none;
+		background: none;
+		font-size: inherit;
+		font-family: inherit;
+		color: inherit;
+		font-weight: bold;
 	}
 
-	#wrapper li a i {
+	.menubutton i {
 		margin-right: 0.65rem;
 	}
 </style>
