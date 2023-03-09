@@ -9,8 +9,6 @@
 	// @ts-ignore
 	import Confetti from 'svelte-confetti';
 
-	let hints: Hints;
-	let guessbox: GuessBox;
 	let confettiTime = false;
 
 	let guesses = 0;
@@ -28,9 +26,9 @@
 
 <div class="wrapper">
 	<Header {guesses} {hintnumber} />
-	<GuessBox word={data.word} bind:this={guessbox} bind:guesses />
+	<GuessBox word={data.word} bind:guesses />
 	<!-- in hints, we need to change the button icon -->
-	<Hints {noHints} bind:this={hints} {data} bind:hintnumber />
+	<Hints {noHints} {data} bind:hintnumber />
 
 	{#if confettiTime}
 		<div class="confettibox">
