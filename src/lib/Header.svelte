@@ -64,10 +64,6 @@
 		background-color: #f5f2e4;
 	}
 
-	#glow:hover {
-		color: gold;
-	}
-
 	#glow {
 		transition: color 0.25s ease-in-out;
 	}
