@@ -1,6 +1,15 @@
+<script>
+	import { ended, won } from "./gameState";
+
+	const giveUp = () => {
+		$ended = true;
+		$won = false;
+	};
+</script>
+
 <div id="wrapper" style="top: 10px; right: 160px;">
 	<ul>
-		<li><a href="/"><i class="fa-duotone fa-flag" />Give Up</a></li>
+		<li><a href="#" on:click={giveUp}><i class="fa-duotone fa-flag" />Give Up</a></li>
 		<li><a href="/"><i class="fa-duotone fa-backward" />Previous Games</a></li>
 	</ul>
 </div>
