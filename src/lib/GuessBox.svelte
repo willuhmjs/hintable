@@ -3,14 +3,15 @@
 	export let word: string;
 
 	export let guesses = 0;
-	export const disable = () => {
-		guessInput.disabled = true;
-		guessInput.value = word;
-	};
 
 	let guessInput: HTMLInputElement;
 	let guess: string = '';
 	let isAnswerIncorrect = false;
+
+	$: if ($ended) {
+		guessInput.disabled = true;
+		guessInput.value = word;
+	}
 
 	const submitGuess = () => {
 		if (!guess || (guess = guess.replaceAll(' ', '')).length === 0) return;

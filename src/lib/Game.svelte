@@ -3,6 +3,7 @@
 	import GuessBox from './GuessBox.svelte';
 	import Hints from './Hints.svelte';
 	
+	import type { Word } from './word';
 	import { ended, won } from '$lib/gameState';
 
 	// @ts-ignore
@@ -17,18 +18,11 @@
 	let noHints = false;
 	$: if ($ended) {
 		if ($won) {
-			hints.setStatus('fa-regular fa-face-laugh-beam', true);
 			confettiTime = true;
 		}
-		guessbox.disable();
 		noHints = true;
 	};
 
-	interface Word {
-		word: string;
-		hintDb: [string, string, string, string, string];
-		difficulty: 'easy' | 'medium' | 'hard';
-	}
 	export let data: Word;
 </script>
 

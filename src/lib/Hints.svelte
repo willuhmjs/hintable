@@ -10,6 +10,10 @@
 	let hintIcon: HTMLElement;
 	export let noHints = false;
 
+	$: if ($ended && $won) {
+		setStatus('fa-regular fa-face-laugh-beam', true);
+	}
+
 	const getHint = () => {
 		if (hints.length == hintDb.length - 1) {
 			setStatus('fa-regular fa-face-sad-tear', false);
@@ -24,7 +28,7 @@
 		hints = [hintDb[hints.length].toString(), ...hints];
 	};
 
-	export const setStatus = (className: string, disabled: boolean) => {
+	const setStatus = (className: string, disabled: boolean) => {
 		hintIcon.className = className;
 		hintButton.disabled = disabled;
 	};
