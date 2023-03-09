@@ -1,8 +1,4 @@
-<script lang="ts">
-	let wrapper: HTMLDivElement;
-</script>
-
-<div id="wrapper" bind:this={wrapper} style="top: 10px; right: 160px;">
+<div id="wrapper" style="top: 10px; right: 160px;">
 	<ul>
 		<li><a href="/"><i class="fa-duotone fa-flag" />Give Up</a></li>
 		<li><a href="/"><i class="fa-duotone fa-backward" />Previous Games</a></li>

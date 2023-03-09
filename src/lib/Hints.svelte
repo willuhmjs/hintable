@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { ended, won } from "./gameState";
+	import type { Word } from "./word";
 
-	// totally not bad code :-)
-	export let data;
+	export let data: Word;
 	const { word, hintDb } = data;
+	
 	let hints = [hintDb[0]];
-	export let hintnumber = 4;
+	export let hintnumber: number;
+	$: hintnumber = hintDb.length - hints.length;
 	let hintButton: HTMLButtonElement;
 	let hintIcon: HTMLElement;
 	export let noHints = false;
@@ -24,8 +26,7 @@
 			$won = false;
 			return;
 		}
-		hintnumber--;
-		hints = [hintDb[hints.length].toString(), ...hints];
+		hints = [hintDb[hints.length], ...hints];
 	};
 
 	const setStatus = (className: string, disabled: boolean) => {
