@@ -12,16 +12,20 @@
 	let hintIcon: HTMLElement;
 	export let noHints = false;
 
-	$: if ($ended && $won) {
-		setStatus('fa-regular fa-face-laugh-beam', true);
+	$: if ($ended) {
+		noHints = true;
+		hintButton.disabled = true;
+		if ($won) {
+			setStatus('fa-regular fa-face-laugh-beam', true)
+		} else if (!$won) {
+			setStatus('fa-regular fa-face-sad-tear', true)
+		}
 	}
 
 	const getHint = () => {
 		if (hints.length == hintDb.length - 1) {
 			setStatus('fa-regular fa-face-sad-tear', false);
 		} else if (hints.length == hintDb.length) {
-			noHints = true;
-			hintButton.disabled = true;
 			$ended = true;
 			$won = false;
 			return;
