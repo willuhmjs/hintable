@@ -1,18 +1,20 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
+	import { ended, won } from "./gameState";
+	import type { Word } from "./word";
 
-	const dispatch = createEventDispatcher<{
-		endgame: { won: boolean };
-	}>();
-
-	// totally not bad code :-)
-	export let data;
+	export let data: Word;
 	const { word, hintDb } = data;
+	
 	let hints = [hintDb[0]];
-	export let hintnumber = 4;
+	export let hintnumber: number;
+	$: hintnumber = hintDb.length - hints.length;
 	let hintButton: HTMLButtonElement;
 	let hintIcon: HTMLElement;
 	export let noHints = false;
+
+	$: if ($ended && $won) {
+		setStatus('fa-regular fa-face-laugh-beam', true);
+	}
 
 	const getHint = () => {
 		if (hints.length == hintDb.length - 1) {
@@ -20,14 +22,14 @@
 		} else if (hints.length == hintDb.length) {
 			noHints = true;
 			hintButton.disabled = true;
-			dispatch('endgame', { won: false });
+			$ended = true;
+			$won = false;
 			return;
 		}
-		hintnumber--;
-		hints = [hintDb[hints.length].toString(), ...hints];
+		hints = [hintDb[hints.length], ...hints];
 	};
 
-	export const setStatus = (className: string, disabled: boolean) => {
+	const setStatus = (className: string, disabled: boolean) => {
 		hintIcon.className = className;
 		hintButton.disabled = disabled;
 	};
