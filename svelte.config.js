@@ -16,7 +16,8 @@ const config = {
 			assets: 'build',
 			fallback: 'index.html'
 		}),
-	}
+	},
+	base: '/hintable/'
 };
 
 export default config;
