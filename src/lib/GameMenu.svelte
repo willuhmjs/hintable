@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-    import words from '../../data/words';
+    import words from '../data/words';
 
 	const getButtonColor = (difficulty: 'easy' | 'medium' | 'hard') => {
 		switch (difficulty) {
@@ -15,12 +15,12 @@
 </script>
 
 <div class="wrapper">
-	<button class="button" on:click={() => goto(`/?game=random`)} style="margin-bottom: 1rem; text-align: center;"><i class="fa-solid fa-shuffle"></i></button>
+	<button class="button randombutton" on:click={() => goto(`?game=random`)}><i class="fa-solid fa-shuffle"></i></button>
     {#each words as _, index}
 		{@const reverseIndex = words.length - 1 - index}
 		{@const word = words[reverseIndex]}
         <div class="box">
-            <button class="button randombutton" on:click={() => goto(`/?game=${reverseIndex+1}`)} style="background-color: {getButtonColor(word.difficulty)};">
+            <button class="button" on:click={() => goto(`?game=${reverseIndex+1}`)} style="background-color: {getButtonColor(word.difficulty)};">
 				<b>#{reverseIndex+1}</b> 
 				<span style="text-align: right">{word.difficulty}</span>
 			</button>
@@ -55,14 +55,15 @@
 		text-align: left;
 		border-radius: 10px;
 		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-
-	}
-
-	.randombutton {
 		display: flex;
 	}
 
-	.randombutton * {
+	.randombutton {
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+
+	.button * {
 		flex: 1;
 	}
 

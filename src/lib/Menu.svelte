@@ -1,5 +1,5 @@
 <script>
-	import { ended, won } from "./gameState";
+	import { ended, won, inGameMenu } from "./gameState";
 
 	const giveUp = () => {
 		$ended = true;
@@ -10,7 +10,7 @@
 <div id="wrapper" style="top: 10px; right: 180px;">
 	<ul>
 		<li><button on:click={giveUp} class="menubutton"><i class="fa-duotone fa-flag" />Give Up</button></li>
-		<li><a href="/games" class="menubutton"><i class="fa-duotone fa-backward" />Previous Games</a></li>
+		<li><button on:click={() => $inGameMenu = true} class="menubutton"><i class="fa-duotone fa-backward" />Previous Games</button></li>
 	</ul>
 </div>
 
