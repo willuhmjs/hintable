@@ -58,7 +58,7 @@
 
 <style>
 	#hintbutton {
-		background-color: #fff3e0;
+		background-color: #ffe1b8;
 		width: 100%;
 		margin: 0.5rem 0;
 		box-sizing: border-box;
@@ -66,21 +66,21 @@
 		border-radius: 10px;
 		border: 1px solid transparent;
 		font-size: 1.8rem;
-		color: black;
+		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+
 	}
 
 	.hintbox {
-		background-color: #fff3e0;
+		background-color: #ffe1b8;
 		width: 100%;
 		box-sizing: border-box;
 		border-radius: 10px;
 		border: 1px solid transparent;
 		font-size: 1rem;
 		margin: 0.35rem 0;
-	}
+		font-weight: 500;
+		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 
-	#hintbutton:disabled {
-		color: #b3b3b3;
 	}
 
 	#hintbutton:hover:enabled {
