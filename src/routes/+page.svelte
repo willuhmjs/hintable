@@ -24,7 +24,6 @@
 	$: newGame($page.url);
 
 </script>
-{$inGameMenu}
 {#if intQuery !== undefined && !$inGameMenu}
 	<Game data={words[intQuery]} />
 {:else if inGameMenu}
