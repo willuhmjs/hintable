@@ -1,4 +1,4 @@
-name: publish
+name: test-and-publish
 
 on:
   push:
@@ -33,7 +33,9 @@ jobs:
 
       - name: Run tests
         run: yarn test
-  gh-release:
+
+  publish:
+    needs: test
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
