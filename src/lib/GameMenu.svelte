@@ -15,12 +15,12 @@
 </script>
 
 <div class="wrapper">
-	<button class="button randombutton" on:click={() => goto(`?game=random`)}><i class="fa-solid fa-shuffle"></i></button>
+	<button class="button randombutton" on:click={() => goto(`/hintable/random`)}><i class="fa-solid fa-shuffle"></i></button>
     {#each words as _, index}
 		{@const reverseIndex = words.length - 1 - index}
 		{@const word = words[reverseIndex]}
         <div class="box">
-            <button class="button" on:click={() => goto(`?game=${reverseIndex+1}`)} style="background-color: {getButtonColor(word.difficulty)};">
+            <button class="button" on:click={() => goto(`/hintable/${reverseIndex+1}`)} style="background-color: {getButtonColor(word.difficulty)};">
 				<b>#{reverseIndex+1}</b> 
 				<span style="text-align: right">{word.difficulty}</span>
 			</button>
