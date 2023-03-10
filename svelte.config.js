@@ -17,7 +17,7 @@ const config = {
 			fallback: 'index.html'
 		}),
 		paths: {
-			base: '/svelte-kit-static'
+			base: '/hintable'
 		}
 	},
 };
