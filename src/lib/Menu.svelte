@@ -7,7 +7,7 @@
 	};
 </script>
 
-<div id="wrapper" style="top: 10px; right: 160px;">
+<div id="wrapper" style="top: 10px; right: 180px;">
 	<ul>
 		<li><button on:click={giveUp} class="menubutton"><i class="fa-duotone fa-flag" />Give Up</button></li>
 		<li><a href="/games" class="menubutton"><i class="fa-duotone fa-backward" />Previous Games</a></li>
@@ -21,7 +21,7 @@
 		border: 1px solid transparent;
 		border-radius: 10px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		width: 185px;
+		width: 205px;
 		z-index: 1;
 	}
 
@@ -40,7 +40,7 @@
 	}
 
 	#wrapper li:hover {
-		background-color: #f5f5f5;
+		background-color: #f5f2e4;
 		border: 1px solid #ddd;
 	}
 
@@ -55,6 +55,8 @@
 		font-family: inherit;
 		color: inherit;
 		font-weight: bold;
+		width: 100%;
+		text-align: left;
 	}
 
 	.menubutton i {
