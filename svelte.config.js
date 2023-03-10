@@ -16,8 +16,10 @@ const config = {
 			assets: 'build',
 			fallback: 'index.html'
 		}),
+		paths: {
+			base: '/svelte-kit-static'
+		}
 	},
-	base: '/hintable/'
 };
 
 export default config;
