@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
     import words from '../data/words';
 
 	const getButtonColor = (difficulty: 'easy' | 'medium' | 'hard') => {
@@ -15,15 +14,15 @@
 </script>
 
 <div class="wrapper">
-	<button class="button randombutton" on:click={() => goto(`/hintable/random`)}><i class="fa-solid fa-shuffle"></i></button>
+	<a class="button randombutton" href={`/hintable/random`}><i class="fa-solid fa-shuffle"></i></a>
     {#each words as _, index}
 		{@const reverseIndex = words.length - 1 - index}
 		{@const word = words[reverseIndex]}
         <div class="box">
-            <button class="button" on:click={() => goto(`/hintable/${reverseIndex+1}`)} style="background-color: {getButtonColor(word.difficulty)};">
+            <a class="button" href={`/hintable/${reverseIndex+1}`} style="background-color: {getButtonColor(word.difficulty)};">
 				<b>#{reverseIndex+1}</b> 
 				<span style="text-align: right">{word.difficulty}</span>
-			</button>
+			</a>
         </div>
     {/each}
 </div>
@@ -56,6 +55,8 @@
 		border-radius: 10px;
 		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 		display: flex;
+		text-decoration: none;
+		color: black;
 	}
 
 	.randombutton {

@@ -1,5 +1,4 @@
 <script>
-	import { goto } from "$app/navigation";
 	import { ended, won } from "./gameState";
 
 	const giveUp = () => {
@@ -11,7 +10,7 @@
 <div id="wrapper" style="top: 10px; right: 180px;">
 	<ul>
 		<li><button on:click={giveUp} class="menubutton"><i class="fa-duotone fa-flag" />Give Up</button></li>
-		<li><button on:click={() => goto("/hintable/menu")} class="menubutton"><i class="fa-duotone fa-backward" />Previous Games</button></li>
+		<li><a href="/hintable/menu" class="menubutton"><i class="fa-duotone fa-backward" />Previous Games</a></li>
 	</ul>
 </div>
 
