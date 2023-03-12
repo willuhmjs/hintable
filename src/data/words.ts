@@ -136,6 +136,83 @@ const words: Word[] = [
 			'I am used to slown the descent of a person or object.'
 		],
 		difficulty: 'easy'
+	},
+	{
+		word: 'telescope',
+		hintDb: [
+			'I am named after a Greek word meaning "far-seeing".',
+			'I am an optical instrument',
+			'I can be used to observe distant objects.',
+			'I can be used for terrestial and astronomical observations.',
+			'I am used to study the sky and other objects in space.'
+		],
+		difficulty: 'easy'
+	},
+	{
+		word: 'escalator',
+		hintDb: [
+			'I come from the Latin word for steps.',
+			'I am a mechanical device.',
+			'I am found in many public places, including airports and malls.',
+			'I move people from one level to another',
+			'I am a moving staircase.'
+		],
+		difficulty: 'easy'
+	},
+	{
+		word: 'schadenfreude',
+		hintDb: [
+			'I can be felt unconsciously or consciously.',
+			'I can be seen as a negative or immoral emotion.',
+			'I am a complex emotion involving empathy, envy, and pleasure.',
+			'My origins are traced back to German language and culture.',
+			'I am a German word that means "harm-joy".'
+		],
+		difficulty: 'hard'
+	},
+	{
+		word: 'enigma',
+		hintDb: [
+			'Solving me requires a combination of logic and intuition.',
+			'I am sometimes associated with mystery and secrecy.',
+			'My origin can be traced back to the Greek word "ainissesthai", meaning "to speak in riddles".',
+			'The inner workings of my mind are an _________.',
+			'I am something mysterious, puzzling or difficult to understand.'
+		],
+		difficulty: 'medium'
+	},
+	{
+		word: 'paradox',
+		hintDb: [
+			'I am often used to illustrate a deeper truth or idea.',
+			'My name comes from a greek word meaning "contrary to expectation".',
+			'I can be found in literature, science, philosophy, and mathematics.',
+			'We are stuck in a _________.',
+			'I am a statement that seems contradictory but may be true.'
+		],
+		difficulty: 'medium'
+	},
+	{
+		word: 'satire',
+		hintDb: [
+			'I am often used to bring attention to societal problems or issues.',
+			'I can be used to make social or political commentary.',
+			'I am a type of writing of speech',
+			'I use humor, irony, or exaggeration to criticize people or institutions.',
+			'Example: A Modest Proposal by Jonathan Swift.'
+		],
+		difficulty: 'easy'
+	},
+	{
+		word: 'hypothesis',
+		hintDb: [
+			'I can be proven or disproven',
+			'I am often written as an if-then statement.',
+			'I am an important part of the scientific method',
+			'I am often tested through experimentation',
+			'I am a tenative explanation for an observation or phenomenon.'
+		],
+		difficulty: 'easy'
 	}
 ];
 
