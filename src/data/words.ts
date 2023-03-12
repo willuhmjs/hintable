@@ -217,9 +217,9 @@ const words: Word[] = [
 	{
 		word: 'dystopia',
 		hintDb: [
-			'I am a type of society.',
 			'I am often portrayed in literature and film.',
 			'I am often characterized by a lack of freedom and a high level of control.',
+			'I am a type of society.',
 			'I am often associated with a totalitarian government.',
 			'I am a society characterized by human misery, oppression, and poverty.'
 		],
