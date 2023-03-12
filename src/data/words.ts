@@ -78,7 +78,7 @@ const words: Word[] = [
 			'I can be a response to dissatisfaction or a lack of interest.',
 			'I am often associated with a feeling of detachment or indifference.',
 			'I can be overcome with effort and empathy.',
-			'I am the lack of emotion or interest'
+			'I am the lack of emotion or interest.'
 		],
 		difficulty: 'medium'
 	},
@@ -141,7 +141,7 @@ const words: Word[] = [
 		word: 'telescope',
 		hintDb: [
 			'I am named after a Greek word meaning "far-seeing".',
-			'I am an optical instrument',
+			'I am an optical instrument.',
 			'I can be used to observe distant objects.',
 			'I can be used for terrestial and astronomical observations.',
 			'I am used to study the sky and other objects in space.'
@@ -154,7 +154,7 @@ const words: Word[] = [
 			'I come from the Latin word for steps.',
 			'I am a mechanical device.',
 			'I am found in many public places, including airports and malls.',
-			'I move people from one level to another',
+			'I move people from one level to another.',
 			'I am a moving staircase.'
 		],
 		difficulty: 'easy'
@@ -197,7 +197,7 @@ const words: Word[] = [
 		hintDb: [
 			'I am often used to bring attention to societal problems or issues.',
 			'I can be used to make social or political commentary.',
-			'I am a type of writing of speech',
+			'I am a type of writing of speech.',
 			'I use humor, irony, or exaggeration to criticize people or institutions.',
 			'Example: A Modest Proposal by Jonathan Swift.'
 		],
@@ -208,8 +208,8 @@ const words: Word[] = [
 		hintDb: [
 			'I can be proven or disproven.',
 			'I am often written as an if-then statement.',
-			'I am an important part of the scientific method',
-			'I am often tested through experimentation',
+			'I am an important part of the scientific method.',
+			'I am often tested through experimentation.',
 			'I am a tenative explanation for an observation or phenomenon.'
 		],
 		difficulty: 'easy'
@@ -243,7 +243,7 @@ const words: Word[] = [
 			'My antonyms are harsh, grating, and unpleasant.',
 			'My synonyms are harmonious, melodious, and tuneful.',
 			'I am often used to describe sounds, especially voices or music.',
-			'I am an adjective meaning pleasent or musical to the ear'
+			'I am an adjective meaning pleasent or musical to the ear.'
 		],
 		difficulty: 'hard'
 	},
