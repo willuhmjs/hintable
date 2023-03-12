@@ -19,7 +19,7 @@ const config = {
 		paths: {
 			base: '/hintable'
 		}
-	},
+	}
 };
 
 export default config;

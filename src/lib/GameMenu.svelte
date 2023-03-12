@@ -1,5 +1,5 @@
 <script lang="ts">
-    import words from '../data/words';
+	import words from '../data/words';
 
 	const getButtonColor = (difficulty: 'easy' | 'medium' | 'hard') => {
 		switch (difficulty) {
@@ -10,46 +10,50 @@
 			case 'hard':
 				return '#f2afaf';
 		}
-	}
+	};
 </script>
 
 <div class="wrapper">
-	<a class="button randombutton" href={`/hintable/random`}><i class="fa-solid fa-shuffle"></i></a>
-    {#each words as _, index}
+	<a class="button randombutton" href={`/hintable/random`}><i class="fa-solid fa-shuffle" /></a>
+	{#each words as _, index}
 		{@const reverseIndex = words.length - 1 - index}
 		{@const word = words[reverseIndex]}
-        <div class="box">
-            <a class="button" href={`/hintable/${reverseIndex+1}`} style="background-color: {getButtonColor(word.difficulty)};">
-				<b>#{reverseIndex+1}</b> 
+		<div class="box">
+			<a
+				class="button"
+				href={`/hintable/${reverseIndex + 1}`}
+				style="background-color: {getButtonColor(word.difficulty)};"
+			>
+				<b>#{reverseIndex + 1}</b>
 				<span style="text-align: right">{word.difficulty}</span>
 			</a>
-        </div>
-    {/each}
+		</div>
+	{/each}
 </div>
 
 <style>
-    .wrapper {
+	.wrapper {
 		max-width: 480px;
 		margin: auto;
 		padding: 1rem;
 		margin: 2rem auto;
 	}
 
-    .box {
+	.box {
 		width: 100%;
 		border: 1px solid transparent;
 		font-size: 1rem;
 		margin: 0.35rem 0;
-        background-color: transparent;
+		background-color: transparent;
 		word-break: break-all;
 	}
 
-    .button {
+	.button {
 		background-color: #ffe1b8;
 		box-sizing: border-box;
-        border: none;
-        padding: 15px;
-        font-size: 20px;
+		border: none;
+		padding: 15px;
+		font-size: 20px;
 		width: 100%;
 		text-align: left;
 		border-radius: 10px;
@@ -68,7 +72,7 @@
 		flex: 1;
 	}
 
-    .button:hover {
+	.button:hover {
 		cursor: pointer;
 		filter: brightness(95%);
 	}

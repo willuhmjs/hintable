@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { ended, won } from "./gameState";
-	import type { Word } from "./word";
+	import { ended, won } from './gameState';
+	import type { Word } from './word';
 
 	export let data: Word;
 	const { word, hintDb } = data;
-	
+
 	let hints = [hintDb[0]];
 	export let hintnumber: number;
 	$: hintnumber = hintDb.length - hints.length;
@@ -16,9 +16,9 @@
 		noHints = true;
 		hintButton.disabled = true;
 		if ($won) {
-			setStatus('fa-regular fa-face-laugh-beam', true)
+			setStatus('fa-regular fa-face-laugh-beam', true);
 		} else if (!$won) {
-			setStatus('fa-regular fa-face-sad-tear', true)
+			setStatus('fa-regular fa-face-sad-tear', true);
 		}
 	}
 
@@ -83,7 +83,6 @@
 		margin: 0.35rem 0;
 		font-weight: 500;
 		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-
 	}
 
 	#hintbutton:hover:enabled {

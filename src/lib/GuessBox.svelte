@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { won, ended } from "./gameState";
+	import { won, ended } from './gameState';
 	export let word: string;
 
 	export let guesses = 0;

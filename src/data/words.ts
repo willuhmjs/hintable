@@ -6,6 +6,61 @@ interface Word {
 
 const words: Word[] = [
 	{
+		word: 'basketball',
+		hintDb: [
+			'I originated in the United States.',
+			'I have orange and black stripes.',
+			'I am typically made of rubber or synthetic materials.',
+			'I am am a bouncy ball used in a popular sport.',
+			'I am often bounced, dribbled, and passed between players.'
+		],
+		difficulty: 'easy'
+	},
+	{
+		word: 'alacrity',
+		hintDb: [
+			'I can be contagious and inspire others.',
+			'I can help overcome obstacles and achieve goals.',
+			'I am often seen as a positive trait or attribute.',
+			'I can be associated with enthusiasm and eagerness.',
+			'I am a quick and cheerful willingness to do something.'
+		],
+		difficulty: 'hard'
+	},
+	{
+		word: 'aesthetic',
+		hintDb: [
+			'I can be used to describe a variety of things, like a room, a piece of clothing, or a website.',
+			'I am often used in discussions about taste, style, and culture.',
+			'I come from a greek word meaning "perception" or "sensation".',
+			'I am often associated with art, design, and beauty.',
+			'I am a word used to describe something that is visually pleasing or appealing.'
+		],
+		difficulty: 'medium'
+	},
+	{
+		word: 'pandemic',
+		hintDb: [
+			'I am widespread and affect many people.',
+			'I cause panic and fear worldwide.',
+			'I can be deadly and have a high mortality rate.',
+			'I can be caused by a virus, bacteria, or other microorganism.',
+			'I am a global outbreak of a disease.'
+		],
+		difficulty: 'easy'
+	},
+	{
+		word: 'pizza',
+		hintDb: [
+			'I can be customized to individual preferences.',
+			'I have become a staple in many countries.',
+			'I come in different shapes and sizes.',
+			'I originated in Italy.',
+			'I am a popular food choice for many people.'
+		],
+		difficulty: 'easy'
+	},
+	{
 		word: 'hint',
 		hintDb: [
 			'I can be subtle or obvious.',
@@ -17,13 +72,24 @@ const words: Word[] = [
 		difficulty: 'easy'
 	},
 	{
-		word: 'sloth',
+		word: 'apathy',
 		hintDb: [
-			'"You act like a ____."',
-			'I am a type of animal.',
-			'I live in the trees of a rainforest.',
-			'I spent most of my time sleeping and resting.',
-			'I am known for being slow and lazy.'
+			'I can be harmful to a person or society.',
+			'I can be a response to dissatisfaction or a lack of interest.',
+			'I am often associated with a feeling of detachment or indifference.',
+			'I can be overcome with effort and empathy.',
+			'I am the lack of emotion or interest'
+		],
+		difficulty: 'medium'
+	},
+	{
+		word: 'guitar',
+		hintDb: [
+			'I am a popular device for professionals and hobbyists.',
+			'I can be electric and come in many shapes in sizes.',
+			'I have been used in many different styles of music.',
+			'I am often used to accompany singing or as a solo instrument.',
+			'I am a musical instrument that is played by strumming or plucking strings.'
 		],
 		difficulty: 'easy'
 	},
@@ -39,48 +105,15 @@ const words: Word[] = [
 		difficulty: 'medium'
 	},
 	{
-		word: 'pizza',
+		word: 'sloth',
 		hintDb: [
-			'I can be customized to individual preferences.',
-			'I have become a staple in many countries.',
-			'I come in different shapes and sizes.',
-			'I originated in Italy.',
-			'I am a popular food choice for many people.'
+			'"You act like a ____."',
+			'I am a type of animal.',
+			'I live in the trees of a rainforest.',
+			'I spent most of my time sleeping and resting.',
+			'I am known for being slow and lazy.'
 		],
 		difficulty: 'easy'
-	},
-	{
-		word: 'basketball',
-		hintDb: [
-			'I originated in the United States.',
-			'I have orange and black stripes.',
-			'I am typically made of rubber or synthetic materials.',
-			'I am am a bouncy ball used in a popular sport.',
-			'I am often bounced, dribbled, and passed between players.'
-		],
-		difficulty: 'easy'
-	},
-	{
-		word: 'guitar',
-		hintDb: [
-			'I am a popular device for professionals and hobbyists.',
-			'I can be electric and come in many shapes in sizes.',
-			'I have been used in many different styles of music.',
-			'I am often used to accompany singing or as a solo instrument.',
-			'I am a musical instrument that is played by strumming or plucking strings.'
-		],
-		difficulty: 'easy'
-	},
-	{
-		word: 'aesthetic',
-		hintDb: [
-			'I can be used to describe a variety of things, like a room, a piece of clothing, or a website.',
-			'I am often used in discussions about taste, style, and culture.',
-			'I come from a greek word meaning "perception" or "sensation".',
-			'I am often associated with art, design, and beauty.',
-			'I am a word used to describe something that is visually pleasing or appealing.'
-		],
-		difficulty: 'medium'
 	},
 	{
 		word: 'marathon',
@@ -103,39 +136,6 @@ const words: Word[] = [
 			'I am used to slown the descent of a person or object.'
 		],
 		difficulty: 'easy'
-	},
-	{
-		word: 'apathy',
-		hintDb: [
-			'I can be harmful to a person or society.',
-			'I can be a response to dissatisfaction or a lack of interest.',
-			'I am often associated with a feeling of detachment or indifference.',
-			'I can be overcome with effort and empathy.',
-			'I am the lack of emotion or interest'
-		],
-		difficulty: 'medium'
-	},
-	{
-		word: 'pandemic',
-		hintDb: [
-			'I am widespread and affect many people.',
-			'I cause panic and fear worldwide.',
-			'I can be deadly and have a high mortality rate.',
-			'I can be caused by a virus, bacteria, or other microorganism.',
-			'I am a global outbreak of a disease.',
-		],
-		difficulty: 'easy'
-	},
-	{
-		word: 'alacrity',
-		hintDb: [
-			'I can be contagious and inspire others.',
-			'I can help overcome obstacles and achieve goals.',
-			'I am often seen as a positive trait or attribute.',
-			'I can be associated with enthusiasm and eagerness.',
-			'I am a quick and cheerful willingness to do something.'
-		],
-		difficulty: 'hard'
 	}
 ];
 

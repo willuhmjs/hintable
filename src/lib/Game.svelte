@@ -2,7 +2,7 @@
 	import Header from './Header.svelte';
 	import GuessBox from './GuessBox.svelte';
 	import Hints from './Hints.svelte';
-	
+
 	import type { Word } from './word';
 	import { ended, won } from '$lib/gameState';
 
@@ -19,7 +19,7 @@
 			confettiTime = true;
 		}
 		noHints = true;
-	};
+	}
 
 	export let data: Word;
 </script>

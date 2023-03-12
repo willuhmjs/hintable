@@ -1,5 +1,5 @@
 <script>
-	import { ended, won } from "./gameState";
+	import { ended, won } from './gameState';
 
 	const giveUp = () => {
 		$ended = true;
@@ -9,8 +9,14 @@
 
 <div id="wrapper" style="top: 10px; right: 180px;">
 	<ul>
-		<li><button on:click={giveUp} class="menubutton"><i class="fa-duotone fa-flag" />Give Up</button></li>
-		<li><a href="/hintable/menu" class="menubutton"><i class="fa-duotone fa-backward" />Previous Games</a></li>
+		<li>
+			<button on:click={giveUp} class="menubutton"><i class="fa-duotone fa-flag" />Give Up</button>
+		</li>
+		<li>
+			<a href="/hintable/menu" class="menubutton"
+				><i class="fa-duotone fa-backward" />Previous Games</a
+			>
+		</li>
 	</ul>
 </div>
 
@@ -29,7 +35,6 @@
 		list-style: none;
 		margin: 0;
 		padding: 8px;
-		
 	}
 
 	#wrapper li {
