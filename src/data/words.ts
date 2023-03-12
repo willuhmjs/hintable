@@ -103,6 +103,39 @@ const words: Word[] = [
 			'I am used to slown the descent of a person or object.'
 		],
 		difficulty: 'easy'
+	},
+	{
+		word: 'apathy',
+		hintDb: [
+			'I can be harmful to a person or society.',
+			'I can be a response to dissatisfaction or a lack of interest.',
+			'I am often associated with a feeling of detachment or indifference.',
+			'I can be overcome with effort and empathy.',
+			'I am the lack of emotion or interest'
+		],
+		difficulty: 'medium'
+	},
+	{
+		word: 'pandemic',
+		hintDb: [
+			'I am widespread and affect many people.',
+			'I cause panic and fear worldwide.',
+			'I can be deadly and have a high mortality rate.',
+			'I can be caused by a virus, bacteria, or other microorganism.',
+			'I am a global outbreak of a disease.',
+		],
+		difficulty: 'easy'
+	},
+	{
+		word: 'alacrity',
+		hintDb: [
+			'I can be contagious and inspire others.',
+			'I can help overcome obstacles and achieve goals.',
+			'I am often seen as a positive trait or attribute.',
+			'I can be associated with enthusiasm and eagerness.',
+			'I am a quick and cheerful willingness to do something.'
+		],
+		difficulty: 'hard'
 	}
 ];
 
