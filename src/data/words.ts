@@ -91,6 +91,17 @@ const words: Word[] = [
 			'I am 26.2 miles long.',
 			'I am a long-distance race that tests endurance.'
 		],
+		difficulty: 'medium'
+	},
+	{
+		word: 'parachute',
+		hintDb: [
+			'I was first used in the 18th century by a French inventor.',
+			'I can be opened manually or automatically, depending on the design.',
+			'I am made of fabric and cords that create drag and provide stability.',
+			'I am essential to the safety of skydivers, pilots, and astronauts.',
+			'I am used to slown the descent of a person or object.'
+		],
 		difficulty: 'easy'
 	}
 ];
