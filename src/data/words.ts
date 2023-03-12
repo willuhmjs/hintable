@@ -206,7 +206,7 @@ const words: Word[] = [
 	{
 		word: 'hypothesis',
 		hintDb: [
-			'I can be proven or disproven',
+			'I can be proven or disproven.',
 			'I am often written as an if-then statement.',
 			'I am an important part of the scientific method',
 			'I am often tested through experimentation',
