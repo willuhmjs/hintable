@@ -1,11 +1,12 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { ended, won } from './gameState';
 	import type { Word } from './word';
 
 	export let data: Word;
 	const { word, hintDb } = data;
 
-	let hints = [hintDb[0]];
+	let hints: hintDb = [];
 	export let hintnumber: number;
 	$: hintnumber = hintDb.length - hints.length;
 	let hintButton: HTMLButtonElement;
@@ -37,6 +38,8 @@
 		hintIcon.className = className;
 		hintButton.disabled = disabled;
 	};
+
+	onMount(getHint);
 </script>
 
 <button id="hintbutton" on:click={getHint} bind:this={hintButton}
