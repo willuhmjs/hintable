@@ -232,7 +232,7 @@ const words: Word[] = [
 			'I am often associated with ethical or moral values.',
 			'I am a Greek word that means "character".',
 			'I am a rhetorical appeal that focues on the character of the speaker or writer.',
-			'I am one of the three modes of persuasion in Aristotle\'s Rhetoric.'
+			"I am one of the three modes of persuasion in Aristotle's Rhetoric."
 		],
 		difficulty: 'medium'
 	},
@@ -246,6 +246,17 @@ const words: Word[] = [
 			'I am an adjective meaning pleasent or musical to the ear'
 		],
 		difficulty: 'hard'
+	},
+	{
+		word: 'dolphin',
+		hintDb: [
+			'I am known for my intelligence and ability to learn.',
+			'I am friendly and playful and known to interact with humans in the wild.',
+			'Many people believe I am a fish, but I am actually a mammal.',
+			'I use clicks, whistles, and body language to communicate.',
+			'I am a cetacean found in oceans around the world.'
+		],
+		difficulty: 'easy'
 	}
 ];
 
