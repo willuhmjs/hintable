@@ -9,15 +9,11 @@
 	// @ts-ignore
 	import Confetti from 'svelte-confetti';
 
-	let confettiTime = false;
 
 	let guesses = 0;
 	let hintnumber = 4;
 	let noHints = false;
 	$: if ($ended) {
-		if ($won) {
-			confettiTime = true;
-		}
 		noHints = true;
 	}
 
@@ -30,7 +26,7 @@
 	<!-- in hints, we need to change the button icon -->
 	<Hints {noHints} {data} bind:hintnumber />
 
-	{#if confettiTime}
+	{#if $won}
 		<div class="confettibox">
 			<Confetti
 				x={[-5, 5]}
