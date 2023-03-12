@@ -213,6 +213,39 @@ const words: Word[] = [
 			'I am a tenative explanation for an observation or phenomenon.'
 		],
 		difficulty: 'easy'
+	},
+	{
+		word: 'dystopia',
+		hintDb: [
+			'I am a type of society.',
+			'I am often portrayed in literature and film.',
+			'I am often characterized by a lack of freedom and a high level of control.',
+			'I am often associated with a totalitarian government.',
+			'I am a society characterized by human misery, oppression, and poverty.'
+		],
+		difficulty: 'easy'
+	},
+	{
+		word: 'ethos',
+		hintDb: [
+			'I can be used in various forms of communication, including speeches, advertisements, and essays.',
+			'I am often associated with ethical or moral values.',
+			'I am a Greek word that means "character".',
+			'I am a rhetorical appeal that focues on the character of the speaker or writer.',
+			'I am one of the three modes of persuasion in Aristotle\'s Rhetoric.'
+		],
+		difficulty: 'medium'
+	},
+	{
+		word: 'mellifluous',
+		hintDb: [
+			'My roots come from the Latin words mel, meaning "honey," and fluere, meaning "to flow."',
+			'My antonyms are harsh, grating, and unpleasant.',
+			'My synonyms are harmonious, melodious, and tuneful.',
+			'I am often used to describe sounds, especially voices or music.',
+			'I am an adjective meaning pleasent or musical to the ear'
+		],
+		difficulty: 'hard'
 	}
 ];
 
