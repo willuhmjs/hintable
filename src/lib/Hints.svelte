@@ -67,7 +67,10 @@
 		border: 1px solid transparent;
 		font-size: 1.8rem;
 		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	}
 
+	#hintbutton:enabled {
+		color: black;
 	}
 
 	.hintbox {

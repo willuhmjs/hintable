@@ -37,7 +37,6 @@
 
     .box {
 		width: 100%;
-		box-sizing: border-box;
 		border: 1px solid transparent;
 		font-size: 1rem;
 		margin: 0.35rem 0;
@@ -47,6 +46,7 @@
 
     .button {
 		background-color: #ffe1b8;
+		box-sizing: border-box;
         border: none;
         padding: 15px;
         font-size: 20px;
