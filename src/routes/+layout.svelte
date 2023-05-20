@@ -40,3 +40,4 @@
         content="Can you guess a word with just five hints? Try this exciting game and put your vocabulary to the test!"
     />
 </svelte:head>
+<slot/>
