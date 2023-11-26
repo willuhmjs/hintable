@@ -9,7 +9,8 @@
 	// @ts-ignore
 	import Confetti from 'svelte-confetti';
 
-
+	$ended = false;
+	$won = false;
 	let guesses = 0;
 	let hintnumber = 4;
 	let noHints = false;
