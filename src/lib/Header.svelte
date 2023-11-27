@@ -12,23 +12,20 @@
   
   <div>
 	<div class="titlebox">
-	  <!-- svelte-ignore a11y-click-events-have-key-events -->
-
-	  <div id="headerbutton" 
+	  <button class="headerbutton" 
 	  on:click={() => (shareActivated = !shareActivated)}>
 		<Fa icon={faShareFromSquare} pull="left" fw=true id="shareIcon" style="transform:translate(-5px, -0.28em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{shareActivated ? 'headerbuttonactive' : ''}" />
 		{#if shareActivated}
 		  <Share />
 		{/if}
-	</div>
+	</button>
 	  <h2 class="title" aria-label="title"><span id="glow">hint</span>able</h2>
-	  <!-- svelte-ignore a11y-click-events-have-key-events -->
-	  <div id="headerbutton" on:click={() => (menuActivated = !menuActivated)}>
+	  <button class="headerbutton" on:click={() => (menuActivated = !menuActivated)}>
 		<Fa icon={faEllipsisVertical} fw=true id="headerIcon" style="transform:translateY(-0.28em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{menuActivated ? 'headerbuttonactive' : ''}" />
 		{#if menuActivated}
 		  <Menu />
 		{/if}
-	  </div>
+	  </button>
 	</div>
   </div>
   
@@ -54,7 +51,8 @@
 	  margin-right: 35px;
 	}
   
-	#headerbutton {
+	.headerbutton {
+	  all: unset;
 	  display: inline;
 	  position: relative;
 	  right: 0;
