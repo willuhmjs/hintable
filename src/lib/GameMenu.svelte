@@ -2,14 +2,18 @@
 	import words from '../data/words';
 	import Fa from 'svelte-fa'
   import { faShuffle } from '@fortawesome/free-solid-svg-icons'
-	const getButtonColor = (difficulty: 'easy' | 'medium' | 'hard') => {
+	const getButtonColor = (difficulty: 'easy' | 'medium' | 'hard' | 'expert') => {
 		switch (difficulty) {
 			case 'easy':
 				return '#b2f2af';
 			case 'medium':
-				return ' #f2e8af';
+				return '#f2e8af';
 			case 'hard':
 				return '#f2afaf';
+			case 'expert':
+				return '#afaff2'
+			default:
+				return "#808080";
 		}
 	};
 </script>

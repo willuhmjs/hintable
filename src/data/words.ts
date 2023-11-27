@@ -1,7 +1,7 @@
 interface Word {
     word: string;
     hintDb: [string, string, string, string, string];
-    difficulty: 'easy' | 'medium' | 'hard';
+    difficulty: 'easy' | 'medium' | 'hard' | 'expert';
 }
 
 const words: Word[] = [
@@ -14,7 +14,7 @@ const words: Word[] = [
             'I am a bouncy ball used in a popular sport.',
             'I am often bounced, dribbled, and passed between players.'
         ],
-        difficulty: 'easy'
+        difficulty: 'medium'
     },
     {
         word: 'alacrity',
@@ -25,7 +25,7 @@ const words: Word[] = [
             'I can be associated with enthusiasm and eagerness.',
             'I am a quick and cheerful willingness to do something.'
         ],
-        difficulty: 'hard'
+        difficulty: 'expert'
     },
     {
         word: 'aesthetic',
@@ -47,7 +47,7 @@ const words: Word[] = [
             'I can be caused by a virus, bacteria, or other microorganism.',
             'I am a global outbreak of a disease.'
         ],
-        difficulty: 'easy'
+        difficulty: 'hard'
     },
     {
         word: 'pizza',
@@ -91,7 +91,7 @@ const words: Word[] = [
             'I am often used to accompany singing or as a solo instrument.',
             'I am a musical instrument that is played by strumming or plucking strings.'
         ],
-        difficulty: 'easy'
+        difficulty: 'medium'
     },
     {
         word: 'ocean',
@@ -102,7 +102,7 @@ const words: Word[] = [
             "I am essential to earth's ecosystem.",
             "I cover most of the Earth's surface."
         ],
-        difficulty: 'medium'
+        difficulty: 'easy'
     },
     {
         word: 'sloth',
@@ -135,7 +135,7 @@ const words: Word[] = [
             'I am essential to the safety of skydivers, pilots, and astronauts.',
             'I am used to slow the descent of a person or object.'
         ],
-        difficulty: 'easy'
+        difficulty: 'hard'
     },
     {
         word: 'telescope',
@@ -146,7 +146,7 @@ const words: Word[] = [
             'I can be used for terrestrial and astronomical observations.',
             'I am used for studying the sky and other objects in space.'
         ],
-        difficulty: 'easy'
+        difficulty: 'medium'
     },
     {
         word: 'escalator',
@@ -157,7 +157,7 @@ const words: Word[] = [
             'I move people from one level to another.',
             'I am a moving staircase.'
         ],
-        difficulty: 'easy'
+        difficulty: 'hard'
     },
     {
         word: 'schadenfreude',
@@ -168,7 +168,7 @@ const words: Word[] = [
             'My origins are traced back to German language and culture.',
             'I am a German word that means "harm-joy".'
         ],
-        difficulty: 'hard'
+        difficulty: 'expert'
     },
     {
         word: 'enigma',
@@ -179,7 +179,7 @@ const words: Word[] = [
             'The inner workings of my mind are an _________.',
             'I am something mysterious, puzzling, or difficult to understand.'
         ],
-        difficulty: 'medium'
+        difficulty: 'hard'
     },
     {
         word: 'paradox',
@@ -190,7 +190,7 @@ const words: Word[] = [
             'We are stuck in a _________.',
             'I am a statement that seems contradictory but may be true.'
         ],
-        difficulty: 'medium'
+        difficulty: 'hard'
     },
     {
         word: 'satire',
@@ -201,7 +201,7 @@ const words: Word[] = [
             'I use humor, irony, or exaggeration to criticize people or institutions.',
             'Example: A Modest Proposal by Jonathan Swift.'
         ],
-        difficulty: 'easy'
+        difficulty: 'medium'
     },
     {
         word: 'hypothesis',
@@ -212,7 +212,7 @@ const words: Word[] = [
             'I am often tested through experimentation.',
             'I am a tentative explanation for an observation or phenomenon.'
         ],
-        difficulty: 'easy'
+        difficulty: 'medium'
     },
     {
         word: 'dystopia',
@@ -223,7 +223,7 @@ const words: Word[] = [
             'I am often associated with a totalitarian government.',
             'I am a society characterized by human misery, oppression, and poverty.'
         ],
-        difficulty: 'easy'
+        difficulty: 'hard'
     },
     {
         word: 'ethos',
@@ -245,7 +245,7 @@ const words: Word[] = [
             'I am often used to describe sounds, especially voices or music.',
             'I am an adjective meaning pleasant or musical to the ear.'
         ],
-        difficulty: 'hard'
+        difficulty: 'expert'
     },
     {
         word: 'dolphin',
