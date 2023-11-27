@@ -2,18 +2,41 @@
 	import Menu from './Menu.svelte';
 	import Share from './Share.svelte';
 	import Fa from 'svelte-fa';
+	import { ended, won} from "$lib/gameState";
 	import { faEllipsisVertical, faShareFromSquare } from '@fortawesome/free-solid-svg-icons';
-  
+	export let word;
+	import words from "../data/words";
 	export let guesses = 0;
 	export let hintnumber = 4;
 	let menuActivated = false;
 	let shareActivated = false;
+
+	import { browser } from '$app/environment';
+  $: webShareAPISupported = browser && typeof navigator.share !== 'undefined';
+ 
+   $: handleWebShare;
+   let text;
+   $: if ($ended && $won) {
+	text = `Hintable #${words.findIndex((element) => element.word === word) + 1} ${"💡".repeat(5-hintnumber)} (${5-hintnumber}/5)`
+   }
+   
+   const handleWebShare = async () => {
+     try {
+       navigator.share({
+         title: "hintable",
+         text,
+         url: document.location.href,
+       });
+     } catch (error) {
+       webShareAPISupported = false;
+     }
+   };
   </script>
   
   <div>
 	<div class="titlebox">
 	  <button class="headerbutton" 
-	  on:click={() => (shareActivated = !shareActivated)}>
+	  on:click={() => (webShareAPISupported ? handleWebShare() : shareActivated = !shareActivated)}>
 		<Fa icon={faShareFromSquare} pull="left" fw=true id="shareIcon" style="transform:translate(-5px, -0.28em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{shareActivated ? 'headerbuttonactive' : ''}" />
 		{#if shareActivated}
 		  <Share />

@@ -1,7 +1,7 @@
 <script>
-	import { ended, won } from './gameState';
 	import Fa from 'svelte-fa'
-  import { faBackward, faFlag } from '@fortawesome/free-solid-svg-icons'
+	import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
+	
 </script>
 
 <div id="wrapper"  style="top: 53px; left: 0;">
