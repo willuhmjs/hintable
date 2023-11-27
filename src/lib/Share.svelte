@@ -41,12 +41,13 @@
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 		width: 205px;
 		z-index: 1;
-
+		display: flex;
+		justify-content: start;
     }
 
     #wrapper ul {
     list-style: none;
-    margin: auto;
+    margin: 0;
     padding: 8px;
     display: flex;
 }
