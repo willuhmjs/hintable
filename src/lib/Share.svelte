@@ -4,29 +4,29 @@
 	
 </script>
 
-<div id="wrapper"  style="top: 53px; left: 0;">
+<div id="wrapper"  style="top: 12px; left: 0;">
 	<ul>
 		<li>
             <a class="menubutton">
-			<Fa style="width: 22px; height: 22px" icon={faFlag} />
+			<Fa style="width: 22px; height: 22px" icon={faXTwitter} />
             </a>
 		</li>
 		<li>
             <a class="menubutton">
 
-			<Fa style="width: 22    px; height: 22px" icon={faBackward} />
+			<Fa style="width: 22px; height: 22px" icon={faXTwitter} />
             </a>
 		</li>
         <li>
             <a class="menubutton">
 
-			<Fa style="width: 22    px; height: 22px" icon={faBackward} />
+			<Fa style="width: 22px; height: 22px" icon={faXTwitter} />
             </a>
 		</li>
         <li>
             <a class="menubutton">
 
-			<Fa style="width: 22    px; height: 22px" icon={faBackward} />
+			<Fa style="width: 22px; height: 22px" icon={faXTwitter} />
             </a>
 		</li>
 	</ul>

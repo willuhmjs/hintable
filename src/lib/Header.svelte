@@ -12,12 +12,13 @@
 	let shareActivated = false;
 
 	import { browser } from '$app/environment';
-  $: webShareAPISupported = browser && typeof navigator.share !== 'undefined';
- 
+  	//$: webShareAPISupported = browser && typeof navigator.share !== 'undefined';
    $: handleWebShare;
    let text;
    $: if ($ended && $won) {
-	text = `Hintable #${words.findIndex((element) => element.word === word) + 1} ${"💡".repeat(5-hintnumber)} (${5-hintnumber}/5)`
+	text = `Hintable #${words.findIndex((element) => element.word === word) + 1} ${"💡".repeat(5-hintnumber)} (${5-hintnumber}/5 hints used)`
+   } {
+	text= 'Play hintable, an exciting word guessing game!'
    }
    
    const handleWebShare = async () => {
@@ -28,7 +29,7 @@
          url: document.location.href,
        });
      } catch (error) {
-       webShareAPISupported = false;
+		shareActivated = !shareActivated
      }
    };
   </script>
@@ -36,8 +37,9 @@
   <div>
 	<div class="titlebox">
 	  <button class="headerbutton" 
-	  on:click={() => (webShareAPISupported ? handleWebShare() : shareActivated = !shareActivated)}>
+	  on:click={handleWebShare}>
 		<Fa icon={faShareFromSquare} pull="left" fw=true id="shareIcon" style="transform:translate(-5px, -0.28em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{shareActivated ? 'headerbuttonactive' : ''}" />
+		
 		{#if shareActivated}
 		  <Share />
 		{/if}

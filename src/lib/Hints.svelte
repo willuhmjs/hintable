@@ -48,7 +48,7 @@
 	</button>
 {#if noHints}
 	<div id="hint-5" class="hintbox">
-		<p class="hinttext">I am "<b>{word}</b>." Thanks for playing!</p>
+		<p class="hinttext">I am "<b>{word}</b>." <a href="menu">Play again?</a></p>
 	</div>
 {/if}
 
@@ -102,6 +102,10 @@
 		margin-left: 1rem;
 		margin-right: 1rem;
 		font-size: 1.1rem;
+	}
+
+	.hinttext a {
+		color: inherit;
 	}
 
 	#hint-5 {
