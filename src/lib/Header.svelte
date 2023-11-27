@@ -1,71 +1,82 @@
 <script lang="ts">
 	import Menu from './Menu.svelte';
+	import Share from './Share.svelte';
+	import Fa from 'svelte-fa';
+	import { faEllipsisVertical, faShareFromSquare } from '@fortawesome/free-solid-svg-icons';
+  
 	export let guesses = 0;
 	export let hintnumber = 4;
 	let menuActivated = false;
-	import Fa from 'svelte-fa'
-  import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
-</script>
-
-
-<div>
+	let shareActivated = false;
+  </script>
+  
+  <div>
 	<div class="titlebox">
-		<h2 class="title" aria-label="title"><span id="glow">hint</span>able</h2>
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<div id="headerbutton" on:click={() => (menuActivated = !menuActivated)}>
-			<Fa icon={faEllipsisVertical} id="headerIcon" style="transform:translateY(-0.22em); text-align: center; padding: 5px; border-radius: 50%; width: 100%; height: 100%;" class="{menuActivated ? 'headerbuttonactive' : ''}" />
-			{#if menuActivated}
-				<Menu />
-			{/if}
-		</div>
+	  <!-- svelte-ignore a11y-click-events-have-key-events -->
+
+	  <div id="headerbutton" 
+	  on:click={() => (shareActivated = !shareActivated)}>
+		<Fa icon={faShareFromSquare} pull="left" fw=true id="shareIcon" style="transform:translate(-5px, -0.28em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{shareActivated ? 'headerbuttonactive' : ''}" />
+		{#if shareActivated}
+		  <Share />
+		{/if}
 	</div>
-</div>
-<div class="databox">
+	  <h2 class="title" aria-label="title"><span id="glow">hint</span>able</h2>
+	  <!-- svelte-ignore a11y-click-events-have-key-events -->
+	  <div id="headerbutton" on:click={() => (menuActivated = !menuActivated)}>
+		<Fa icon={faEllipsisVertical} fw=true id="headerIcon" style="transform:translateY(-0.28em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{menuActivated ? 'headerbuttonactive' : ''}" />
+		{#if menuActivated}
+		  <Menu />
+		{/if}
+	  </div>
+	</div>
+  </div>
+  
+  <div class="databox">
 	<h3>hints remaining: {hintnumber}</h3>
 	<h3>guesses: {guesses}</h3>
-</div>
-
-<style>
+  </div>
+  
+  <style>
 	.titlebox {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: -0.8rem;
-		margin-top: -0.8rem;
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  margin-bottom: -0.8rem;
+	  margin-top: -0.8rem;
 	}
-
+  
 	.title {
-		font-size: 2rem;
-		text-align: center;
-		flex-grow: 1;
-		margin-left: 35px;
+	  font-size: 2rem;
+	  text-align: center;
+	  flex-grow: 1;
+	  margin-left: 35px;
+	  margin-right: 35px;
 	}
-
-	/* despite my best efforts, a gray box appears on mobile browsers (maybe due to focus)
-	 TODO: deal with the pain of mobile web development */
+  
 	#headerbutton {
-		display: inline;
-		position: relative;
-		right: 0;
-		top: 0;
-		margin: 10px;
-		font-size: 22px;
-		width: 25px;
-		height: 25px;
+	  display: inline;
+	  position: relative;
+	  right: 0;
+	  top: 0;
+	  font-size: 22px;
+	  width: 25px;
+	  height: 25px;
 	}
-
+  
+	:global(#shareIcon:hover),
 	:global(#headerIcon:hover),
 	:global(.headerbuttonactive) {
-		cursor: pointer;
-		background-color: #f5f2e4;
+	  cursor: pointer;
+	  background-color: #f5f2e4;
 	}
-
+  
 	#glow {
-		transition: color 0.25s ease-in-out;
+	  transition: color 0.25s ease-in-out;
 	}
-
+  
 	.databox {
-		display: flex;
-		justify-content: space-between;
+	  display: flex;
+	  justify-content: space-between;
 	}
-</style>
+  </style>
