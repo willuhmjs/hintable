@@ -1,6 +1,7 @@
 <script>
 	import { ended, won } from './gameState';
-
+	import Fa from 'svelte-fa'
+  import { faBackward, faFlag } from '@fortawesome/free-solid-svg-icons'
 	const giveUp = () => {
 		$ended = true;
 		$won = false;
@@ -10,11 +11,11 @@
 <div id="wrapper" style="top: 10px; right: 180px;">
 	<ul>
 		<li>
-			<button on:click={giveUp} class="menubutton"><i class="fa-duotone fa-flag" />Give Up</button>
+			<button on:click={giveUp} class="menubutton"><Fa fw=true style="margin-right: 0.65rem" icon={faFlag} />Give Up</button>
 		</li>
 		<li>
 			<a href="/hintable/menu" class="menubutton"
-				><i class="fa-duotone fa-backward" />Previous Games</a
+				><Fa fw=true style="margin-right: 0.65rem" icon={faBackward} />Previous Games</a
 			>
 		</li>
 	</ul>
@@ -62,9 +63,5 @@
 		font-weight: bold;
 		width: 100%;
 		text-align: left;
-	}
-
-	.menubutton i {
-		margin-right: 0.65rem;
 	}
 </style>

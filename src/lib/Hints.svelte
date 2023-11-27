@@ -2,7 +2,8 @@
 	import { onMount } from 'svelte';
 	import { ended, won } from './gameState';
 	import type { Word } from './word';
-
+	import { faFaceLaughBeam, faFaceSadCry, faFaceSadTear, faLightbulb, type IconDefinition } from '@fortawesome/free-regular-svg-icons';
+	import Fa from 'svelte-fa';
 	export let data: Word;
 	const { word, hintDb } = data;
 
@@ -10,22 +11,21 @@
 	export let hintnumber: number;
 	$: hintnumber = hintDb.length - hints.length;
 	let hintButton: HTMLButtonElement;
-	let hintIcon: HTMLElement;
 	export let noHints = false;
 
 	$: if ($ended) {
 		noHints = true;
 		hintButton.disabled = true;
 		if ($won) {
-			setStatus('fa-regular fa-face-laugh-beam', true);
+			setStatus(faFaceLaughBeam, true);
 		} else if (!$won) {
-			setStatus('fa-regular fa-face-sad-tear', true);
+			setStatus(faFaceSadCry, true);
 		}
 	}
 
 	const getHint = () => {
 		if (hints.length == hintDb.length - 1) {
-			setStatus('fa-regular fa-face-sad-tear', false);
+			setStatus(faFaceSadTear, false);
 		} else if (hints.length == hintDb.length) {
 			$ended = true;
 			$won = false;
@@ -34,17 +34,18 @@
 		hints = [hintDb[hints.length], ...hints];
 	};
 
-	const setStatus = (className: string, disabled: boolean) => {
-		hintIcon.className = className;
+	let icon = faLightbulb;
+	const setStatus = (_icon: IconDefinition, disabled: boolean) => {
+		icon = _icon;
 		hintButton.disabled = disabled;
 	};
-
 	onMount(getHint);
 </script>
 
 <button id="hintbutton" on:click={getHint} bind:this={hintButton}
-	><i bind:this={hintIcon} class="fa-regular fa-lightbulb" /></button
->
+	>
+	<Fa icon={icon} />
+	</button>
 {#if noHints}
 	<div id="hint-5" class="hintbox">
 		<p class="hinttext">I am "<b>{word}</b>." Thanks for playing!</p>

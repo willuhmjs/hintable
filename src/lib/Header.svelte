@@ -3,14 +3,17 @@
 	export let guesses = 0;
 	export let hintnumber = 4;
 	let menuActivated = false;
+	import Fa from 'svelte-fa'
+  import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
 </script>
+
 
 <div>
 	<div class="titlebox">
 		<h2 class="title" aria-label="title"><span id="glow">hint</span>able</h2>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<div id="menubutton" on:click={() => (menuActivated = !menuActivated)}>
-			<i class="fa-solid fa-ellipsis-vertical {menuActivated ? 'menubuttonactive' : ''}" />
+		<div id="headerbutton" on:click={() => (menuActivated = !menuActivated)}>
+			<Fa icon={faEllipsisVertical} id="headerIcon" style="transform:translateY(-0.22em); text-align: center; padding: 5px; border-radius: 50%; width: 100%; height: 100%;" class="{menuActivated ? 'headerbuttonactive' : ''}" />
 			{#if menuActivated}
 				<Menu />
 			{/if}
@@ -40,7 +43,7 @@
 
 	/* despite my best efforts, a gray box appears on mobile browsers (maybe due to focus)
 	 TODO: deal with the pain of mobile web development */
-	#menubutton {
+	#headerbutton {
 		display: inline;
 		position: relative;
 		right: 0;
@@ -50,16 +53,9 @@
 		width: 25px;
 		height: 25px;
 	}
-	#menubutton i {
-		text-align: center;
-		padding: 5px;
-		border-radius: 50%;
-		width: 100%;
-		height: 100%;
-	}
 
-	#menubutton i:hover,
-	.menubuttonactive {
+	:global(#headerIcon:hover),
+	:global(.headerbuttonactive) {
 		cursor: pointer;
 		background-color: #f5f2e4;
 	}

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import words from '../data/words';
-
+	import Fa from 'svelte-fa'
+  import { faShuffle } from '@fortawesome/free-solid-svg-icons'
 	const getButtonColor = (difficulty: 'easy' | 'medium' | 'hard') => {
 		switch (difficulty) {
 			case 'easy':
@@ -14,7 +15,7 @@
 </script>
 
 <div class="wrapper">
-	<a class="button randombutton" href={`/hintable/random`}><i class="fa-solid fa-shuffle" /></a>
+	<a class="button randombutton" href={`/hintable/random`}><Fa style="width: 100%" icon={faShuffle} /></a>
 	{#each words as _, index}
 		{@const reverseIndex = words.length - 1 - index}
 		{@const word = words[reverseIndex]}
@@ -65,9 +66,7 @@
 
 	.randombutton {
 		margin-bottom: 1rem;
-		text-align: center;
 	}
-
 	.button * {
 		flex: 1;
 	}

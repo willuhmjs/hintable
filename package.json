@@ -33,7 +33,10 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fortawesome/free-regular-svg-icons": "^6.4.2",
+		"@fortawesome/free-solid-svg-icons": "^6.4.2",
 		"@sveltejs/adapter-static": "^2.0.1",
-		"svelte-confetti": "^1.2.2"
+		"svelte-confetti": "^1.2.2",
+		"svelte-fa": "^3.0.4"
 	}
 }
