@@ -3,8 +3,10 @@
 	import Fa from 'svelte-fa'
   import { faBackward, faFlag } from '@fortawesome/free-solid-svg-icons'
 	const giveUp = () => {
-		$ended = true;
-		$won = false;
+		if (!$ended) {
+			$ended = true;
+			$won = false;
+		}
 	};
 </script>
 
