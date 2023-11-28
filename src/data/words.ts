@@ -135,7 +135,7 @@ const words: Word[] = [
             'I am essential to the safety of skydivers, pilots, and astronauts.',
             'I am used to slow the descent of a person or object.'
         ],
-        difficulty: 'hard'
+        difficulty: 'easy'
     },
     {
         word: 'telescope',
@@ -146,7 +146,7 @@ const words: Word[] = [
             'I can be used for terrestrial and astronomical observations.',
             'I am used for studying the sky and other objects in space.'
         ],
-        difficulty: 'medium'
+        difficulty: 'easy'
     },
     {
         word: 'escalator',
@@ -223,7 +223,7 @@ const words: Word[] = [
             'I am often associated with a totalitarian government.',
             'I am a society characterized by human misery, oppression, and poverty.'
         ],
-        difficulty: 'hard'
+        difficulty: 'medium'
     },
     {
         word: 'ethos',
@@ -234,7 +234,7 @@ const words: Word[] = [
             'I am a rhetorical appeal that focues on the character of the speaker or writer.',
             "I am one of the three modes of persuasion in Aristotle's Rhetoric."
         ],
-        difficulty: 'medium'
+        difficulty: 'hard'
     },
     {
         word: 'mellifluous',
