@@ -257,7 +257,52 @@ const words: Word[] = [
             'I am a cetacean found in oceans around the world.'
         ],
         difficulty: 'easy'
+    },
+    {
+        word: 'quartz',
+        hintDb: [
+            'I can be transparent, translucent, or opaque.',
+            'I am composed of silicon and oxygen atoms.',
+            'I can be used in jewelry, clocks, watches, and electronics.',
+            'I am a common mineral found in many rocks.',
+            'I have a hexagonal crystal structure and a hardness of 7 on the Mohs scale.',
+        ],
+        difficulty: 'hard'
+    },
+    {
+        word: 'jazz',
+        hintDb: [
+            'I am characterized by complex rhythms, syncopation, swing, and improvisation.',
+            'I have many subgenres, such as bebop, cool, fusion, and smooth.',
+            'I am a genre of music that originated in the late 19th and early 20th centuries.',
+            'I have influenced many other forms of music, such as rock, pop, and hip hop.',
+            'I have produced many famous musicians, such as Louis Armstrong, Duke Ellington, Miles Davis, and John Coltrane.'
+        ],
+        difficulty: 'medium'
+    },
+    {
+        word: 'cryptocurrency',
+        hintDb: [
+            'I operate independently of a central authority or intermediary.',
+            'I use cryptography to secure and verify transactions and to control the creation of new units.',
+            'I can be exchanged for goods, services, or other currencies on online platforms.',
+            'I am a digital or virtual form of money.',
+            'I have many examples, such as Bitcoin, Ethereum, and Dogecoin.'
+        ],
+        difficulty: 'hard'
+    },
+    {
+        word: 'yoga',
+        hintDb: [
+            'I am often associated with a word that means "union" or "connection".',
+            'I can promote health, wellness, and relaxation.',
+            'I am a physical, mental, and spiritual practice that originated in India.',
+            'I involve various postures, breathing techniques, and meditation.',
+            'I have many types, such as hatha, vinyasa, bikram, and ashtanga.',
+        ],
+        difficulty: 'easy'
     }
+    
 ];
 
 export default words;
