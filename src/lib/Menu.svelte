@@ -11,11 +11,11 @@
 <div id="wrapper" style="top: 10px; right: 180px;">
 	<ul>
 		<li>
-			<button on:click={giveUp} class="menubutton"><Fa fw=true style="margin-right: 0.65rem" icon={faFlag} />Give Up</button>
+			<button on:click={giveUp} class="menubutton"><Fa fw=true style="margin-right: 8px" icon={faFlag} />Give Up</button>
 		</li>
 		<li>
 			<a href="/hintable/menu" class="menubutton"
-				><Fa fw=true style="margin-right: 0.65rem" icon={faBackward} />Previous Games</a
+				><Fa fw=true style="margin-right: 8px" icon={faBackward} />Previous Games</a
 			>
 		</li>
 	</ul>
