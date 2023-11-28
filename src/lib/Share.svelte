@@ -1,14 +1,21 @@
-<script>
+<script lang="ts">
 	import Fa from 'svelte-fa'
 	import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
-	
+	import { ended, won } from './gameState';
+	import words from "../data/words";
+	let text: string;
+   $: if ($ended && $won) {
+	text = `hintable #${words.findIndex((element) => element.word === word) + 1} ${"💡".repeat(hintnumber)}`
+   } else {
+	text= 'Play hintable, an exciting word guessing game!'
+   }
 </script>
 
 <div id="wrapper"  style="top: 12px; left: 0;">
 	<ul>
 		<li>
-            <a class="menubutton">
-			<Fa style="width: 22px; height: 22px" icon={faXTwitter} />
+            <a class="menubutton" href="https://twitter.com/intent/tweet?url={document.location.href}&text=">
+				<Fa style="width: 22px; height: 22px" icon={faXTwitter} />
             </a>
 		</li>
 		<li>

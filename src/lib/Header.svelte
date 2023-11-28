@@ -3,7 +3,7 @@
 	import Share from './Share.svelte';
 	import Fa from 'svelte-fa';
 	import { ended, won} from "$lib/gameState";
-	import { faEllipsisVertical, faShareNodes, faBars } from '@fortawesome/free-solid-svg-icons';
+	import { faShareNodes, faBars } from '@fortawesome/free-solid-svg-icons';
 	export let word;
 	import words from "../data/words";
 	export let guesses = 0;
@@ -11,13 +11,13 @@
 	let menuActivated = false;
 	let shareActivated = false;
 
-	import { browser } from '$app/environment';
+	//import { browser } from '$app/environment';
   	//$: webShareAPISupported = browser && typeof navigator.share !== 'undefined';
    $: handleWebShare;
-   let text;
+   let text: string;
    $: if ($ended && $won) {
 	text = `hintable #${words.findIndex((element) => element.word === word) + 1} ${"💡".repeat(hintnumber)}`
-   } {
+   } else {
 	text= 'Play hintable, an exciting word guessing game!'
    }
    
@@ -38,15 +38,14 @@
 	<div class="titlebox">
 	  <button class="headerbutton" 
 	  on:click={handleWebShare}>
-		<Fa icon={faShareNodes} pull="left" fw=true id="shareIcon" style="transform:translate(-5px, -0.28em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{shareActivated ? 'headerbuttonactive' : ''}" />
-		
+		<Fa icon={faShareNodes} pull="left" fw=true id="shareIcon" style="transform:translate(-5px, -0.33em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{shareActivated ? 'headerbuttonactive' : ''}" />
 		{#if shareActivated}
 		  <Share />
 		{/if}
 	</button>
 	  <h2 class="title" aria-label="title">hintable</h2>
 	  <button class="headerbutton" on:click={() => (menuActivated = !menuActivated)}>
-		<Fa icon={faBars	} fw=true id="headerIcon" style="transform:translateY(-0.28em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{menuActivated ? 'headerbuttonactive' : ''}" />
+		<Fa icon={faBars} fw=true id="headerIcon" style="transform:translateY(-0.33em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{menuActivated ? 'headerbuttonactive' : ''}" />
 		{#if menuActivated}
 		  <Menu />
 		{/if}
