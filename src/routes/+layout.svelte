@@ -13,8 +13,7 @@
         }
     </style>
     <!-- Primary Meta Tags -->
-    <title>hintable - an exciting word guessing game</title>
-    <meta name="title" content="hintable - an exciting word guessing game" />
+
     <meta
         name="description"
         content="Can you guess a word with just five hints? Try this exciting game and put your vocabulary to the test!"
@@ -24,7 +23,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://willuhmjs.github.io/hintable/" />
-    <meta property="og:title" content="hintable - an exciting word guessing game" />
+
     <meta
         property="og:description"
         content="Can you guess a word with just five hints? Try this exciting game and put your vocabulary to the test!"
@@ -33,7 +32,7 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://willuhmjs.github.io/hintable/" />
-    <meta property="twitter:title" content="hintable - an exciting word guessing game" />
+
     <meta
         property="twitter:description"
         content="Can you guess a word with just five hints? Try this exciting game and put your vocabulary to the test!"
