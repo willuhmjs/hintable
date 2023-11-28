@@ -3,6 +3,8 @@
 	import { faTwitterSquare, faFacebookSquare, faLinkedin, faTumblrSquare } from '@fortawesome/free-brands-svg-icons'
 	import { ended, won } from './gameState';
 	import words from "../data/words";
+	export let word: string;
+	export let hintnumber: number;
 	let text: string;
    $: if ($ended && $won) {
 	text = `hintable #${words.findIndex((element) => element.word === word) + 1} ${"💡".repeat(hintnumber)}`

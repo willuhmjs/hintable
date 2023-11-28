@@ -4,7 +4,7 @@
 	import Fa from 'svelte-fa';
 	import { ended, won} from "$lib/gameState";
 	import { faShareNodes, faBars } from '@fortawesome/free-solid-svg-icons';
-	export let word;
+	export let word: string;
 	import words from "../data/words";
 	export let guesses = 0;
 	export let hintnumber = 4;
@@ -40,7 +40,7 @@
 	  on:click={handleWebShare}>
 		<Fa icon={faShareNodes} pull="left" fw=true id="shareIcon" style="transform:translate(-5px, -0.33em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{shareActivated ? 'headerbuttonactive' : ''}" />
 		{#if shareActivated}
-		  <Share />
+		  <Share {word} {hintnumber} />
 		{/if}
 	</button>
 	  <h2 class="title" aria-label="title">hintable</h2>
