@@ -9,7 +9,7 @@ const words: Word[] = [
         word: 'basketball',
         hintDb: [
             'I originated in the United States.',
-            'I have orange and black stripes.',
+            'I am orange with black stripes.',
             'I am typically made of rubber or synthetic materials.',
             'I am a bouncy ball used in a popular sport.',
             'I am often bounced, dribbled, and passed between players.'
