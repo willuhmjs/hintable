@@ -26,7 +26,7 @@
        navigator.share({
          title: "hintable",
          text,
-         url: document.location.href,
+         url: location.href,
        });
      } catch (error) {
 		shareActivated = !shareActivated
