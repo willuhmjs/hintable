@@ -16,7 +16,7 @@
    $: handleWebShare;
    let text;
    $: if ($ended && $won) {
-	text = `Hintable #${words.findIndex((element) => element.word === word) + 1} ${"💡".repeat(5-hintnumber)} (${5-hintnumber}/5 hints used)`
+	text = `hintable #${words.findIndex((element) => element.word === word) + 1} ${"💡".repeat(hintnumber)}`
    } {
 	text= 'Play hintable, an exciting word guessing game!'
    }
