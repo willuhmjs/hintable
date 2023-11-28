@@ -44,7 +44,7 @@
 		  <Share />
 		{/if}
 	</button>
-	  <h2 class="title" aria-label="title"><span id="glow">hint</span>able</h2>
+	  <h2 class="title" aria-label="title">hintable</h2>
 	  <button class="headerbutton" on:click={() => (menuActivated = !menuActivated)}>
 		<Fa icon={faEllipsisVertical} fw=true id="headerIcon" style="transform:translateY(-0.28em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{menuActivated ? 'headerbuttonactive' : ''}" />
 		{#if menuActivated}
@@ -93,10 +93,7 @@
 	  cursor: pointer;
 	  background-color: #f5f2e4;
 	}
-  
-	#glow {
-	  transition: color 0.25s ease-in-out;
-	}
+
   
 	.databox {
 	  display: flex;
