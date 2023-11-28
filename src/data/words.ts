@@ -272,9 +272,9 @@ const words: Word[] = [
     {
         word: 'jazz',
         hintDb: [
-            'I am characterized by complex rhythms, syncopation, swing, and improvisation.',
+            'I originated in the late 19th and early 20th centuries.',
             'I have many subgenres, such as bebop, cool, fusion, and smooth.',
-            'I am a genre of music that originated in the late 19th and early 20th centuries.',
+            'I am characterized by complex rhythms, syncopation, swing, and improvisation.',
             'I have influenced many other forms of music, such as rock, pop, and hip hop.',
             'I have produced many famous musicians, such as Louis Armstrong, Duke Ellington, Miles Davis, and John Coltrane.'
         ],
