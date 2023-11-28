@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Fa from 'svelte-fa'
-	import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
+	import { faTwitterSquare, faFacebookSquare, faLinkedin, faTumblrSquare } from '@fortawesome/free-brands-svg-icons'
 	import { ended, won } from './gameState';
 	import words from "../data/words";
 	let text: string;
@@ -14,26 +14,23 @@
 <div id="wrapper"  style="top: 12px; left: 0;">
 	<ul>
 		<li>
-            <a class="menubutton" href="https://twitter.com/intent/tweet?url={document.location.href}&text=">
-				<Fa style="width: 22px; height: 22px" icon={faXTwitter} />
+            <a class="menubutton" href="https://twitter.com/intent/tweet?url={location.href}&text={text}">
+				<Fa icon={faTwitterSquare} fw=true />
             </a>
 		</li>
 		<li>
-            <a class="menubutton">
-
-			<Fa style="width: 22px; height: 22px" icon={faXTwitter} />
+            <a class="menubutton" href="https://www.facebook.com/sharer/sharer.php?u={location.href}">
+			<Fa  icon={faFacebookSquare}  fw=true />
             </a>
 		</li>
         <li>
-            <a class="menubutton">
-
-			<Fa style="width: 22px; height: 22px" icon={faXTwitter} />
+            <a class="menubutton" href="http://www.linkedin.com/shareArticle?mini=true&url={location.href}&title={text}">
+			<Fa  icon={faLinkedin} fw=true />
             </a>
 		</li>
         <li>
-            <a class="menubutton">
-
-			<Fa style="width: 22px; height: 22px" icon={faXTwitter} />
+            <a class="menubutton" href="http://www.tumblr.com/share?v=3&u={location.href}&t={text}">
+			<Fa  icon={faTumblrSquare} fw=true />
             </a>
 		</li>
 	</ul>
@@ -57,6 +54,7 @@
     margin: 0;
     padding: 8px;
     display: flex;
+	justify-content: space-around;
 }
 
 	#wrapper li {
@@ -83,5 +81,9 @@
 		color: inherit;
 		font-weight: bold;
 		text-align: left;
+	}
+
+	.menubutton :global(svg) {
+		font-size: 23px;
 	}
 </style>
