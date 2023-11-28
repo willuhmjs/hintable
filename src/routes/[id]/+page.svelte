@@ -20,12 +20,6 @@
 		}
 	}
 </script>
-<svelte:head>
-	<title>hintable - an exciting word guessing game (#{id})</title>
-    <meta name="title" content="hintable - an exciting word guessing game (#{id})" />
-    <meta property="og:title" content="hintable - an exciting word guessing game (#{id})" />
-    <meta property="twitter:title" content="hintable - an exciting word guessing game (#{id})" />
-</svelte:head>
 
 {#if error}
 	<h1>{error}</h1>
