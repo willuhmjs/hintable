@@ -3,7 +3,7 @@
 	import Share from './Share.svelte';
 	import Fa from 'svelte-fa';
 	import { ended, won} from "$lib/gameState";
-	import { faEllipsisVertical, faShareFromSquare } from '@fortawesome/free-solid-svg-icons';
+	import { faEllipsisVertical, faShareNodes, faBars } from '@fortawesome/free-solid-svg-icons';
 	export let word;
 	import words from "../data/words";
 	export let guesses = 0;
@@ -38,7 +38,7 @@
 	<div class="titlebox">
 	  <button class="headerbutton" 
 	  on:click={handleWebShare}>
-		<Fa icon={faShareFromSquare} pull="left" fw=true id="shareIcon" style="transform:translate(-5px, -0.28em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{shareActivated ? 'headerbuttonactive' : ''}" />
+		<Fa icon={faShareNodes} pull="left" fw=true id="shareIcon" style="transform:translate(-5px, -0.28em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{shareActivated ? 'headerbuttonactive' : ''}" />
 		
 		{#if shareActivated}
 		  <Share />
@@ -46,7 +46,7 @@
 	</button>
 	  <h2 class="title" aria-label="title">hintable</h2>
 	  <button class="headerbutton" on:click={() => (menuActivated = !menuActivated)}>
-		<Fa icon={faEllipsisVertical} fw=true id="headerIcon" style="transform:translateY(-0.28em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{menuActivated ? 'headerbuttonactive' : ''}" />
+		<Fa icon={faBars	} fw=true id="headerIcon" style="transform:translateY(-0.28em); text-align: center; padding: 7px; border-radius: 50%; width: 100%; height: 100%;" class="{menuActivated ? 'headerbuttonactive' : ''}" />
 		{#if menuActivated}
 		  <Menu />
 		{/if}
