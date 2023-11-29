@@ -16,7 +16,7 @@
 			hintnumber
 		)}`;
 	} else {
-		text = encodeURI('Play hintable, an exciting word guessing game!');
+		text = 'Play hintable, an exciting word guessing game!';
 	}
 </script>
 
@@ -47,7 +47,7 @@
 		<li>
 			<a
 				class="menubutton"
-				href={`hhttps://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+				href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
 					location.href
 				)}&title=${encodeURIComponent(text)}`}
 				target="_blank"
