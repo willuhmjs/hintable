@@ -38,7 +38,7 @@
 
 <div>
 	<div class="titlebox">
-		<button class="headerbutton" on:click={handleWebShare}>
+		<button class="headerbutton" on:click={handleWebShare} aria-label="Share">
 			<Fa
 				icon={faShareNodes}
 				pull="left"
@@ -52,7 +52,7 @@
 			{/if}
 		</button>
 		<h2 class="title" aria-label="title">hintable</h2>
-		<button class="headerbutton" on:click={() => (menuActivated = !menuActivated)}>
+		<button class="headerbutton" on:click={() => (menuActivated = !menuActivated)} aria-label="Menu">
 			<Fa
 				icon={faBars}
 				fw="true"

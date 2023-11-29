@@ -48,7 +48,7 @@
 	onMount(getHint);
 </script>
 
-<button id="hintbutton" on:click={getHint} bind:this={hintButton}>
+<button id="hintbutton" on:click={getHint} bind:this={hintButton} aria-label="New Hint">
 	<Fa {icon} />
 </button>
 {#if noHints}
