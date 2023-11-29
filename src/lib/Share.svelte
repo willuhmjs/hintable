@@ -8,33 +8,35 @@
 	let text: string;
    $: if ($ended && $won) {
 	text = `hintable #${words.findIndex((element) => element.word === word) + 1} ${"💡".repeat(hintnumber)}`
-   } else {
-	text= 'Play hintable, an exciting word guessing game!'
+} else {
+	text= encodeURI('Play hintable, an exciting word guessing game!');
    }
 </script>
 
 <div id="wrapper"  style="top: 12px; left: 0;">
 	<ul>
 		<li>
-            <a class="menubutton" href="https://twitter.com/intent/tweet?url={location.href}&text={text}">
+            <a class="menubutton" href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(location.href)}&text=${encodeURIComponent(text)}`} target="_blank" rel="noopener noreferrer">
 				<Fa icon={faTwitterSquare} fw=true />
-            </a>
+			</a>
+			
 		</li>
 		<li>
-            <a class="menubutton" href="https://www.facebook.com/sharer/sharer.php?u={location.href}">
-			<Fa  icon={faFacebookSquare}  fw=true />
-            </a>
-		</li>
-        <li>
-            <a class="menubutton" href="http://www.linkedin.com/shareArticle?mini=true&url={location.href}&title={text}">
-			<Fa  icon={faLinkedin} fw=true />
-            </a>
-		</li>
-        <li>
-            <a class="menubutton" href="http://www.tumblr.com/share?v=3&u={location.href}&t={text}">
-			<Fa  icon={faTumblrSquare} fw=true />
-            </a>
-		</li>
+    <a class="menubutton" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(location.href)}`} target="_blank" rel="noopener noreferrer">
+        <Fa icon={faFacebookSquare} fw=true />
+    </a>
+</li>
+<li>
+    <a class="menubutton" href={`hhttps://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(location.href)}&title=${encodeURIComponent(text)}`} target="_blank" rel="noopener noreferrer">
+        <Fa icon={faLinkedin} fw=true />
+    </a>
+</li>
+<li>
+    <a class="menubutton" href={`http://www.tumblr.com/share?v=3&u=${encodeURIComponent(location.href)}&t=${encodeURIComponent(text)}`} target="_blank" rel="noopener noreferrer">
+        <Fa icon={faTumblrSquare} fw=true />
+    </a>
+</li>
+
 	</ul>
 </div>
 
