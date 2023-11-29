@@ -2,7 +2,13 @@
 	import { onMount } from 'svelte';
 	import { ended, won } from './gameState';
 	import type { Word } from './word';
-	import { faFaceLaughBeam, faFaceSadCry, faFaceSadTear, faLightbulb, type IconDefinition } from '@fortawesome/free-regular-svg-icons';
+	import {
+		faFaceLaughBeam,
+		faFaceSadCry,
+		faFaceSadTear,
+		faLightbulb,
+		type IconDefinition
+	} from '@fortawesome/free-regular-svg-icons';
 	import Fa from 'svelte-fa';
 	export let data: Word;
 	const { word, hintDb } = data;
@@ -42,10 +48,9 @@
 	onMount(getHint);
 </script>
 
-<button id="hintbutton" on:click={getHint} bind:this={hintButton}
-	>
-	<Fa icon={icon} />
-	</button>
+<button id="hintbutton" on:click={getHint} bind:this={hintButton}>
+	<Fa {icon} />
+</button>
 {#if noHints}
 	<div id="hint-5" class="hintbox">
 		<p class="hinttext">I am "<b>{word}</b>." <a href="/hintable/menu">Play again?</a></p>

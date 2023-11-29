@@ -1,42 +1,73 @@
 <script lang="ts">
-	import Fa from 'svelte-fa'
-	import { faTwitterSquare, faFacebookSquare, faLinkedin, faTumblrSquare } from '@fortawesome/free-brands-svg-icons'
+	import Fa from 'svelte-fa';
+	import {
+		faTwitterSquare,
+		faFacebookSquare,
+		faLinkedin,
+		faTumblrSquare
+	} from '@fortawesome/free-brands-svg-icons';
 	import { ended, won } from './gameState';
-	import words from "../data/words";
+	import words from '../data/words';
 	export let word: string;
 	export let hintnumber: number;
 	let text: string;
-   $: if ($ended && $won) {
-	text = `hintable #${words.findIndex((element) => element.word === word) + 1} ${"💡".repeat(hintnumber)}`
-} else {
-	text= encodeURI('Play hintable, an exciting word guessing game!');
-   }
+	$: if ($ended && $won) {
+		text = `hintable #${words.findIndex((element) => element.word === word) + 1} ${'💡'.repeat(
+			hintnumber
+		)}`;
+	} else {
+		text = encodeURI('Play hintable, an exciting word guessing game!');
+	}
 </script>
 
-<div id="wrapper"  style="top: 12px; left: 0;">
+<div id="wrapper" style="top: 12px; left: 0;">
 	<ul>
 		<li>
-            <a class="menubutton" href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(location.href)}&text=${encodeURIComponent(text)}`} target="_blank" rel="noopener noreferrer">
-				<Fa icon={faTwitterSquare} fw=true />
+			<a
+				class="menubutton"
+				href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+					location.href
+				)}&text=${encodeURIComponent(text)}`}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<Fa icon={faTwitterSquare} fw="true" />
 			</a>
-			
 		</li>
 		<li>
-    <a class="menubutton" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(location.href)}`} target="_blank" rel="noopener noreferrer">
-        <Fa icon={faFacebookSquare} fw=true />
-    </a>
-</li>
-<li>
-    <a class="menubutton" href={`hhttps://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(location.href)}&title=${encodeURIComponent(text)}`} target="_blank" rel="noopener noreferrer">
-        <Fa icon={faLinkedin} fw=true />
-    </a>
-</li>
-<li>
-    <a class="menubutton" href={`http://www.tumblr.com/share?v=3&u=${encodeURIComponent(location.href)}&t=${encodeURIComponent(text)}`} target="_blank" rel="noopener noreferrer">
-        <Fa icon={faTumblrSquare} fw=true />
-    </a>
-</li>
-
+			<a
+				class="menubutton"
+				href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(location.href)}`}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<Fa icon={faFacebookSquare} fw="true" />
+			</a>
+		</li>
+		<li>
+			<a
+				class="menubutton"
+				href={`hhttps://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+					location.href
+				)}&title=${encodeURIComponent(text)}`}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<Fa icon={faLinkedin} fw="true" />
+			</a>
+		</li>
+		<li>
+			<a
+				class="menubutton"
+				href={`http://www.tumblr.com/share?v=3&u=${encodeURIComponent(
+					location.href
+				)}&t=${encodeURIComponent(text)}`}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<Fa icon={faTumblrSquare} fw="true" />
+			</a>
+		</li>
 	</ul>
 </div>
 
@@ -51,15 +82,15 @@
 		z-index: 1;
 		display: flex;
 		justify-content: start;
-    }
+	}
 
-    #wrapper ul {
-    list-style: none;
-    margin: 0;
-    padding: 8px;
-    display: flex;
-	justify-content: space-around;
-}
+	#wrapper ul {
+		list-style: none;
+		margin: 0;
+		padding: 8px;
+		display: flex;
+		justify-content: space-around;
+	}
 
 	#wrapper li {
 		border: 1px solid transparent;

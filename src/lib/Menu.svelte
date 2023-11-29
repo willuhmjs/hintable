@@ -1,7 +1,7 @@
 <script>
 	import { ended, won } from './gameState';
-	import Fa from 'svelte-fa'
-  import { faBackward, faFlag } from '@fortawesome/free-solid-svg-icons'
+	import Fa from 'svelte-fa';
+	import { faBackward, faFlag } from '@fortawesome/free-solid-svg-icons';
 	const giveUp = () => {
 		if (!$ended) {
 			$ended = true;
@@ -13,11 +13,13 @@
 <div id="wrapper" style="top: 10px; right: 180px;">
 	<ul>
 		<li>
-			<button on:click={giveUp} class="menubutton"><Fa fw=true style="margin-right: 8px" icon={faFlag} />Give Up</button>
+			<button on:click={giveUp} class="menubutton"
+				><Fa fw="true" style="margin-right: 8px" icon={faFlag} />Give Up</button
+			>
 		</li>
 		<li>
 			<a href="/hintable/menu" class="menubutton"
-				><Fa fw=true style="margin-right: 8px" icon={faBackward} />Previous Games</a
+				><Fa fw="true" style="margin-right: 8px" icon={faBackward} />Previous Games</a
 			>
 		</li>
 	</ul>
