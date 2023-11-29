@@ -49,7 +49,7 @@
 				class="menubutton"
 				href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
 					location.href
-				)}&title=${encodeURIComponent(text)}`}
+				)}&text=${encodeURIComponent(text)}`}
 				target="_blank"
 				rel="noopener noreferrer"
 			>
