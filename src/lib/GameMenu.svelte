@@ -19,7 +19,7 @@
 </script>
 
 <div class="wrapper">
-	<a class="button randombutton" href={`/hintable/random`}
+	<a class="button randombutton" href={`/random`}
 		><Fa style="width: 100%" icon={faShuffle} /></a
 	>
 	{#each words as _, index}
@@ -28,7 +28,7 @@
 		<div class="box">
 			<a
 				class="button"
-				href={`/hintable/${reverseIndex + 1}`}
+				href={`/${reverseIndex + 1}`}
 				style="background-color: {getButtonColor(word.difficulty)};"
 			>
 				<b>#{reverseIndex + 1}</b>

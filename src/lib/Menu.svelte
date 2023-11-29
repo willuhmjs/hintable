@@ -18,7 +18,7 @@
 			>
 		</li>
 		<li>
-			<a href="/hintable/menu" class="menubutton"
+			<a href="/menu" class="menubutton"
 				><Fa fw="true" style="margin-right: 8px" icon={faBackward} />Previous Games</a
 			>
 		</li>

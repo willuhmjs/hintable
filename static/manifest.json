@@ -1,0 +1,22 @@
+{
+	"short_name": "hintable",
+	"name": "hintable",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "favicon.png",
+			"type": "image/png",
+			"sizes": "128x128"
+		},
+		{
+			"src": "favicon_upscaled.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"background_color": "#fafafa",
+	"display": "standalone",
+	"scope": "/",
+	"theme_color": "#fffaf2",
+	"description": "Can you guess a word with just five hints? Try this exciting game and put your vocabulary to the test!"
+}

@@ -53,7 +53,7 @@
 </button>
 {#if noHints}
 	<div id="hint-5" class="hintbox">
-		<p class="hinttext">I am "<b>{word}</b>." <a href="/hintable/menu">Play again?</a></p>
+		<p class="hinttext">I am "<b>{word}</b>." <a href="/menu">Play again?</a></p>
 	</div>
 {/if}
 
