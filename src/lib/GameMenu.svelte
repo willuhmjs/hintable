@@ -2,7 +2,7 @@
 	import words from '../data/words';
 	import Fa from 'svelte-fa';
 	import { faShuffle, faFaceLaughBeam, faFaceSadCry } from '@fortawesome/free-solid-svg-icons';
-	import { gameStats } from "./gameState";
+	import { gameStats, type GameStat } from "./gameState";
 	const getButtonColor = (difficulty: 'easy' | 'medium' | 'hard' | 'expert') => {
 		switch (difficulty) {
 			case 'easy':
@@ -17,9 +17,27 @@
 				return '#808080';
 		}
 	};
+
+	export const calculatePoints = (gameStat: GameStat): number => {
+  switch (gameStat.hintsLeft) {
+    case 4:
+      return 1000;
+    case 3:
+      return 750;
+    case 2:
+      return 500;
+    case 1:
+      return 250;
+    case 0:
+      return 100;
+    default:
+      return 0;
+  }
+};
 </script>
 
 <div class="wrapper">
+	<h2 style="margin-top: 0!important;">score: {$gameStats.reduce((acc, stat) => acc + calculatePoints(stat), 0)}</h2>
 	<a class="button randombutton" href={`/random`}
 		><Fa style="width: 100%" icon={faShuffle} /></a
 	>
@@ -35,9 +53,9 @@
 			>
 				<b>#{reverseIndex + 1}</b>
 				<span style="text-align: right">{#if userWordStat}
-					{#if userWordStat.hintsLeft > 0}
+					{#if userWordStat.hintsLeft >= 0}
 						<Fa fw=true icon={faFaceLaughBeam} />
-					{:else if userWordStat.hintsLeft === 0}
+					{:else if userWordStat.hintsLeft === -1}
 						<Fa fw=true icon={faFaceSadCry} />
 					{/if}					
 				{/if} {word.difficulty}</span>

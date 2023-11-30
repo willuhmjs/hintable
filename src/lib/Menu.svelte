@@ -13,7 +13,7 @@
 						...$gameStats,
 						{
 							word,
-							hintsLeft: 0
+							hintsLeft: -1
 						}
 					];
 			}

@@ -33,7 +33,7 @@
 					...$gameStats,
 					{
 						word,
-						hintsLeft: hintnumber
+						hintsLeft: $won ? hintnumber : -1
 					}
 				];
 			}
