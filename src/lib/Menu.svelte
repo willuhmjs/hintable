@@ -10,12 +10,12 @@
 			const game = $gameStats.find((game: GameStat) => game.word === word);
 			if (!game) {
 				$gameStats = [
-						...$gameStats,
-						{
-							word,
-							hintsLeft: -1
-						}
-					];
+					...$gameStats,
+					{
+						word,
+						hintsLeft: -1
+					}
+				];
 			}
 		}
 	};

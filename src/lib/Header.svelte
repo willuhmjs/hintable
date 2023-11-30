@@ -52,7 +52,11 @@
 			{/if}
 		</button>
 		<h2 class="title" aria-label="title">hintable</h2>
-		<button class="headerbutton" on:click={() => (menuActivated = !menuActivated)} aria-label="Menu">
+		<button
+			class="headerbutton"
+			on:click={() => (menuActivated = !menuActivated)}
+			aria-label="Menu"
+		>
 			<Fa
 				icon={faBars}
 				fw="true"
@@ -61,7 +65,7 @@
 				class={menuActivated ? 'headerbuttonactive' : ''}
 			/>
 			{#if menuActivated}
-				<Menu {hintnumber} {word}/>
+				<Menu {hintnumber} {word} />
 			{/if}
 		</button>
 	</div>

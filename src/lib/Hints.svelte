@@ -28,15 +28,15 @@
 			setStatus(faFaceSadCry, true);
 		}
 		const game = $gameStats.find((game: GameStat) => game.word === word);
-			 if (!game) {
-				$gameStats = [
-					...$gameStats,
-					{
-						word,
-						hintsLeft: $won ? hintnumber : -1
-					}
-				];
-			}
+		if (!game) {
+			$gameStats = [
+				...$gameStats,
+				{
+					word,
+					hintsLeft: $won ? hintnumber : -1
+				}
+			];
+		}
 	}
 
 	const getHint = () => {

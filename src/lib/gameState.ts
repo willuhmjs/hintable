@@ -1,9 +1,9 @@
 import { writable } from 'svelte/store';
-import { persisted } from 'svelte-persisted-store'
+import { persisted } from 'svelte-persisted-store';
 
 export interface GameStat {
-    word: string;
-    hintsLeft: number;
+	word: string;
+	hintsLeft: number;
 }
 
 /*
