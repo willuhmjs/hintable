@@ -3,7 +3,7 @@
 	import { ended, gameStats, won, type GameStat } from './gameState';
 	import type { Word } from './word';
 	import {
-		faFaceLaughBeam,
+		faFaceGrinStars,
 		faFaceSadCry,
 		faFaceSadTear,
 		faLightbulb,
@@ -23,7 +23,7 @@
 		noHints = true;
 		hintButton.disabled = true;
 		if ($won) {
-			setStatus(faFaceLaughBeam, true);
+			setStatus(faFaceGrinStars, true);
 		} else if (!$won) {
 			setStatus(faFaceSadCry, true);
 		}

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import words from '../data/words';
 	import Fa from 'svelte-fa';
-	import { faShuffle, faFaceLaughBeam, faFaceSadCry } from '@fortawesome/free-solid-svg-icons';
+	import { faShuffle, faFaceGrinStars, faFaceSadCry } from '@fortawesome/free-solid-svg-icons';
 	import { gameStats, type GameStat } from "./gameState";
 	const getButtonColor = (difficulty: 'easy' | 'medium' | 'hard' | 'expert') => {
 		switch (difficulty) {
@@ -37,7 +37,7 @@
 </script>
 
 <div class="wrapper">
-	<h2 style="margin-top: 0!important;">score: {$gameStats.reduce((acc, stat) => acc + calculatePoints(stat), 0)}</h2>
+	<h2 class="score">{$gameStats.reduce((acc, stat) => acc + calculatePoints(stat), 0)} points</h2>
 	<a class="button randombutton" href={`/random`}
 		><Fa style="width: 100%" icon={faShuffle} /></a
 	>
@@ -54,7 +54,7 @@
 				<b>#{reverseIndex + 1}</b>
 				<span style="text-align: right">{#if userWordStat}
 					{#if userWordStat.hintsLeft >= 0}
-						<Fa fw=true icon={faFaceLaughBeam} />
+						<Fa fw=true icon={faFaceGrinStars} />
 					{:else if userWordStat.hintsLeft === -1}
 						<Fa fw=true icon={faFaceSadCry} />
 					{/if}					
@@ -111,6 +111,11 @@
 
 	.button:active {
 		filter: brightness(90%);
+	}
+
+	.score {
+		margin-top: 0;
+		text-align: center;
 	}
 
 	@media (max-width: 485px) {
