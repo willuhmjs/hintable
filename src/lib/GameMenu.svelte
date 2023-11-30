@@ -30,8 +30,8 @@
       return 250;
     case 0:
       return 100;
-    default:
-      return 0;
+	case -1:
+	  return 0;
   }
 };
 </script>
