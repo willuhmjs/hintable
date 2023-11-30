@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { ended, won } from './gameState';
+	import { ended, gameStats, won, type GameStat } from './gameState';
 	import type { Word } from './word';
 	import {
 		faFaceLaughBeam,
@@ -27,6 +27,16 @@
 		} else if (!$won) {
 			setStatus(faFaceSadCry, true);
 		}
+		const game = $gameStats.find((game: GameStat) => game.word === word);
+			 if (!game) {
+				$gameStats = [
+					...$gameStats,
+					{
+						word,
+						hintsLeft: hintnumber
+					}
+				];
+			}
 	}
 
 	const getHint = () => {

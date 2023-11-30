@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { won, ended } from './gameState';
+	import { won, ended, gameStats, type GameStat } from './gameState';
 	export let word: string;
-
 	export let guesses = 0;
 
+	export let hintnumber: number;
 	let guessInput: HTMLInputElement;
 	let guess: string = '';
 	let isAnswerIncorrect = false;

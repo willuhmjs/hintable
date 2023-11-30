@@ -23,7 +23,7 @@
 
 <div class="wrapper">
 	<Header {guesses} {hintnumber} word={data.word} />
-	<GuessBox word={data.word} bind:guesses />
+	<GuessBox word={data.word} bind:guesses {hintnumber} />
 	<!-- in hints, we need to change the button icon -->
 	<Hints {noHints} {data} bind:hintnumber />
 

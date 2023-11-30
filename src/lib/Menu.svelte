@@ -1,11 +1,22 @@
-<script>
-	import { ended, won } from './gameState';
+<script lang="ts">
+	import { ended, gameStats, won, type GameStat } from './gameState';
 	import Fa from 'svelte-fa';
 	import { faBackward, faFlag } from '@fortawesome/free-solid-svg-icons';
+	export let word: string;
 	const giveUp = () => {
 		if (!$ended) {
 			$ended = true;
 			$won = false;
+			const game = $gameStats.find((game: GameStat) => game.word === word);
+			if (!game) {
+				$gameStats = [
+						...$gameStats,
+						{
+							word,
+							hintsLeft: 0
+						}
+					];
+			}
 		}
 	};
 </script>

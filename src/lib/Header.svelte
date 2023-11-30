@@ -61,7 +61,7 @@
 				class={menuActivated ? 'headerbuttonactive' : ''}
 			/>
 			{#if menuActivated}
-				<Menu />
+				<Menu {hintnumber} {word}/>
 			{/if}
 		</button>
 	</div>

@@ -1,7 +1,8 @@
 <script lang="ts">
 	import words from '../data/words';
 	import Fa from 'svelte-fa';
-	import { faShuffle } from '@fortawesome/free-solid-svg-icons';
+	import { faShuffle, faFaceLaughBeam, faFaceSadCry } from '@fortawesome/free-solid-svg-icons';
+	import { gameStats } from "./gameState";
 	const getButtonColor = (difficulty: 'easy' | 'medium' | 'hard' | 'expert') => {
 		switch (difficulty) {
 			case 'easy':
@@ -25,6 +26,7 @@
 	{#each words as _, index}
 		{@const reverseIndex = words.length - 1 - index}
 		{@const word = words[reverseIndex]}
+		{@const userWordStat = $gameStats.find((game) => game.word === word.word)}
 		<div class="box">
 			<a
 				class="button"
@@ -32,7 +34,13 @@
 				style="background-color: {getButtonColor(word.difficulty)};"
 			>
 				<b>#{reverseIndex + 1}</b>
-				<span style="text-align: right">{word.difficulty}</span>
+				<span style="text-align: right">{#if userWordStat}
+					{#if userWordStat.hintsLeft > 0}
+						<Fa fw=true icon={faFaceLaughBeam} />
+					{:else if userWordStat.hintsLeft === 0}
+						<Fa fw=true icon={faFaceSadCry} />
+					{/if}					
+				{/if} {word.difficulty}</span>
 			</a>
 		</div>
 	{/each}
