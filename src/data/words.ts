@@ -360,7 +360,7 @@ const words: Word[] = [
 	{
 		word: 'gravity',
 		hintDb: [
-			'I am be affected by mass and distance.',
+			'I can be affected by mass and distance.',
 			'I can be described by a famous equation',
 			'I am a force that attracts two objects with mass.',
 			'I can be be different on different planets or celestial bodies.',
