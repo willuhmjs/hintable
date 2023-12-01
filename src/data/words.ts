@@ -382,10 +382,10 @@ const words: Word[] = [
 	{
 		word: 'moon',
 		hintDb: [
+			'I have many phases.',
+			'I am a satellite.',
 			'I am visible at night.',
-			'I have phases, including full and crescent.',
 			'I control the ocean tides.',
-			'I am Earth\'s natural satellite.',
 			'I am the only celestial body humans have visited.'
 		],
 		difficulty: 'easy'
