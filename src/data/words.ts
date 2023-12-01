@@ -1,6 +1,6 @@
 interface Word {
 	word: string;
-	hintDb: [string, string, string, string, string];
+	hintDb: string[5];
 	difficulty: 'easy' | 'medium' | 'hard' | 'expert';
 }
 
