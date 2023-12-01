@@ -301,7 +301,106 @@ const words: Word[] = [
 			'I have many types, such as hatha, vinyasa, bikram, and ashtanga.'
 		],
 		difficulty: 'easy'
-	}
+	},
+	{
+		word: 'origami',
+		hintDb: [
+			'I am an ancient Japanese art form.',
+			'I am a traditional craft that fosters patience and creativity.',
+			'I require precision and attention to detail.',
+			'I create sculptures without cutting or gluing.',
+			'I involve folding paper into intricate designs.',
+		],
+		difficulty: 'medium'
+	},
+	{
+		word: 'zebra',
+		hintDb: [
+			'I can be found in Africa.',
+			'I can be a prey for lions, hyenas, or crocodiles.',
+			'I can be related to horses and donkeys.',
+			'I can have black and white stripes.',
+			'I am a type of animal that belongs to the genus Equus.'
+		],
+		difficulty: 'easy'
+	},
+	{
+		word: 'onomatopoeia',
+		hintDb: [
+			'I can be used to create vivid and expressive language.',
+			'I can be found in poetry, comics, or literature.',
+			'I can imitate or suggest a sound.',
+			'I can be words like bang, splash, or meow.',
+			'I am a word that sounds like what it means.'
+		],
+		difficulty: 'expert'
+	},
+	{
+		word: 'chameleon',
+		hintDb: [
+			'I am capable of blending into my surroundings.',
+			'I am known for changing colors.',
+			'I use my unique features for survival in diverse environments.',
+			'I have independently moving eyes.',
+			'I am a reptile with a prehensile tail.',
+		],
+		difficulty: 'medium'
+	},
+	{
+		word: 'sushi',
+		hintDb: [
+			'I originated in Japan.',
+			'I can be eaten with chopsticks, fingers, or utensils.',
+			'I can have different ingredients, such as fish, rice, seaweed, or vegetables.',
+			'I can be served with soy sauce, wasabi, and ginger.',
+			'I am a type of food that is often wrapped in nori.'
+		],
+		difficulty: 'easy'
+	},
+	{
+		word: 'gravity',
+		hintDb: [
+			'I am be affected by mass and distance.',
+			'I can be described by a famous equation',
+			'I am a force that attracts two objects with mass.',
+			'I can be be different on different planets or celestial bodies.',
+			'I keep you from floating away from the earth.'
+		],
+		difficulty: 'hard'
+	},
+	{
+		word: 'origami',
+		hintDb: [
+			'I am an ancient Japanese art form.',
+			'I involve folding paper into intricate designs.',
+			'I require precision and attention to detail.',
+			'I create sculptures without cutting or gluing.',
+			'I am a traditional craft that fosters patience and creativity.',
+		],
+		difficulty: 'medium'
+	},
+	{
+		word: 'moon',
+		hintDb: [
+			'I am visible at night.',
+			'I have phases, including full and crescent.',
+			'I control the ocean tides.',
+			'I am Earth\'s natural satellite.',
+			'I am the only celestial body humans have visited.'
+		],
+		difficulty: 'easy'
+	},
+	{
+		word: 'constellation',
+		hintDb: [
+			'I have been named after mythological figures and animals.',
+			'I am used for navigation and storytelling.',
+			'My patterns are often recognized in the night sky.',
+			'I am a group of stars forming a pattern.',
+			'I am a celestial arrangement visible from Earth.',
+		],
+		difficulty: 'medium'
+	},
 ];
 
 export default words;
