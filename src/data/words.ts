@@ -371,11 +371,12 @@ const words: Word[] = [
 	{
 		word: 'origami',
 		hintDb: [
+   'I am a traditional craft that fosters patience and creativity.',
+'I require precision and attention to detail.',
 			'I am an ancient Japanese art form.',
-			'I involve folding paper into intricate designs.',
-			'I require precision and attention to detail.',
 			'I create sculptures without cutting or gluing.',
-			'I am a traditional craft that fosters patience and creativity.',
+'I involve folding paper into intricate designs.'
+			
 		],
 		difficulty: 'medium'
 	},
