@@ -6,7 +6,6 @@
 	import type { Word } from './word';
 	import { ended, won } from '$lib/gameState';
 
-	// @ts-ignore
 	import Confetti from 'svelte-confetti';
 
 	$ended = false;

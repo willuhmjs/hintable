@@ -132,6 +132,11 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.35.0.tgz#b7569632b0b788a0ca0e438235154e45d42813a7"
   integrity sha512-JXdzbRiWclLVoD8sNUjR443VVlYqiYmDVT6rGUEIEHU5YJW0gaVZwV2xgM7D4arkvASqD0IlLUVjHiFuxaftRw==
 
+"@fontsource-variable/montserrat@^5.0.16":
+  version "5.0.16"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/montserrat/-/montserrat-5.0.16.tgz#bb1138c8fee894c6b02795e03bb84ed8ac9a20a1"
+  integrity sha512-KwPT4ccZE1MY9fnlKBOWCTCz/siApJCHnS9nFhTBzo8eybFYLWQ0kaiZJXz6K0lpKAkBCO4fIkCaL8SSnLiKhg==
+
 "@fortawesome/fontawesome-common-types@6.4.2":
   version "6.4.2"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.4.2.tgz#1766039cad33f8ad87f9467b98e0d18fbc8f01c5"
@@ -1524,10 +1529,10 @@ svelte-check@^3.0.1:
     svelte-preprocess "^5.0.0"
     typescript "^4.9.4"
 
-svelte-confetti@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/svelte-confetti/-/svelte-confetti-1.2.2.tgz#87e96d19ce859af40b099535cfd406bf38245770"
-  integrity sha512-LkvWO732jRNmYykWi0IOK7xoBX241p+p+tC7Ef1EcO3TK9b9lpB/vYqKkcwVya+onG2SgQsX2g+JVbVKxq5ixQ==
+svelte-confetti@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/svelte-confetti/-/svelte-confetti-1.3.1.tgz#2dedf40ed0cd0db849079d1e4179a6a671cdd3af"
+  integrity sha512-ljpyflZZzpyByDODM7xKzbYLWZpA54fLqjire2M7Rp6/Fedx6L9+p3CmBQ2j96cZcp++4ueF5A8TYZ8f22kh9w==
 
 svelte-fa@^3.0.4:
   version "3.0.4"
