@@ -2,10 +2,10 @@
 	import Menu from './Menu.svelte';
 	import Share from './Share.svelte';
 	import Fa from 'svelte-fa';
-	import { ended, won } from '$lib/gameState';
+	import { ended, won } from '$lib/utils';
 	import { faShareNodes, faBars } from '@fortawesome/free-solid-svg-icons';
 	export let word: string;
-	import words from '../data/words';
+	import words from '$lib/data/words';
 	export let guesses = 0;
 	export let hintnumber = 4;
 	let menuActivated = false;

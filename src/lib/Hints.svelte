@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { ended, gameStats, won, type GameStat } from './gameState';
-	import type { Word } from './word';
+	import { ended, gameStats, won, type GameStat } from './utils';
+	import type { Word } from '$lib/utils';
 	import {
 		faFaceGrinStars,
 		faFaceSadCry,

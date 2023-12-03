@@ -6,8 +6,8 @@
 		faLinkedin,
 		faTumblrSquare
 	} from '@fortawesome/free-brands-svg-icons';
-	import { ended, won } from './gameState';
-	import words from '../data/words';
+	import { ended, won } from './utils';
+	import words from '$lib/data/words';
 	export let word: string;
 	export let hintnumber: number;
 	let text: string;

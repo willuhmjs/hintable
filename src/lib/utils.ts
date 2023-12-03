@@ -1,6 +1,13 @@
 import { writable } from 'svelte/store';
 import { persisted } from 'svelte-persisted-store';
 
+export interface Word {
+	word: string;
+	hintDb: [string, string, string, string, string];
+	difficulty: 'easy' | 'medium' | 'hard' | 'expert';
+}
+
+
 export interface GameStat {
 	word: string;
 	hintsLeft: number;

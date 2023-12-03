@@ -3,8 +3,7 @@
 	import GuessBox from './GuessBox.svelte';
 	import Hints from './Hints.svelte';
 
-	import type { Word } from './word';
-	import { ended, won } from '$lib/gameState';
+	import { ended, won, type Word } from '$lib/utils';
 
 	import Confetti from 'svelte-confetti';
 
@@ -22,7 +21,7 @@
 
 <div class="wrapper">
 	<Header {guesses} {hintnumber} word={data.word} />
-	<GuessBox word={data.word} bind:guesses {hintnumber} />
+	<GuessBox word={data.word} bind:guesses />
 	<!-- in hints, we need to change the button icon -->
 	<Hints {noHints} {data} bind:hintnumber />
 
@@ -33,8 +32,8 @@
 				y={[0, 0.1]}
 				delay={[500, 2000]}
 				infinite
-				duration="5000"
-				amount="300"
+				duration=5000
+				amount=300
 				fallDistance="100vh"
 			/>
 		</div>

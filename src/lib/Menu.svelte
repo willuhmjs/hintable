@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ended, gameStats, won, type GameStat } from './gameState';
+	import { ended, gameStats, won, type GameStat } from './utils';
 	import Fa from 'svelte-fa';
 	import { faBackward, faFlag } from '@fortawesome/free-solid-svg-icons';
 	export let word: string;

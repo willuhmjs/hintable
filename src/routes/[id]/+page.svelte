@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Game from '$lib/Game.svelte';
-	import words from '../../data/words';
+	import words from '$lib/data/words';
 	import { page } from '$app/stores';
 
 	function checkIfNumber(n: string): boolean {
