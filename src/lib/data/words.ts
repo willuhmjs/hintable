@@ -309,7 +309,7 @@ const words: Word[] = [
 			'I am a traditional craft that fosters patience and creativity.',
 			'I require precision and attention to detail.',
 			'I create sculptures without cutting or gluing.',
-			'I involve folding paper into intricate designs.',
+			'I involve folding paper into intricate designs.'
 		],
 		difficulty: 'medium'
 	},
@@ -342,7 +342,7 @@ const words: Word[] = [
 			'I am known for changing colors.',
 			'I use my unique features for survival in diverse environments.',
 			'I have independently moving eyes.',
-			'I am a reptile with a prehensile tail.',
+			'I am a reptile with a prehensile tail.'
 		],
 		difficulty: 'medium'
 	},
@@ -371,12 +371,11 @@ const words: Word[] = [
 	{
 		word: 'origami',
 		hintDb: [
-   'I am a traditional craft that fosters patience and creativity.',
-'I require precision and attention to detail.',
+			'I am a traditional craft that fosters patience and creativity.',
+			'I require precision and attention to detail.',
 			'I am an ancient Japanese art form.',
 			'I create sculptures without cutting or gluing.',
-'I involve folding paper into intricate designs.'
-			
+			'I involve folding paper into intricate designs.'
 		],
 		difficulty: 'medium'
 	},
@@ -398,7 +397,7 @@ const words: Word[] = [
 			'I am used for navigation and storytelling.',
 			'My patterns are often recognized in the night sky.',
 			'I am a group of stars forming a pattern.',
-			'I am a celestial arrangement visible from Earth.',
+			'I am a celestial arrangement visible from Earth.'
 		],
 		difficulty: 'medium'
 	},
@@ -409,33 +408,32 @@ const words: Word[] = [
 			'I am considered a positive trait in individuals, organizations, and systems.',
 			'I can be symbolized as a tree able to withstand storms.',
 			'My name is derived from the Latin word "resilio," meaning "to spring back."',
-			'I am the ability to recover and adapt in the face of challenges or adversity.',
-
+			'I am the ability to recover and adapt in the face of challenges or adversity.'
 		],
 		difficulty: 'hard'
 	},
 	{
-    word: 'ephemeral',
-    hintDb: [
-        'I am often used to describe something short-lived or fleeting.',
-        'I can be associated with the transient nature of life.',
-        'My name is derived from a Greek word meaning "lasting only a day."',
-        'I am used to express the brevity of certain experiences or phenomena.',
-        'A beautiful sunset is an example of something that can be described as ____.'
-    ],
-    difficulty: 'expert'
-},
-{
-	word: 'quarantine',
-	hintDb: [
-		'I can be imposed by authorities or self-imposed.',
-		'I can last for a specific period of time, usually 14 days.',
-		'I can involve isolation, social distancing, and testing.',
-		'I can be a measure to prevent or limit the spread of something.',
-		'I separate and restrict the movement of people who may have been exposed to a contagious illness.'
-	],
-	difficulty: 'medium'
-},
+		word: 'ephemeral',
+		hintDb: [
+			'I am often used to describe something short-lived or fleeting.',
+			'I can be associated with the transient nature of life.',
+			'My name is derived from a Greek word meaning "lasting only a day."',
+			'I am used to express the brevity of certain experiences or phenomena.',
+			'A beautiful sunset is an example of something that can be described as ____.'
+		],
+		difficulty: 'expert'
+	},
+	{
+		word: 'quarantine',
+		hintDb: [
+			'I can be imposed by authorities or self-imposed.',
+			'I can last for a specific period of time, usually 14 days.',
+			'I can involve isolation, social distancing, and testing.',
+			'I can be a measure to prevent or limit the spread of something.',
+			'I separate and restrict the movement of people who may have been exposed to a contagious illness.'
+		],
+		difficulty: 'medium'
+	}
 ];
 
 export default words;

@@ -7,7 +7,6 @@ export interface Word {
 	difficulty: 'easy' | 'medium' | 'hard' | 'expert';
 }
 
-
 export interface GameStat {
 	word: string;
 	hintsLeft: number;
