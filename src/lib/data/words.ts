@@ -402,6 +402,40 @@ const words: Word[] = [
 		],
 		difficulty: 'medium'
 	},
+	{
+		word: 'resilience',
+		hintDb: [
+			'I am an important concept in psychology, ecology, and engineering.',
+			'I am considered a positive trait in individuals, organizations, and systems.',
+			'I can be symbolized as a tree able to withstand storms.',
+			'My name is derived from the Latin word "resilio," meaning "to spring back."',
+			'I am the ability to recover and adapt in the face of challenges or adversity.',
+
+		],
+		difficulty: 'hard'
+	},
+	{
+    word: 'ephemeral',
+    hintDb: [
+        'I am often used to describe something short-lived or fleeting.',
+        'I can be associated with the transient nature of life.',
+        'My name is derived from a Greek word meaning "lasting only a day."',
+        'I am used to express the brevity of certain experiences or phenomena.',
+        'A beautiful sunset is an example of something that can be described as ____.'
+    ],
+    difficulty: 'expert'
+},
+{
+	word: 'quarantine',
+	hintDb: [
+		'I can be imposed by authorities or self-imposed.',
+		'I can last for a specific period of time, usually 14 days.',
+		'I can involve isolation, social distancing, and testing.',
+		'I can be a measure to prevent or limit the spread of something.',
+		'I separate and restrict the movement of people who may have been exposed to a contagious illness.'
+	],
+	difficulty: 'medium'
+},
 ];
 
 export default words;
