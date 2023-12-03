@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Menu from './Menu.svelte';
-	import Share from './Share.svelte';
+	import Menu from './ContextMenu.svelte';
+	import Share from './ContextShare.svelte';
 	import Fa from 'svelte-fa';
 	import { ended, won } from '$lib/utils';
 	import { faShareNodes, faBars } from '@fortawesome/free-solid-svg-icons';
