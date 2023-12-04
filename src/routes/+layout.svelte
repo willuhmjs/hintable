@@ -1,5 +1,6 @@
 <script>
-	import '@fontsource-variable/montserrat';
+	import "../app.pcss";
+    import '@fontsource-variable/montserrat';
 </script>
 
 <svelte:head>
@@ -15,4 +16,4 @@
 		}
 	</style>
 </svelte:head>
-<slot />
+<slot></slot>
