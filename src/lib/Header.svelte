@@ -110,7 +110,7 @@
 	.headerbutton:focus > :global(#shareIcon),
 	.headerbutton:focus > :global(#headerIcon) {
 		cursor: pointer;
-		background-color: #f5f2e4;
+		background-color: var(--text-hover);
 	}
 
 	.databox {

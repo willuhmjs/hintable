@@ -77,7 +77,7 @@
 
 <style>
 	#hintbutton {
-		background-color: #ffe1b8;
+		background-color: var(--secondary);
 		width: 100%;
 		margin: 0.5rem 0;
 		box-sizing: border-box;
@@ -93,7 +93,7 @@
 	}
 
 	.hintbox {
-		background-color: #ffe1b8;
+		background-color: var(--secondary);
 		width: 100%;
 		box-sizing: border-box;
 		border-radius: 10px;
@@ -124,6 +124,7 @@
 	}
 
 	#hint-5 {
+		/* todo filter */
 		background-color: #ffebcc;
 		width: 100%;
 		box-sizing: border-box;

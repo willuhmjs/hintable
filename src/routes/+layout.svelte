@@ -9,10 +9,10 @@
 		body {
 			margin: 0;
 			padding: 0;
-			background-color: #fffaf2;
+			background-color: var(--primary);
 			touch-action: manipulation;
 			font-family: 'Montserrat Variable', sans-serif;
-			color: #002147;
+			color: var(--text);
 		}
 	</style>
 </svelte:head>

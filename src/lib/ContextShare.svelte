@@ -74,7 +74,7 @@
 <style>
 	#wrapper {
 		position: relative;
-		background-color: white;
+		background-color: var(--white);
 		border: 1px solid transparent;
 		border-radius: 10px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -100,12 +100,11 @@
 	}
 
 	#wrapper li:hover {
-		background-color: #f5f2e4;
+		background-color: var(--text-hover);
 		border: 1px solid #ddd;
 	}
 
 	.menubutton {
-		color: #333;
 		text-decoration: none;
 		display: block;
 		padding: 0.5rem;

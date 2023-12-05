@@ -84,7 +84,7 @@
 	}
 
 	.button {
-		background-color: #ffe1b8;
+		background-color: var(--secondary);
 		box-sizing: border-box;
 		border: none;
 		padding: 15px;
@@ -95,7 +95,7 @@
 		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 		display: flex;
 		text-decoration: none;
-		color: black;
+		color: inherit;
 	}
 
 	.randombutton {
