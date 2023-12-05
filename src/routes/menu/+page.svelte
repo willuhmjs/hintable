@@ -3,20 +3,6 @@
 	import Fa from 'svelte-fa';
 	import { faShuffle, faFaceGrinStars, faFaceSadCry } from '@fortawesome/free-solid-svg-icons';
 	import { gameStats, type GameStat } from '$lib/utils';
-	const getButtonColor = (difficulty: 'easy' | 'medium' | 'hard' | 'expert') => {
-		switch (difficulty) {
-			case 'easy':
-				return '#b2f2af';
-			case 'medium':
-				return '#f2e8af';
-			case 'hard':
-				return '#f2afaf';
-			case 'expert':
-				return '#afaff2';
-			default:
-				return '#808080';
-		}
-	};
 
 	export const calculatePoints = (gameStat: GameStat): number => {
 		switch (gameStat.hintsLeft) {
@@ -47,7 +33,7 @@
 			<a
 				class="button"
 				href={`/${reverseIndex + 1}`}
-				style="background-color: {getButtonColor(word.difficulty)};"
+				style="background-color: var(--{word.difficulty}, #808080);"
 			>
 				<b>#{reverseIndex + 1}</b>
 				<span style="text-align: right"
