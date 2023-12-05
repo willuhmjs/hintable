@@ -89,7 +89,7 @@
 	}
 
 	#hintbutton:enabled {
-		color: black;
+		color: inherit;
 	}
 
 	.hintbox {
