@@ -124,8 +124,7 @@
 	}
 
 	#hint-5 {
-		/* todo filter */
-		background-color: #ffebcc;
+		background-color: var(--hint5);
 		width: 100%;
 		box-sizing: border-box;
 		border-radius: 10px;
