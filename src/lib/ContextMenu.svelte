@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { ended, gameStats, won, type GameStat } from './utils';
+	import { ended, gameStats, won, type GameStat, theme } from '$lib/utils';
 	import Fa from 'svelte-fa';
-	import { faBackward, faFlag } from '@fortawesome/free-solid-svg-icons';
+	import { faBackward, faFlag, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 	export let word: string;
 	const giveUp = () => {
 		if (!$ended) {
@@ -32,6 +32,11 @@
 			<a href="/menu" class="menubutton"
 				><Fa fw="true" style="margin-right: 8px" icon={faBackward} />Previous Games</a
 			>
+		</li>
+		<li>
+			<button on:click={() => $theme = $theme === "light" ? "dark" : "light"} class="menubutton">
+				<Fa fw="true" style="margin-right: 8px" icon={$theme === "light" ? faMoon : faSun} />Toggle Theme
+			</button>
 		</li>
 	</ul>
 </div>
