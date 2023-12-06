@@ -34,7 +34,8 @@
 		autocorrect="off"
 		autocapitalize="off"
 		bind:value={guess}
-		class="guessInput {isAnswerIncorrect ? 'incorrect' : ''}"
+		id="guessInput"
+		class="{isAnswerIncorrect ? 'incorrect' : ''}"
 		bind:this={guessInput}
 		autocomplete="off"
 		placeholder="type a word"
@@ -72,7 +73,7 @@
 		animation: shake 0.7s ease-in-out;
 	}
 
-	.guessInput {
+	#guessInput {
 		width: 100%;
 		margin: 0;
 		box-sizing: border-box;
