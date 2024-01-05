@@ -433,6 +433,28 @@ const words: Word[] = [
 			'I separate and restrict the movement of people who may have been exposed to a contagious illness.'
 		],
 		difficulty: 'medium'
+	},
+	{
+		word: 'chocolate',
+		hintDb: [
+			'I am usually brown in color.',
+			'I am a type of food.',
+			'I am a sweet and delicious treat.',
+			'I come from the seeds of a tropical tree.',
+			'I can be used to make cakes, cookies, and candies.'
+		],
+		difficulty: 'easy'
+	},
+	{
+		word: 'pyramid',
+		hintDb: [
+			'I come from an ancient civilization.',
+			'I have a triangular shape.',
+			'I can be found in Egypt, Mexico, and Tennessee.',
+			'I am a type of structure.',
+			'I am a monumental tomb for pharaohs or kings.'
+		],
+		difficulty: 'easy'
 	}
 ];
 
