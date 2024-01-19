@@ -455,7 +455,18 @@ const words: Word[] = [
 			'I am a monumental tomb for pharaohs or kings.'
 		],
 		difficulty: 'easy'
-	}
+	},
+	{
+        word: 'towel',
+        hintDb: [
+            'I am both smooth and rough.',
+            'My absence can ruin your morning or evening.',
+            'I am held in your hand or wrapped around your body.',
+            'I absorb water effortlessly.',
+            'I am found by the pool or by the bath.'
+        ],
+        difficulty: 'easy'
+    }
 ];
 
 export default words;
