@@ -466,7 +466,84 @@ const words: Word[] = [
             'I am found by the pool or by the bath.'
         ],
         difficulty: 'easy'
-    }
+    },
+	{
+		word: 'algorithm',
+		hintDb: [
+			'I am used in computer science.',
+			'I am a set of instructions.',
+			'I am designed to perform a specific task.',
+			'I can be simple like a recipe or complex like a machine learning model.',
+			'I am the backbone of any non-trivial computer application.'
+		],
+		difficulty: 'hard'
+	},
+	{
+		word: 'keyboard',
+		hintDb: [
+			'I am used every day.',
+			'I am an essential part of a computer.',
+			'I have letters and numbers on me.',
+			'I am used for typing.',
+			'You press my buttons.'
+		],
+		difficulty: 'easy'
+	},
+	{
+		word: 'metropolis',
+		hintDb: [
+			'I am a place where many people live.',
+			'I am larger than a town or city.',
+			'I am often bustling with activity.',
+			'I am a hub for culture, business, and transportation.',
+			'New York, Tokyo, and London are examples of me.'
+		],
+		difficulty: 'medium'
+	},
+	{
+		word: 'equator',
+		hintDb: [
+			'I am an imaginary line.',
+			'I divide the earth into two equal parts.',
+			'I am the hottest part of the earth.',
+			'I am 0 degrees latitude.',
+			'I run horizontally around the middle of the Earth.'
+		],
+		difficulty: 'easy'
+	},
+	{
+		word: 'photosynthesis',
+		hintDb: [
+			'I involve the sun.',
+			'I am a process used by plants.',
+			'I convert light energy into chemical energy.',
+			'I produce oxygen.',
+			'I am the reason why plants are green.'
+		],
+		difficulty: 'hard'
+	},
+	{
+		word: 'sphinx',
+		hintDb: [
+			'I am a mythical creature.',
+			'I have the body of a lion.',
+			'I have the head of a human.',
+			'I am associated with ancient Egypt.',
+			'I am a famous statue near the Pyramids of Giza.'
+		],
+		difficulty: 'hard'
+	},
+	{
+		word: 'volcano',
+		hintDb: [
+			'I can be found on Earth and other planets.',
+			'I am a natural feature.',
+			'I can erupt.',
+			'I spew out lava and ash.',
+			'Mount Vesuvius and Mount St. Helens are examples of me.'
+		],
+		difficulty: 'medium'
+	},
 ];
 
 export default words;
