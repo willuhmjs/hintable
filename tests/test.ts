@@ -1,6 +1,6 @@
 
 import { expect, test } from '@playwright/test';
-import words from "$lib/data/words"
+import words from "$lib/data/words.json"
 
 test('index page has expected h2', async ({ page }) => {
 	await page.goto('/');
