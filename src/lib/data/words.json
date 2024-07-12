@@ -1,41 +1,5 @@
 [
   {
-    "word": "magic",
-    "hintDb": [
-      "I am often seen in shows.",
-      "I am stigmatized in some cultures.",
-      "I am used by many performers.",
-      "I involve illusions and tricks.",
-      "I am loved by Harry Houdini."
-    ],
-    "difficulty": "medium",
-    "day": 1720756800000
-  },
-  {
-    "word": "basketball",
-    "hintDb": [
-      "I originated in the United States.",
-      "I am orange with black stripes.",
-      "I am typically made of rubber or synthetic materials.",
-      "I am a bouncy ball used in a popular sport.",
-      "I am often bounced, dribbled, and passed between players."
-    ],
-    "difficulty": "medium",
-    "day": 1720815355848
-  },
-  {
-    "word": "slushie",
-    "hintDb": [
-      "I am very common in the summer.",
-      "I am very cold.",
-      "I am found at convenience stores.",
-      "I have a variety of flavors.",
-      "I am known for causing brain freezes."
-    ],
-    "difficulty": "easy",
-    "day": 1720756800000
-  },
-  {
     "word": "alacrity",
     "hintDb": [
       "I can be contagious and inspire others.",
@@ -610,5 +574,17 @@
     ],
     "difficulty": "medium",
     "day": 1716668155848
+  },
+  {
+    "word": "basketball",
+    "hintDb": [
+      "I originated in the United States.",
+      "I am orange with black stripes.",
+      "I am typically made of rubber or synthetic materials.",
+      "I am a bouncy ball used in a popular sport.",
+      "I am often bounced, dribbled, and passed between players."
+    ],
+    "difficulty": "medium",
+    "day": 1716523200000
   }
 ]
