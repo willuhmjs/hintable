@@ -5,7 +5,7 @@
 	import { ended, won } from '$lib/utils';
 	import { faShareNodes, faBars } from '@fortawesome/free-solid-svg-icons';
 	export let word: string;
-	import words from '$lib/data/words';
+	import words from '$lib/data/words.json';
 	export let guesses = 0;
 	export let hintnumber = 4;
 	let menuActivated = false;

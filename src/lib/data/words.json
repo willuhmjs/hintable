@@ -1,12 +1,4 @@
-
-  interface Word {
-    word: string;
-    hintDb: [string, string, string, string, string];
-    difficulty: 'easy' | 'medium' | 'hard' | 'expert';
-    day: number;
-  }
-
-  const words: Word[] = [
+[
   {
     "word": "basketball",
     "hintDb": [
@@ -594,7 +586,4 @@
     ],
     "difficulty": "medium",
     "day": 1716668155848
-  }
-]
-
-  export default words;
+  }]

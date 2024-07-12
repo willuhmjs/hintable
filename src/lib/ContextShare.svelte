@@ -7,7 +7,7 @@
 		faTumblrSquare
 	} from '@fortawesome/free-brands-svg-icons';
 	import { ended, won } from './utils';
-	import words from '$lib/data/words';
+	import words from '$lib/data/words.json';
 	export let word: string;
 	export let hintnumber: number;
 	let text: string;

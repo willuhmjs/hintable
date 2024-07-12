@@ -1,5 +1,5 @@
 <script lang="ts">
-	import words from '$lib/data/words';
+	import words from '$lib/data/words.json';
 	import Fa from 'svelte-fa';
 	import { faShuffle, faFaceGrinStars, faFaceSadCry } from '@fortawesome/free-solid-svg-icons';
 	import { gameStats, type GameStat } from '$lib/utils';
