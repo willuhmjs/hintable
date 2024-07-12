@@ -12,6 +12,18 @@
     "day": 1720815355848
   },
   {
+    "word": "slushie",
+    "hintDb": [
+      "I am very common in the summer.",
+      "I am very cold.",
+      "I am found at convenience stores.",
+      "I have a variety of flavors.",
+      "I am known for causing brain freezes."
+    ],
+    "difficulty": "easy",
+    "day": 1720756800000
+  },
+  {
     "word": "alacrity",
     "hintDb": [
       "I can be contagious and inspire others.",
@@ -586,4 +598,5 @@
     ],
     "difficulty": "medium",
     "day": 1716668155848
-  }]
+  }
+]
