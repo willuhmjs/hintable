@@ -1,5 +1,17 @@
 [
   {
+    "word": "magic",
+    "hintDb": [
+      "I am often seen in shows.",
+      "I am stigmatized in some cultures.",
+      "I am used by many performers.",
+      "I involve illusions and tricks.",
+      "I am loved by Harry Houdini."
+    ],
+    "difficulty": "medium",
+    "day": 1720756800000
+  },
+  {
     "word": "alacrity",
     "hintDb": [
       "I can be contagious and inspire others.",
