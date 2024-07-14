@@ -1,5 +1,6 @@
 <script lang="ts">
-	import words from '$lib/data/words.json';
+	import w from '$lib/data/words.json';
+	let words = w.toReversed();
 	import Fa from 'svelte-fa';
 	import { faShuffle, faFaceGrinStars, faFaceSadCry } from '@fortawesome/free-solid-svg-icons';
 	import { gameStats, type GameStat } from '$lib/utils';
@@ -27,7 +28,7 @@
 <div class="wrapper">
 	<h2 class="score">{$gameStats.reduce((acc, stat) => acc + calculatePoints(stat), 0)} points</h2>
 	<a class="button randombutton" href={`/random`}><Fa style="width: 100%" icon={faShuffle} /></a>
-	{#each words.reverse() as _, index}
+	{#each words as _, index}
 		{@const reverseIndex = words.length - 1 - index}
 		{@const word = words[reverseIndex]}
 		{@const userWordStat = $gameStats.find((game) => game.word === word.word)}
