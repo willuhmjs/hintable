@@ -39,7 +39,7 @@
 				on:mouseenter={() => showDate = word.day}
 			>
 			{#if showDate == word.day}
-					<b>{new Date(word.day).toLocaleString()}</b>
+					<b>{new Date(word.day).toLocaleDateString()}</b>
 			{:else}
 				<b>#{reverseIndex + 1}</b>
 			{/if}
