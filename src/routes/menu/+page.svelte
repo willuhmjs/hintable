@@ -27,7 +27,7 @@
 <div class="wrapper">
 	<h2 class="score">{$gameStats.reduce((acc, stat) => acc + calculatePoints(stat), 0)} points</h2>
 	<a class="button randombutton" href={`/random`}><Fa style="width: 100%" icon={faShuffle} /></a>
-	{#each words as _, index}
+	{#each words.reverse() as _, index}
 		{@const reverseIndex = words.length - 1 - index}
 		{@const word = words[reverseIndex]}
 		{@const userWordStat = $gameStats.find((game) => game.word === word.word)}
