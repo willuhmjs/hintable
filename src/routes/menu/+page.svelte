@@ -20,6 +20,8 @@
 				return 0;
 		}
 	};
+
+	let showDate = 0;
 </script>
 
 <div class="wrapper">
@@ -34,8 +36,13 @@
 				class="button"
 				href={`/${reverseIndex + 1}`}
 				style="background-color: var(--{word.difficulty}, #808080);"
+				on:mouseenter={() => showDate = word.day}
 			>
+			{#if showDate == word.day}
+					<b>{new Date(word.day).toLocaleString()}</b>
+			{:else}
 				<b>#{reverseIndex + 1}</b>
+			{/if}
 				<span style="text-align: right"
 					>{#if userWordStat}
 						{#if userWordStat.hintsLeft >= 0}
