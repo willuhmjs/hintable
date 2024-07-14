@@ -610,5 +610,17 @@
     ],
     "difficulty": "easy",
     "day": 1720843200000
+  },
+  {
+    "word": "brassiere",
+    "hintDb": [
+      "I come in various styles, like sports.",
+      "I provide support to my user.",
+      "I contain straps and cups.",
+      "I am worn by women.",
+      "I am the full form of bra."
+    ],
+    "difficulty": "hard",
+    "day": 1720915200000
   }
 ]
