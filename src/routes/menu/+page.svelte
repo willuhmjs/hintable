@@ -28,19 +28,21 @@
 <div class="wrapper">
 	<h2 class="score">{$gameStats.reduce((acc, stat) => acc + calculatePoints(stat), 0)} points</h2>
 	<a class="button randombutton" href={`/random`}><Fa style="width: 100%" icon={faShuffle} /></a>
-	{#each words as word, index}
+	{#each words.sort((a, b) => b.day - a.day) as word, i}
+		{@const inverseIndex = words.length - i - 1}
+		
 		{@const userWordStat = $gameStats.find((game) => game.word === word.word)}
 		<div class="box">
 			<a
 				class="button"
-				href={`/${index + 1}`}
+				href={`/${inverseIndex + 1}`}
 				style="background-color: var(--{word.difficulty}, #808080);"
 				on:mouseenter={() => showDate = word.day}
 			>
 			{#if showDate == word.day}
 					<b>{new Date(word.day).toLocaleDateString()}</b>
 			{:else}
-				<b>#{index + 1}</b>
+				<b>#{inverseIndex + 1}</b>
 			{/if}
 				<span style="text-align: right"
 					>{#if userWordStat}

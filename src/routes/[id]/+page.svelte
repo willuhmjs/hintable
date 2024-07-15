@@ -24,5 +24,5 @@
 {#if error}
 	<h1>{error}</h1>
 {:else}
-	<Game data={words[id - 1]} />
+	<Game data={words.sort((a, b) => a.day - b.day)[id - 1]} />
 {/if}
