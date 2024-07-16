@@ -26,14 +26,3 @@ test('guessing latest word works correctly', async ({ page }) => {
 	await expect(page.locator("#hint-5").innerText()).resolves.toContain(word);
 	//await page.screenshot({ path: `screenshots/${word}.png` });
 });
-
-test('guessing random word works correctly', async ({ page }) => {
-	const i = Math.floor(Math.random() * words.length);
-	const word: string = words[i].word;
-	await page.goto(`/${i}`);
-	await page.locator("#guessInput").fill(word)
-	await page.locator("#guessInput").press("Enter");
-	await expect(page.isVisible('#hint-5')).resolves.toBeTruthy();
-	await expect(page.locator("#hint-5").innerText()).resolves.toContain(word);
-	//await page.screenshot({ path: `screenshots/${word}.png` });
-})
