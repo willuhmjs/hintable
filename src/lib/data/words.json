@@ -1,5 +1,17 @@
 [
   {
+    "word": "audience",
+    "hintDb": [
+      "I am found in theaters, concerts, and classrooms.",
+      "I can be large or small, depending on the event.",
+      "I am essential for performers, speakers, and presenters.",
+      "I am the group of people who listen to or watch something.",
+      "I am the collective viewers or listeners of a performance or presentation."
+    ],
+    "difficulty": "medium",
+    "day": 1721952000000
+  },
+  {
     "word": "verification",
     "hintDb": [
       "I can be required for accessing accounts or services.",
