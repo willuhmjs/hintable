@@ -1,5 +1,17 @@
 [
   {
+    "word": "mustache",
+    "hintDb": [
+      "I can make or break a first impression.",
+      "I am often associated with famous figures like Salvador Dalí or Freddie Mercury.",
+      "I can be thick or thin, long or short.",
+      "I can be styled in various ways.",
+      "I can be groomed with scissors, wax, or combs."
+    ],
+    "difficulty": "easy",
+    "day": 1721260800000
+  },
+  {
     "word": "sculpture",
     "hintDb": [
       "I can be made from various materials, including stone, metal, or clay.",
