@@ -1,5 +1,17 @@
 [
   {
+    "word": "sandwich",
+    "hintDb": [
+      "I can be hot or cold.",
+      "I am named after the 4th Earl of _____.",
+      "I can have a variety of fillings like meats, cheese, or vegetables.",
+      "I am often eaten for lunch.",
+      "I consist of ingredients placed between slices of bread."
+    ],
+    "difficulty": "easy",
+    "day": 1721692800000
+  },
+  {
     "word": "marshmellow",
     "hintDb": [
       "I am soft and fluffy.",
