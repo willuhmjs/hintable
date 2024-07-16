@@ -1,5 +1,17 @@
 [
   {
+    "word": "downgrade",
+    "hintDb": [
+      "I can happen to products, services, or statuses.",
+      "I often result from poor performance or a decrease in quality.",
+      "I can mean lowering something to a less desirable state.",
+      "I am used to describe a reduction in rank, status, or importance.",
+      "I can be the opposite of an upgrade."
+    ],
+    "difficulty": "hard",
+    "day": 1721865600000
+  },
+  {
     "word": "audience",
     "hintDb": [
       "I am found in theaters, concerts, and classrooms.",
