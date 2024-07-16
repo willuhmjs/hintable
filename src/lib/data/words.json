@@ -1,5 +1,17 @@
 [
   {
+    "word": "verification",
+    "hintDb": [
+      "I can be required for accessing accounts or services.",
+      "I ensure that something is true or accurate.",
+      "I often involve checking information or credentials.",
+      "I am a process used to confirm something's authenticity.",
+      "I involve confirming the validity of something through evidence or documentation."
+    ],
+    "difficulty": "hard",
+    "day": 1722038400000
+  },
+  {
     "word": "basketball",
     "hintDb": [
       "I originated in the United States.",
