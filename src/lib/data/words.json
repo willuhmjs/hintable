@@ -1,5 +1,17 @@
 [
   {
+    "word": "sculpture",
+    "hintDb": [
+      "I can be made from various materials, including stone, metal, or clay.",
+      "I can be relief or in the round.",
+      "I can represent abstract forms or realistic figures.",
+      "I can be carved, molded, or assembled.",
+      "I am often found in museums, parks, and public spaces."
+    ],
+    "difficulty": "medium",
+    "day": 1721347200000
+  },
+  {
     "word": "circus",
     "hintDb": [
       "I am a place where people gather to watch shows.",
