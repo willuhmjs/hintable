@@ -1,5 +1,17 @@
 [
   {
+    "word": "wisdom",
+    "hintDb": [
+      "I can be gained through learning and reflection.",
+      "Proverbs and sayings often convey me.",
+      "I involve the ability to make sound judgments.",
+      "I am often associated with age and experience.",
+      "I am considered a valuable trait in many cultures."
+    ],
+    "difficulty": "medium",
+    "day": 1721520000000
+  },
+  {
     "word": "complaint",
     "hintDb": [
       "I am often a response to dissatisfaction or discomfort.",
