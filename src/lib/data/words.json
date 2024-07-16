@@ -1,5 +1,17 @@
 [
   {
+    "word": "campaign",
+    "hintDb": [
+      "I can be political, marketing, or military in nature.",
+      "I often involve a series of coordinated actions or efforts.",
+      "I may include advertisements, speeches, or strategies.",
+      "I am a planned set of activities aimed at achieving a particular goal.",
+      "Presidential candidates and businesses often run me to gain support or promote a product."
+    ],
+    "difficulty": "medium",
+    "day": 1721088000000
+  },
+  {
     "word": "perspective",
     "hintDb": [
       "I can be influenced by personal experiences and cultural background.",
