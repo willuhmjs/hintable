@@ -1,5 +1,17 @@
 [
   {
+    "word": "perspective",
+    "hintDb": [
+      "I can be influenced by personal experiences and cultural background.",
+      "I can change over time or with new information.",
+      "I can be different for each individual.",
+      "I can refer to a particular attitude or way of viewing something.",
+      "I am the point of view from which something is considered or evaluated."
+    ],
+    "difficulty": "medium",
+    "day": 1721174400000
+  },
+  {
     "word": "mustache",
     "hintDb": [
       "I can make or break a first impression.",
