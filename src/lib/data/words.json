@@ -1,5 +1,17 @@
 [
   {
+    "word": "marshmellow",
+    "hintDb": [
+      "I am soft and fluffy.",
+      "I come in different shapes and sizes.",
+      "I am more often burnt than not.",
+      "I am often burned by children.",
+      "I am often used in desserts."
+    ],
+    "difficulty": "medium",
+    "day": 1721779200000
+  },
+  {
     "word": "downgrade",
     "hintDb": [
       "I can happen to products, services, or statuses.",
