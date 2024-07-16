@@ -1,5 +1,17 @@
 [
   {
+    "word": "complaint",
+    "hintDb": [
+      "I am often a response to dissatisfaction or discomfort.",
+      "I can be voiced verbally or in writing.",
+      "I am something people file when they are unhappy with a service or product.",
+      "I can be directed towards individuals, organizations, or systems.",
+      "I express a grievance or objection."
+    ],
+    "difficulty": "easy",
+    "day": 1721606400000
+  },
+  {
     "word": "sandwich",
     "hintDb": [
       "I can be hot or cold.",
