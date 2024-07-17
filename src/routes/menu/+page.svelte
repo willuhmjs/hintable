@@ -40,7 +40,7 @@
 				on:mouseenter={() => showDate = word.day}
 			>
 			{#if showDate == word.day}
-					<b>{new Date(word.day).toLocaleDateString()}</b>
+					<b>{new Date(word.day).toLocaleDateString(undefined, { timeZone: 'UTC' })}</b>
 			{:else}
 				<b>#{inverseIndex + 1}</b>
 			{/if}
