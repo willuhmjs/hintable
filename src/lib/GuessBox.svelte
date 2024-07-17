@@ -35,7 +35,7 @@
 		autocapitalize="off"
 		bind:value={guess}
 		id="guessInput"
-		class="{isAnswerIncorrect ? 'incorrect' : ''}"
+		class={isAnswerIncorrect ? 'incorrect' : ''}
 		bind:this={guessInput}
 		autocomplete="off"
 		placeholder="type a word"

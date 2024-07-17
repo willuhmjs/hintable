@@ -34,8 +34,9 @@
 			>
 		</li>
 		<li>
-			<button on:click={() => $theme = $theme === "light" ? "dark" : "light"} class="menubutton">
-				<Fa fw="true" style="margin-right: 8px" icon={$theme === "light" ? faMoon : faSun} />Toggle Theme
+			<button on:click={() => ($theme = $theme === 'light' ? 'dark' : 'light')} class="menubutton">
+				<Fa fw="true" style="margin-right: 8px" icon={$theme === 'light' ? faMoon : faSun} />Toggle
+				Theme
 			</button>
 		</li>
 	</ul>

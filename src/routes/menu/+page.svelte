@@ -1,6 +1,6 @@
 <script lang="ts">
 	import words from '$lib/data/words.json';
-	
+
 	import Fa from 'svelte-fa';
 	import { faShuffle, faFaceGrinStars, faFaceSadCry } from '@fortawesome/free-solid-svg-icons';
 	import { gameStats, type GameStat } from '$lib/utils';
@@ -30,20 +30,20 @@
 	<a class="button randombutton" href={`/random`}><Fa style="width: 100%" icon={faShuffle} /></a>
 	{#each words.sort((a, b) => b.day - a.day) as word, i}
 		{@const inverseIndex = words.length - i - 1}
-		
+
 		{@const userWordStat = $gameStats.find((game) => game.word === word.word)}
 		<div class="box">
 			<a
 				class="button"
 				href={`/${inverseIndex + 1}`}
 				style="background-color: var(--{word.difficulty}, #808080);"
-				on:mouseenter={() => showDate = word.day}
+				on:mouseenter={() => (showDate = word.day)}
 			>
-			{#if showDate == word.day}
+				{#if showDate == word.day}
 					<b>{new Date(word.day).toLocaleDateString(undefined, { timeZone: 'UTC' })}</b>
-			{:else}
-				<b>#{inverseIndex + 1}</b>
-			{/if}
+				{:else}
+					<b>#{inverseIndex + 1}</b>
+				{/if}
 				<span style="text-align: right"
 					>{#if userWordStat}
 						{#if userWordStat.hintsLeft >= 0}

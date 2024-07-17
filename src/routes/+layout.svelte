@@ -1,15 +1,14 @@
 <script>
-	import "../app.pcss";
-	import { theme } from "$lib/utils";
-    import '@fontsource-variable/montserrat';
-	import { onMount } from "svelte";
+	import '../app.pcss';
+	import { theme } from '$lib/utils';
+	import '@fontsource-variable/montserrat';
+	import { onMount } from 'svelte';
 
-    onMount(() => {
-        theme.subscribe((value) => {
-        document.documentElement.setAttribute("data-theme", value);
-    });
-    })
-   
+	onMount(() => {
+		theme.subscribe((value) => {
+			document.documentElement.setAttribute('data-theme', value);
+		});
+	});
 </script>
 
 <svelte:head>
@@ -25,4 +24,4 @@
 		}
 	</style>
 </svelte:head>
-<slot></slot>
+<slot />

@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: |
           yarn
-          yarn playwright install 
+          yarn playwright install
       - name: test and build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
