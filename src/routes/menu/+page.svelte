@@ -71,7 +71,6 @@
 	.wrapper {
 		max-width: 480px;
 		margin: auto;
-		/* padding 1 everywhere except top */
 		padding: 0 1rem 1rem 1rem;
 		margin: 2rem auto;
 	}

@@ -10,6 +10,7 @@
 		type IconDefinition
 	} from '@fortawesome/free-regular-svg-icons';
 	import Fa from 'svelte-fa';
+	import { faLifeRing } from '@fortawesome/free-solid-svg-icons';
 	export let data: Word;
 	const { word, hintDb } = data;
 
@@ -67,7 +68,15 @@
 		<p class="hinttext">I am "<b>{word}</b>." <a href="/menu">Play again?</a></p>
 	</div>
 {/if}
-
+{#if $usedLifeline}
+<div class="hintbox lifeline">
+	<div class="hinttext">
+		<p class="icon">
+			<Fa icon={faLifeRing} fw="true"/>
+		</p>
+		<p>I start with "{word[0]}" and am {word.length} letters long.</p></div>
+</div>
+{/if}
 {#if hints.length > 0}
 	{#each hints as hint}
 		<div class="hintbox">
@@ -105,6 +114,19 @@
 		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 	}
 
+	.lifeline {
+		background-color: var(--hard)!important;
+	}
+
+	.lifeline .hinttext {
+		display: flex;
+		gap: 0.8rem;
+		align-items: center;
+	}
+
+	.lifeline .hinttext .icon {
+		font-size: 1.5rem;
+	}
 	#hintbutton:hover:enabled {
 		cursor: pointer;
 		filter: brightness(95%);
