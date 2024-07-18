@@ -11,6 +11,7 @@ export interface Word {
 export interface GameStat {
 	word: string;
 	hintsLeft: number;
+	usedLifeline?: boolean;
 }
 
 /*
@@ -20,4 +21,5 @@ its less annoying than passing it through a parent component
 export const ended = writable(false);
 export const won = writable(false);
 export const gameStats = persisted<GameStat[]>('gameStats', []);
+export const usedLifeline = writable(false);
 export const theme = persisted('theme', 'light');

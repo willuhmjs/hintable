@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { ended, gameStats, won, type GameStat } from './utils';
+	import { ended, gameStats, won, usedLifeline, type GameStat } from './utils';
 	import type { Word } from '$lib/utils';
 	import {
 		faFaceGrinStars,
@@ -33,7 +33,8 @@
 				...$gameStats,
 				{
 					word,
-					hintsLeft: $won ? hintnumber : -1
+					hintsLeft: $won ? hintnumber : -1,
+					usedLifeline: $usedLifeline
 				}
 			];
 		}

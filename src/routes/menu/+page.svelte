@@ -2,8 +2,8 @@
 	import words from '$lib/data/words.json';
 
 	import Fa from 'svelte-fa';
-	import { faShuffle, faFaceGrinStars, faFaceSadCry } from '@fortawesome/free-solid-svg-icons';
-	import { gameStats, type GameStat } from '$lib/utils';
+	import { faShuffle, faFaceGrinStars, faFaceSadCry, faHome, faLifeRing } from '@fortawesome/free-solid-svg-icons';
+	import { gameStats, usedLifeline, type GameStat } from '$lib/utils';
 
 	export const calculatePoints = (gameStat: GameStat): number => {
 		switch (gameStat.hintsLeft) {
@@ -26,8 +26,11 @@
 </script>
 
 <div class="wrapper">
-	<h2 class="score">{$gameStats.reduce((acc, stat) => acc + calculatePoints(stat), 0)} points</h2>
-	<a class="button randombutton" href={`/random`}><Fa style="width: 100%" icon={faShuffle} /></a>
+	<h2 class="score">{$gameStats.reduce((acc, stat) => acc + calculatePoints(stat) - (stat.usedLifeline ? 100 : 0), 0)} points</h2>
+	<div class="mainMenuBtns">
+		<a class="button randombutton" href={`/`}><Fa style="width: 100%" icon={faHome} /></a>
+		<a class="button randombutton" href={`/random`}><Fa style="width: 100%" icon={faShuffle} /></a>
+	</div>
 	{#each words.sort((a, b) => b.day - a.day) as word, i}
 		{@const inverseIndex = words.length - i - 1}
 
@@ -44,15 +47,20 @@
 				{:else}
 					<b>#{inverseIndex + 1}</b>
 				{/if}
-				<span style="text-align: right"
-					>{#if userWordStat}
-						{#if userWordStat.hintsLeft >= 0}
-							<Fa fw="true" icon={faFaceGrinStars} />
-						{:else if userWordStat.hintsLeft === -1}
-							<Fa fw="true" icon={faFaceSadCry} />
+				<div class="wordRightInfo"
+					><div class="wordRightInfoIcons">
+						{#if userWordStat}
+							{#if userWordStat?.usedLifeline}
+								<Fa fw="true" icon={faLifeRing} />
+							{/if}
+							{#if userWordStat.hintsLeft >= 0}
+								<Fa fw="true" icon={faFaceGrinStars} />
+							{:else if userWordStat.hintsLeft === -1}
+								<Fa fw="true" icon={faFaceSadCry} />
+							{/if}
 						{/if}
-					{/if}
-					{word.difficulty}</span
+					</div>
+					{word.difficulty}</div
 				>
 			</a>
 		</div>
@@ -75,6 +83,11 @@
 		margin: 0.35rem 0;
 		background-color: transparent;
 		word-break: break-all;
+	}
+
+	.mainMenuBtns {
+		display: flex;
+		gap: 0.35rem;
 	}
 
 	.button {
@@ -118,4 +131,19 @@
 			margin: 2rem 2rem;
 		}
 	}
+
+	.wordRightInfo {
+		text-align: right;
+		display: flex;
+		align-items: center;
+		justify-content: right;
+		gap: 5px;
+	}
+
+	.wordRightInfoIcons {
+		display: flex;
+		max-width: fit-content;
+		gap: 2px;
+	}
+	
 </style>

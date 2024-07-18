@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { ended, gameStats, won, type GameStat, theme } from '$lib/utils';
+	import { ended, gameStats, won, type GameStat, theme, usedLifeline } from '$lib/utils';
 	import Fa from 'svelte-fa';
-	import { faBackward, faFlag, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+	import { faBackward, faFlag, faMoon, faSun, faLifeRing } from '@fortawesome/free-solid-svg-icons';
 	export let word: string;
 	const giveUp = () => {
 		if (!$ended) {
@@ -13,12 +13,14 @@
 					...$gameStats,
 					{
 						word,
-						hintsLeft: -1
+						hintsLeft: -1,
+						usedLifeline: $usedLifeline
 					}
 				];
 			}
 		}
 	};
+
 </script>
 
 <div id="wrapper" style="top: 10px; right: 180px;">
@@ -28,6 +30,7 @@
 				><Fa fw="true" style="margin-right: 8px" icon={faFlag} />Give Up</button
 			>
 		</li>
+		<li><button on:click={() => $usedLifeline = true} class="menubutton"><Fa fw="true" style="margin-right: 8px" icon={faLifeRing} />Extra Hint</button></li>
 		<li>
 			<a href="/menu" class="menubutton"
 				><Fa fw="true" style="margin-right: 8px" icon={faBackward} />Previous Games</a

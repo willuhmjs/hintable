@@ -3,12 +3,13 @@
 	import GuessBox from './GuessBox.svelte';
 	import Hints from './Hints.svelte';
 
-	import { ended, won, type Word } from '$lib/utils';
+	import { ended, usedLifeline, won, type Word } from '$lib/utils';
 
 	import Confetti from 'svelte-confetti';
 
 	$ended = false;
 	$won = false;
+	$usedLifeline = false;
 	let guesses = 0;
 	let hintnumber = 4;
 	let noHints = false;
