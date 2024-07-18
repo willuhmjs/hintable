@@ -60,7 +60,15 @@
 		text-transform: lowercase;
 		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 		border-left: none;
+		color: var(--text);
+		background-color: var(--secondary);
 	}
+
+	.submitBtn:hover {
+		cursor: pointer;
+		filter: brightness(95%);
+	}
+	
 	@keyframes shake {
 		0% {
 			transform: translateX(0);
