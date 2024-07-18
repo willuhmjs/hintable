@@ -2,7 +2,13 @@
 	import words from '$lib/data/words.json';
 
 	import Fa from 'svelte-fa';
-	import { faShuffle, faFaceGrinStars, faFaceSadCry, faHome, faLifeRing } from '@fortawesome/free-solid-svg-icons';
+	import {
+		faShuffle,
+		faFaceGrinStars,
+		faFaceSadCry,
+		faHome,
+		faLifeRing
+	} from '@fortawesome/free-solid-svg-icons';
 	import { gameStats, usedLifeline, type GameStat } from '$lib/utils';
 
 	export const calculatePoints = (gameStat: GameStat): number => {
@@ -26,7 +32,12 @@
 </script>
 
 <div class="wrapper">
-	<h2 class="score">{$gameStats.reduce((acc, stat) => acc + calculatePoints(stat) - (stat.usedLifeline ? 100 : 0), 0)} points</h2>
+	<h2 class="score">
+		{$gameStats.reduce(
+			(acc, stat) => acc + calculatePoints(stat) - (stat.usedLifeline ? 100 : 0),
+			0
+		)} points
+	</h2>
 	<div class="mainMenuBtns">
 		<a class="button randombutton" href={`/`}><Fa style="width: 100%" icon={faHome} /></a>
 		<a class="button randombutton" href={`/random`}><Fa style="width: 100%" icon={faShuffle} /></a>
@@ -47,8 +58,8 @@
 				{:else}
 					<b>#{inverseIndex + 1}</b>
 				{/if}
-				<div class="wordRightInfo"
-					><div class="wordRightInfoIcons">
+				<div class="wordRightInfo">
+					<div class="wordRightInfoIcons">
 						{#if userWordStat}
 							{#if userWordStat?.usedLifeline}
 								<Fa fw="true" icon={faLifeRing} />
@@ -60,8 +71,8 @@
 							{/if}
 						{/if}
 					</div>
-					{word.difficulty}</div
-				>
+					{word.difficulty}
+				</div>
 			</a>
 		</div>
 	{/each}
@@ -144,5 +155,4 @@
 		max-width: fit-content;
 		gap: 2px;
 	}
-	
 </style>

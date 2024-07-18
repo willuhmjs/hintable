@@ -20,18 +20,21 @@
 			}
 		}
 	};
-
 </script>
 
 <div id="wrapper" style="top: 10px; right: 180px;">
 	<ul>
 		{#if !$ended}
-		<li>
-			<button on:click={giveUp} class="menubutton"
-				><Fa fw="true" style="margin-right: 8px" icon={faFlag} />Give Up</button
-			>
-		</li>
-		<li><button on:click={() => $usedLifeline = true} class="menubutton"><Fa fw="true" style="margin-right: 8px" icon={faLifeRing} />Extra Hint</button></li>
+			<li>
+				<button on:click={giveUp} class="menubutton"
+					><Fa fw="true" style="margin-right: 8px" icon={faFlag} />Give Up</button
+				>
+			</li>
+			<li>
+				<button on:click={() => ($usedLifeline = true)} class="menubutton"
+					><Fa fw="true" style="margin-right: 8px" icon={faLifeRing} />Extra Hint</button
+				>
+			</li>
 		{/if}
 		<li>
 			<a href="/menu" class="menubutton"

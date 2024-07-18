@@ -69,13 +69,14 @@
 	</div>
 {/if}
 {#if $usedLifeline}
-<div class="hintbox lifeline">
-	<div class="hinttext">
-		<p class="icon">
-			<Fa icon={faLifeRing} fw="true"/>
-		</p>
-		<p>I start with "{word[0]}" and am {word.length} letters long.</p></div>
-</div>
+	<div class="hintbox lifeline">
+		<div class="hinttext">
+			<p class="icon">
+				<Fa icon={faLifeRing} fw="true" />
+			</p>
+			<p>I start with "{word[0]}" and am {word.length} letters long.</p>
+		</div>
+	</div>
 {/if}
 {#if hints.length > 0}
 	{#each hints as hint}
@@ -115,7 +116,7 @@
 	}
 
 	.lifeline {
-		background-color: var(--hard)!important;
+		background-color: var(--hard) !important;
 	}
 
 	.lifeline .hinttext {

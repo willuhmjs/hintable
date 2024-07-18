@@ -41,7 +41,7 @@
 		autocomplete="off"
 		placeholder="type a word"
 	/>
-	<button class="submitBtn"><Fa icon={faRightToBracket}/></button>
+	<button class="submitBtn"><Fa icon={faRightToBracket} /></button>
 </form>
 
 <style>
@@ -68,7 +68,7 @@
 		cursor: pointer;
 		filter: brightness(95%);
 	}
-	
+
 	@keyframes shake {
 		0% {
 			transform: translateX(0);
