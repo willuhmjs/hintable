@@ -23,5 +23,4 @@ test('guessing latest word works correctly', async ({ page }) => {
 	await page.locator('#guessInput').press('Enter');
 	await expect(page.isVisible('#hint-5')).resolves.toBeTruthy();
 	await expect(page.locator('#hint-5').innerText()).resolves.toContain(word);
-	await page.screenshot({ path: `screenshots/${word}.png` });
 });
