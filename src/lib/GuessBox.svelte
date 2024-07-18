@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { won, ended } from './utils';
+	import { faRightToBracket } from '@fortawesome/free-solid-svg-icons';
 	export let word: string;
 	export let guesses = 0;
+	import Fa from 'svelte-fa';
 
 	let guessInput: HTMLInputElement;
 	let guess: string = '';
@@ -28,21 +30,37 @@
 	};
 </script>
 
-<form on:submit|preventDefault={submitGuess}>
+<form on:submit|preventDefault={submitGuess} class={isAnswerIncorrect ? 'incorrect' : ''}>
 	<input
 		type="text"
 		autocorrect="off"
 		autocapitalize="off"
 		bind:value={guess}
 		id="guessInput"
-		class={isAnswerIncorrect ? 'incorrect' : ''}
 		bind:this={guessInput}
 		autocomplete="off"
 		placeholder="type a word"
 	/>
+	<button class="submitBtn"><Fa icon={faRightToBracket}/></button>
 </form>
 
 <style>
+	form {
+		display: flex;
+		margin-bottom: 1rem;
+	}
+
+	.submitBtn {
+		margin: 0;
+		box-sizing: border-box;
+		padding: 1rem;
+		border-radius: 0 10px 10px 0;
+		border: 1px solid slategray;
+		font-size: 1.5rem;
+		text-transform: lowercase;
+		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+		border-left: none;
+	}
 	@keyframes shake {
 		0% {
 			transform: translateX(0);
@@ -76,12 +94,12 @@
 	#guessInput {
 		width: 100%;
 		margin: 0;
+		border-right: none;
 		box-sizing: border-box;
 		padding: 1rem;
-		border-radius: 10px;
 		border: 1px solid slategray;
+		border-radius: 10px 0 0 10px;
 		font-size: 1.5rem;
-		margin-bottom: 1rem;
 		text-transform: lowercase;
 		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 	}
