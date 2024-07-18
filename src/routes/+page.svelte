@@ -3,4 +3,4 @@
 	import words from '$lib/data/words.json';
 </script>
 
-<Game data={words[words.length - 1]} />
+<Game data={words.toSorted((a,b) => a.day - b.day)[words.length - 1]} />
