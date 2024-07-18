@@ -3,7 +3,7 @@ import { persisted } from 'svelte-persisted-store';
 
 export interface Word {
 	word: string;
-	hintDb: [string, string, string, string, string];
+	hintDb: string[];
 	difficulty: 'easy' | 'medium' | 'hard' | 'expert';
 	day: number;
 }
