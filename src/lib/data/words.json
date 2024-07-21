@@ -1,5 +1,17 @@
 [
   {
+    "word": "website",
+    "hintDb": [
+      "I am accessed via the internet.",
+      "I consist of multiple pages and can include text, images, and videos.",
+      "I can serve various purposes, like providing information, selling products, or offering services.",
+      "I am hosted on a server and can be visited using a web browser.",
+      "Examples include social media platforms, news sites, and online stores."
+    ],
+    "difficulty": "easy",
+    "day": 1716436800000
+  },
+  {
     "word": "basketball",
     "hintDb": [
       "I originated in the United States.",
@@ -696,15 +708,15 @@
     "day": 1721433600000
   },
   {
-    "word": "website",
+    "word": "wisdom",
     "hintDb": [
-      "I am accessed via the internet.",
-      "I consist of multiple pages and can include text, images, and videos.",
-      "I can serve various purposes, like providing information, selling products, or offering services.",
-      "I am hosted on a server and can be visited using a web browser.",
-      "Examples include social media platforms, news sites, and online stores."
+      "I can be gained through learning and reflection.",
+      "Proverbs and sayings often convey me.",
+      "I involve the ability to make sound judgments.",
+      "I am often associated with age and experience.",
+      "I am considered a valuable trait in many cultures."
     ],
-    "difficulty": "easy",
-    "day": 1716436800000
+    "difficulty": "medium",
+    "day": 1721520000000
   }
 ]
