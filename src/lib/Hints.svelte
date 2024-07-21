@@ -123,10 +123,15 @@
 		display: flex;
 		gap: 0.8rem;
 		align-items: center;
+		
+	}
+
+	.lifeline * {
+		margin: 0.5rem 0;
 	}
 
 	.lifeline .hinttext .icon {
-		font-size: 1.5rem;
+		font-size: 1.7rem;
 	}
 	#hintbutton:hover:enabled {
 		cursor: pointer;
