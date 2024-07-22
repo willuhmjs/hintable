@@ -718,5 +718,17 @@
     ],
     "difficulty": "medium",
     "day": 1721520000000
+  },
+  {
+    "word": "coterie",
+    "hintDb": [
+      "I refer to a small group of people with shared interests.",
+      "I often form around exclusive social circles.",
+      "My members often have close, trusting relationships.",
+      "I can be seen in professional or social settings.",
+      "I am synonymous with clique or circle."
+    ],
+    "difficulty": "expert",
+    "day": 1721606400000
   }
 ]
