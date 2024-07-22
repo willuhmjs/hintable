@@ -10,6 +10,7 @@
 		faLifeRing
 	} from '@fortawesome/free-solid-svg-icons';
 	import { gameStats, usedLifeline, type GameStat } from '$lib/utils';
+	import MetaTags from '$lib/MetaTags.svelte';
 
 	export const calculatePoints = (gameStat: GameStat): number => {
 		switch (gameStat.hintsLeft) {
@@ -31,6 +32,9 @@
 	let showDate = 0;
 </script>
 
+
+<MetaTags/>
+
 <div class="wrapper">
 	<h2 class="score">
 		{$gameStats.reduce(
@@ -42,6 +46,7 @@
 		<a class="button randombutton" href={`/`}><Fa style="width: 100%" icon={faHome} /></a>
 		<a class="button randombutton" href={`/random`}><Fa style="width: 100%" icon={faShuffle} /></a>
 	</div>
+
 	{#each words.sort((a, b) => b.day - a.day) as word, i}
 		{@const inverseIndex = words.length - i - 1}
 

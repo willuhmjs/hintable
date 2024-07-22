@@ -1,10 +1,12 @@
 import { writable } from 'svelte/store';
 import { persisted } from 'svelte-persisted-store';
 
+export type difficulty = 'easy' | 'medium' | 'hard' | 'expert';
+
 export interface Word {
 	word: string;
 	hintDb: string[];
-	difficulty: 'easy' | 'medium' | 'hard' | 'expert';
+	difficulty: difficulty;
 	day: number;
 }
 

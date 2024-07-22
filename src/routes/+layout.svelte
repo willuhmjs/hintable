@@ -3,12 +3,17 @@
 	import { theme } from '$lib/utils';
 	import '@fontsource-variable/montserrat';
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 
 	onMount(() => {
 		theme.subscribe((value) => {
 			document.documentElement.setAttribute('data-theme', value);
 		});
+
 	});
+
+
+
 </script>
 
 <svelte:head>

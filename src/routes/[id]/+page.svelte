@@ -2,6 +2,7 @@
 	import Game from '$lib/Game.svelte';
 	import words from '$lib/data/words.json';
 	import { page } from '$app/stores';
+	import MetaTags from '$lib/MetaTags.svelte';
 
 	function checkIfNumber(n: string): boolean {
 		return !isNaN(parseInt(n));
@@ -20,6 +21,8 @@
 		}
 	}
 </script>
+
+<MetaTags description={words.sort((a, b) => a.day - b.day)[id -1].hintDb[0] + " Can you guess what I am with just a few hints?"}/>
 
 {#if error}
 	<h1>{error}</h1>
