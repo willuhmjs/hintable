@@ -730,5 +730,29 @@
     ],
     "difficulty": "expert",
     "day": 1721606400000
+  },
+  {
+    "word": "sculpture",
+    "hintDb": [
+      "I can be made from various materials, including stone, metal, or clay.",
+      "I can be relief or in the round.\t",
+      "I can represent abstract forms or realistic figures.\t",
+      "I can be carved, molded, or assembled.\t",
+      "I am often found in museums, parks, and public spaces."
+    ],
+    "difficulty": "medium",
+    "day": 1721692800000
+  },
+  {
+    "word": "mustache",
+    "hintDb": [
+      "I can make or break a first impression.",
+      "I am often associated with famous figures like Salvador Dalí or Freddie Mercury.\t",
+      "I can be thick or thin, long or short.\t",
+      "I can be styled in various ways.\t",
+      "I can be groomed with scissors, wax, or combs.\t"
+    ],
+    "difficulty": "easy",
+    "day": 1721779200000
   }
 ]
