@@ -754,5 +754,29 @@
     ],
     "difficulty": "easy",
     "day": 1721779200000
+  },
+  {
+    "word": "perspective",
+    "hintDb": [
+      "I can be influenced by personal experiences and cultural background.",
+      "I can change over time or with new information.\t",
+      "I can be different for each individual.\t",
+      "I can refer to a particular attitude or way of viewing something.\t",
+      "I am the point of view from which something is considered or evaluated."
+    ],
+    "difficulty": "medium",
+    "day": 1721865600000
+  },
+  {
+    "word": "commuter",
+    "hintDb": [
+      "I am often seen during rush hour.",
+      "I frequently use public transportation.",
+      "I travel to and from a specific place regularly.",
+      "I typically go to work or school.",
+      "I am a person who travels a distance to get to their job."
+    ],
+    "difficulty": "hard",
+    "day": 1721952000000
   }
 ]
