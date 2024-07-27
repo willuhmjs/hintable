@@ -778,5 +778,17 @@
     ],
     "difficulty": "hard",
     "day": 1721952000000
+  },
+  {
+    "word": "antechamber",
+    "hintDb": [
+      "I am a room found in many grand buildings.",
+      "I am often used as a waiting area.",
+      "I can be a precursor to an important room.",
+      "I am sometimes called a vestibule.",
+      "I am a transitional space between outside and inside."
+    ],
+    "difficulty": "expert",
+    "day": 1722038400000
   }
 ]
