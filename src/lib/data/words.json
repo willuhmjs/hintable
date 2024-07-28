@@ -790,5 +790,17 @@
     ],
     "difficulty": "expert",
     "day": 1722038400000
+  },
+  {
+    "word": "yahoo",
+    "hintDb": [
+      "I am a popular search engine and web portal.",
+      "I offer email services to millions of users.",
+      "My logo features an exclamation mark.",
+      "I was founded in 1994 by Jerry Yang and David Filo.",
+      "I am known for my yodeling sound."
+    ],
+    "difficulty": "easy",
+    "day": 1722124800000
   }
 ]
