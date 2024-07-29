@@ -814,5 +814,17 @@
     ],
     "difficulty": "easy",
     "day": 1722124800000
+  },
+  {
+    "word": "swole",
+    "hintDb": [
+      "I am a slang term often used in fitness and bodybuilding.",
+      "I describe someone who is muscular and well-developed.",
+      "My usage implies someone who has gained significant muscle mass.",
+      "Gym-goers aspire to become me.",
+      "I am a colloquial way to say \"muscular.\""
+    ],
+    "difficulty": "easy",
+    "day": 1722211200000
   }
 ]
