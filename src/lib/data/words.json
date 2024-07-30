@@ -826,5 +826,17 @@
     ],
     "difficulty": "easy",
     "day": 1722211200000
+  },
+  {
+    "word": "circus",
+    "hintDb": [
+      "I am a place where people gather to watch shows.\t",
+      "I am known for entertainment and performances.\t",
+      "Ringling Bros. and Barnum & Bailey were famous for me.\t",
+      "I often have a big tent or arena.\t",
+      "I have clowns, acrobats, and animals.\t"
+    ],
+    "difficulty": "easy",
+    "day": 1722297600000
   }
 ]
