@@ -838,5 +838,17 @@
     ],
     "difficulty": "easy",
     "day": 1722297600000
+  },
+  {
+    "word": "guerrilla",
+    "hintDb": [
+      "I am a type of irregular warfare.",
+      "I involve small, mobile groups of fighters.",
+      "I rely on ambushes and surprise attacks.",
+      "I am often used by forces against larger, traditional armies.",
+      "Both American and Vietnamese forces used me in their respective wars."
+    ],
+    "difficulty": "hard",
+    "day": 1722384000000
   }
 ]
