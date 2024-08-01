@@ -850,5 +850,17 @@
     ],
     "difficulty": "hard",
     "day": 1722384000000
+  },
+  {
+    "word": "panic",
+    "hintDb": [
+      "I am a sudden, overwhelming fear.",
+      "I often cause irrational behavior.",
+      "I can be triggered by an unexpected event.",
+      "I am the opposite of calm.",
+      "I can result in a feeling of being out of control."
+    ],
+    "difficulty": "easy",
+    "day": 1722470400000
   }
 ]
