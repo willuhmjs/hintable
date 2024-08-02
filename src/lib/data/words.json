@@ -862,5 +862,17 @@
     ],
     "difficulty": "easy",
     "day": 1722470400000
+  },
+  {
+    "word": "limo",
+    "hintDb": [
+      "I am a luxury vehicle.",
+      "I am often used for special occasions.",
+      "I am longer than a regular car.",
+      "Celebrities and VIPs frequently use me.",
+      "My full name is limousine."
+    ],
+    "difficulty": "easy",
+    "day": 1722556800000
   }
 ]
