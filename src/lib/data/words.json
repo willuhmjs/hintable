@@ -874,5 +874,17 @@
     ],
     "difficulty": "easy",
     "day": 1722556800000
+  },
+  {
+    "word": "charisma",
+    "hintDb": [
+      "I am a quality often attributed to leaders.",
+      "People with me have a compelling charm or presence.",
+      "I can inspire devotion and admiration in others.",
+      "I am considered an important trait in public speaking.",
+      "Some famous figures are known for their extraordinary me."
+    ],
+    "difficulty": "medium",
+    "day": 1722643200000
   }
 ]
