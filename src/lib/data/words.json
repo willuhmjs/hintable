@@ -886,5 +886,29 @@
     ],
     "difficulty": "medium",
     "day": 1722643200000
+  },
+  {
+    "word": "debate",
+    "hintDb": [
+      "I involve a formal discussion on a particular topic.",
+      "I often feature opposing viewpoints.",
+      "Politicians and students commonly engage in me.",
+      "I can be moderated to ensure fairness.",
+      "I require good communication skills and reasoning."
+    ],
+    "difficulty": "easy",
+    "day": 1722729600000
+  },
+  {
+    "word": "tomfoolery",
+    "hintDb": [
+      "I am a term for playful or silly behavior.",
+      "I involve antics or tricks.",
+      "People engage in me to amuse themselves or others.",
+      "I can sometimes involve harmless pranks.",
+      "Shakespeare's plays often feature characters engaging in me."
+    ],
+    "difficulty": "hard",
+    "day": 1722816000000
   }
 ]
