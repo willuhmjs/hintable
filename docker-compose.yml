@@ -1,0 +1,12 @@
+# This docker-compose is only here so the database can exist.
+services:
+  db:
+    image: postgres:13
+    restart: always
+    container_name: hintable-db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: mydb
+    ports:
+      - '5432:5432'
