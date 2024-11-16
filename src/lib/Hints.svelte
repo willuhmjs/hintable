@@ -14,9 +14,9 @@
 	export let data: Word;
 	const { word, hintDb } = data;
 
-	let hints: hintDb = [];
+	let hints: typeof hintDb = [];
 	export let hintnumber: number;
-	$: hintnumber = hintDb.length - hints.length;
+	$: hintnumber = (hintDb?.length || 5) - hints.length;
 	let hintButton: HTMLButtonElement;
 	export let noHints = false;
 

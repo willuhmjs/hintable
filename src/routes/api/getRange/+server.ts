@@ -29,7 +29,7 @@ export const GET: RequestHandler = async ({ url }) => {
 			word: true,
 			day: true,
 			difficulty: true,
-			hints: true
+			hintDb: true
 		},
 		orderBy: {
 			day: 'desc'

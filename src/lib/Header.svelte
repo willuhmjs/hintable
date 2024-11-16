@@ -7,7 +7,7 @@
 	export let word: string;
 	import words from '$lib/data/words.json';
 	export let guesses = 0;
-	export let hintnumber = 4;
+	let hintnumber = 4;
 	let menuActivated = false;
 	let shareActivated = false;
 
@@ -65,7 +65,7 @@
 				class={menuActivated ? 'headerbuttonactive' : ''}
 			/>
 			{#if menuActivated}
-				<Menu {hintnumber} {word} />
+				<Menu {word} />
 			{/if}
 		</button>
 	</div>

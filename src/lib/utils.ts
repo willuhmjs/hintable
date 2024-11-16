@@ -1,12 +1,13 @@
 import { writable } from 'svelte/store';
 import { persisted } from 'svelte-persisted-store';
+import type { Difficulty } from '@prisma/client';
 
 export type difficulty = 'easy' | 'medium' | 'hard' | 'expert';
 
 export interface Word {
 	word: string;
 	hintDb: string[];
-	difficulty: difficulty;
+	difficulty: Difficulty;
 	day: number;
 }
 

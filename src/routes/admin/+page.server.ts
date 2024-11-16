@@ -51,7 +51,7 @@ const processSubmission = async (data: FormData): Promise<void> => {
 
     const game: Game = {
         word: data.word.trim().toLowerCase().toWellFormed(),
-        hints: [
+        hintDb: [
             data.hint1,
             data.hint2,
             data.hint3,
