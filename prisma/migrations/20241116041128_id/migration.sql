@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Game" ADD COLUMN     "id" SERIAL NOT NULL,
+ADD CONSTRAINT "Game_pkey" PRIMARY KEY ("id");

@@ -33,6 +33,7 @@
 		"postcss-load-config": "^4.0.2",
 		"prettier": "^3.3.3",
 		"prettier-plugin-svelte": "^3.2.8",
+		"prisma": "^5.22.0",
 		"svelte": "^4.2.19",
 		"svelte-check": "^3.8.6",
 		"svelte-confetti": "^1.4.0",
@@ -47,7 +48,6 @@
 	"dependencies": {
 		"@prisma/client": "5.22.0",
 		"dayjs": "^1.11.13",
-		"jsonwebtoken": "^9.0.2",
-		"prisma": "^5.22.0"
+		"jsonwebtoken": "^9.0.2"
 	}
 }
