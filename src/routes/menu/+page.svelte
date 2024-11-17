@@ -1,6 +1,4 @@
 <script lang="ts">
-	import words from '$lib/data/words.json';
-
 	import Fa from 'svelte-fa';
 	import {
 		faShuffle,
@@ -11,7 +9,8 @@
 	} from '@fortawesome/free-solid-svg-icons';
 	import { gameStats, usedLifeline, type GameStat } from '$lib/utils';
 	import MetaTags from '$lib/MetaTags.svelte';
-
+	export let data;
+	let words = data.games;
 	export const calculatePoints = (gameStat: GameStat): number => {
 		switch (gameStat.hintsLeft) {
 			case 4:
@@ -47,7 +46,7 @@
 		<a class="button randombutton" href={`/random`}><Fa style="width: 100%" icon={faShuffle} /></a>
 	</div>
 
-	{#each words.sort((a, b) => b.day - a.day) as word, i}
+	{#each words.sort((a, b) => b.day.getTime() - a.day.getTime()) as word, i}
 		{@const inverseIndex = words.length - i - 1}
 
 		{@const userWordStat = $gameStats.find((game) => game.word === word.word)}
@@ -56,9 +55,10 @@
 				class="button"
 				href={`/${inverseIndex + 1}`}
 				style="background-color: var(--{word.difficulty}, #808080);"
-				on:mouseenter={() => (showDate = word.day)}
-			>
-				{#if showDate == word.day}
+				on:mouseenter={() => (showDate = word.day.getTime())}
+				on:mouseleave={() => (showDate = 0)}
+				>
+				{#if showDate == word.day.getTime()}
 					<b>{new Date(word.day).toLocaleDateString(undefined, { timeZone: 'UTC' })}</b>
 				{:else}
 					<b>#{inverseIndex + 1}</b>

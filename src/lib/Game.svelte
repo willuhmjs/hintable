@@ -21,7 +21,7 @@
 </script>
 
 <div class="wrapper">
-	<Header {guesses} word={data.word} />
+	<Header {guesses} game={data}/>
 	<GuessBox word={data.word} bind:guesses />
 	<!-- in hints, we need to change the button icon -->
 	<Hints {noHints} {data} bind:hintnumber />

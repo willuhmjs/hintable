@@ -4,19 +4,17 @@
 	import Fa from 'svelte-fa';
 	import { ended, won } from '$lib/utils';
 	import { faShareNodes, faBars } from '@fortawesome/free-solid-svg-icons';
-	export let word: string;
-	import words from '$lib/data/words.json';
 	export let guesses = 0;
 	let hintnumber = 4;
 	let menuActivated = false;
 	let shareActivated = false;
-
+	export let game;
 	//import { browser } from '$app/environment';
 	//$: webShareAPISupported = browser && typeof navigator.share !== 'undefined';
 	$: handleWebShare;
 	let text: string;
 	$: if ($ended && $won) {
-		text = `hintable #${words.findIndex((element) => element.word === word) + 1} ${'💡'.repeat(
+		text = `hintable #${game.id} ${'💡'.repeat(
 			hintnumber
 		)}`;
 	} else {
@@ -48,7 +46,7 @@
 				class={shareActivated ? 'headerbuttonactive' : ''}
 			/>
 			{#if shareActivated}
-				<Share {word} {hintnumber} />
+				<Share {hintnumber} game={game} />
 			{/if}
 		</button>
 		<h2 class="title" aria-label="title">hintable</h2>
@@ -65,7 +63,7 @@
 				class={menuActivated ? 'headerbuttonactive' : ''}
 			/>
 			{#if menuActivated}
-				<Menu {word} />
+				<Menu word={game.word} />
 			{/if}
 		</button>
 	</div>

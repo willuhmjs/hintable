@@ -7,12 +7,11 @@
 		faTumblrSquare
 	} from '@fortawesome/free-brands-svg-icons';
 	import { ended, won } from './utils';
-	import words from '$lib/data/words.json';
-	export let word: string;
 	export let hintnumber: number;
+	export let game;
 	let text: string;
 	$: if ($ended && $won) {
-		text = `hintable #${words.findIndex((element) => element.word === word) + 1} ${'💡'.repeat(
+		text = `hintable #${game.id} ${'💡'.repeat(
 			hintnumber
 		)}`;
 	} else {
