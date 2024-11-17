@@ -33,19 +33,19 @@ const processSubmission = async (games: Game[]): Promise<void> => {
         }
     })
     let gid = latest?.id ?? 0;
-    // add word to list of words
+    let gdate = latest?.day ?? new Date(Date.now());    // add word to list of words
     try {
-        
     await prisma.game.createMany({
         
         data: games.map((game) => {
             gid++;
+            gdate = dayjs(gdate).utc().startOf('day').add(1, 'day').toDate()
             return {
                 id: gid,
                 word: game.word.trim().toLowerCase().toWellFormed(),
                 hintDb: game.hintDb,
                 difficulty: game.difficulty,
-                day: new Date(game.day)
+                day: gdate
             }
         }),
         skipDuplicates: true,

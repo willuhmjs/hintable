@@ -1,6 +1,4 @@
 <script lang="ts">
-    	import type { PageData } from './$types';
-
         export let data;
 </script>
 
@@ -19,7 +17,40 @@
     </select>
     <button>submit</button>
 </form>
+<a href="/admin/bulk">Bulk</a>
 
-{#each data.items as game} 
-    <div>{game.word}</div>
-{/each}
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Word</th>
+            <th>Hint DB</th>
+            <th>Difficulty</th>
+            <th>Day</th>
+        </tr>
+    </thead>
+    <tbody>
+        {#each data.items as game} 
+        <tr>
+            <td>{game.id}</td>
+            <td>{game.word}</td>
+            <td>{game.hintDb.join(', ')}</td>
+            <td>{game.difficulty}</td>
+            <td>{game.day.toLocaleDateString()}</td>
+        </tr>
+        {/each}
+    </tbody>
+</table>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+</style>
