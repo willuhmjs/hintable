@@ -4,7 +4,6 @@ export const load = async () => {
    const game = await prisma.game.findMany({
      select: {
           word: true,
-          day: true,
           difficulty: true,
           hintDb: true
      },
