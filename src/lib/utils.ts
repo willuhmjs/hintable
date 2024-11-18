@@ -7,8 +7,8 @@ export type difficulty = 'easy' | 'medium' | 'hard' | 'expert';
 export interface Word {
 	word: string;
 	hintDb: string[];
-	difficulty: Difficulty;
-	day: number;
+	difficulty: Difficulty | difficulty;
+	day: string;
 }
 
 export interface GameStat {
