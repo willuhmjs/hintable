@@ -47,6 +47,7 @@
 	"type": "module",
 	"dependencies": {
 		"@prisma/client": "5.22.0",
+		"@sveltejs/adapter-node": "^5.2.9",
 		"dayjs": "^1.11.13",
 		"jsonwebtoken": "^9.0.2"
 	}
