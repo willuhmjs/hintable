@@ -1,7 +1,7 @@
 services:
   web:
     image: node:20.9.0-alpine3.18
-    container_name: club-list-web
+    container_name: hintable
     environment:
       - CODESPACES
       - ORIGIN=http://localhost:6969
