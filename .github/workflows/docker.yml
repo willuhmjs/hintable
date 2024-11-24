@@ -1,6 +1,6 @@
 name: Build and publish a Docker image to ghcr.io
 on:
-
+  workflow_dispatch:
   # publish on releases, e.g. v2.1.13 (image tagged as "2.1.13" - "v" prefix is removed)
   release:
     types: [ published ]
