@@ -6,7 +6,7 @@ services:
       - CODESPACES
       - ORIGIN=http://localhost:6969
     ports:
-      - '6969:6969'
+      - '6969:3000'
     env_file:
       - .env
     volumes:
@@ -16,4 +16,4 @@ services:
       - /app/prisma
       - /app/package.json
     working_dir: /app
-    command: sh -c "npm i -g pnpm && pnpm install && pnpm npx prisma migrate deploy && pnpm build && pnpm preview --port=6969 --host"
+    command: sh -c "npm i -g pnpm && pnpm install && pnpm npx prisma migrate deploy && pnpm build && pnpm preview"
