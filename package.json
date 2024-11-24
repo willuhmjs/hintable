@@ -2,6 +2,9 @@
 	"name": "hintable",
 	"version": "0.0.1",
 	"private": true,
+	"prisma": {
+		"seed": "node ./src/seed.js"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
