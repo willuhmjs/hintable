@@ -13,5 +13,7 @@ services:
       - ./:/app
       - /app/node_modules/
       - /app/.pnpm-store/
+      - /app/prisma
+      - /app/package.json
     working_dir: /app
     command: sh -c "npm i -g pnpm && pnpm install && pnpm npx prisma migrate deploy && pnpm build && pnpm preview --port=6969 --host"
