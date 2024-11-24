@@ -1,7 +1,7 @@
 services:
   web:
     image: node:20.9.0-alpine3.18
-    container_name: hintable
+    container_name: club-list-web
     environment:
       - CODESPACES
       - ORIGIN=http://localhost:6969
@@ -14,4 +14,4 @@ services:
       - /app/node_modules/
       - /app/.pnpm-store/
     working_dir: /app
-    command: sh -c "npm i -g pnpm && pnpm install && pnpm npx prisma migrate deploy && pnpm build && pnpm preview --port=6969 --host"
+    command: sh -c "npm i -g pnpm && pnpm install && pnpm npx prisma migrate deploy && pnpm build && pnpm preview --port=6969"
