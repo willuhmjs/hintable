@@ -8,7 +8,8 @@ export const load = async () => {
      select: {
           word: true,
           difficulty: true,
-          hintDb: true
+          hintDb: true,
+          id: true
      },
      take: 1,
      skip: Math.floor(Math.random() * await prisma.game.count()),

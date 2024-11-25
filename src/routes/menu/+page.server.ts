@@ -30,8 +30,8 @@ export const load = async () => {
 			word: true,
 			day: true,
 			difficulty: true,
-			hintDb: true
-		},
+			hintDb: true,
+},
 		orderBy: {
 			day: 'desc'
 		}

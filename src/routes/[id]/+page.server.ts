@@ -16,7 +16,8 @@ export const load = async ({ params }) => {
      select: {
           word: true,
           difficulty: true,
-          hintDb: true
+          hintDb: true,
+          id: true
      }
 });
     if (!game) {
