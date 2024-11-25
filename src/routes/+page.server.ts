@@ -9,6 +9,11 @@ export const load = async () => {
      },
         orderBy: {
             day: 'desc'
+        },
+        where: {
+            day: {
+                lte: new Date()
+            }
         }
 });
     if (!game) {
