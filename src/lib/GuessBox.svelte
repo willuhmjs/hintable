@@ -6,11 +6,13 @@
 	import Fa from 'svelte-fa';
 
 	let guessInput: HTMLInputElement;
+	let submitBtn: HTMLButtonElement
 	let guess: string = '';
 	let isAnswerIncorrect = false;
 
 	$: if ($ended) {
 		guessInput.disabled = true;
+		submitBtn.disabled = true;
 		guessInput.value = word;
 	}
 
@@ -41,7 +43,7 @@
 		autocomplete="off"
 		placeholder="type a word"
 	/>
-	<button class="submitBtn"><Fa icon={faRightToBracket} /></button>
+	<button class="submitBtn" bind:this={submitBtn}><Fa icon={faRightToBracket} /></button>
 </form>
 
 <style>
