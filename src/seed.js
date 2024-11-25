@@ -10,7 +10,7 @@ const word = {
       "A word game is named after me."
     ],
     "difficulty": Difficulty.easy,
-    "day": new Date(Date.now())
+    "day": new Date(Date.now()- 86400000)
   };
 
   await prisma.game.upsert({
