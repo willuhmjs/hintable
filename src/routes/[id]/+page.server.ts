@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 dayjs.extend(utc);
 export const load = async ({ params }) => {
-   console.log(params.id);
+     try {
    const game = await prisma.game.findFirst({
      where: {
          id: Number(params.id),
@@ -20,10 +20,12 @@ export const load = async ({ params }) => {
           id: true
      }
 });
-    if (!game) {
-         return error(404, "Game not found");
-    }
-    return {
-          game
-    };
+return {
+     game
+};
+     } catch (err) {
+          return error(404, "Game Not Found");
+
+     }
+
 };
