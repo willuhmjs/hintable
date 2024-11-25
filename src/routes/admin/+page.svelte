@@ -1,6 +1,7 @@
 <script lang="ts">
         export let data;
 </script>
+<a href="/admin/bulk">Bulk</a>
 
 <form method="POST" action="?/manual">
     <input type="text" name="word" id="word" placeholder="word">
@@ -17,7 +18,6 @@
     </select>
     <button>submit</button>
 </form>
-<a href="/admin/bulk">Bulk</a>
 
 <table>
     <thead>
@@ -52,5 +52,13 @@
         border: 1px solid black;
         padding: 8px;
         text-align: left;
+    }
+
+    a {
+        padding: 0.5rem;
+        border: 1px solid black;
+        background-color: white;
+        color: black;
+        display: inline-block;
     }
 </style>
