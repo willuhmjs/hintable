@@ -5,7 +5,7 @@
 	import { ended, won } from '$lib/utils';
 	import { faShareNodes, faBars } from '@fortawesome/free-solid-svg-icons';
 	export let guesses = 0;
-	let hintnumber = 4;
+	export let hintnumber = 4;
 	let menuActivated = false;
 	let shareActivated = false;
 	export let game;
