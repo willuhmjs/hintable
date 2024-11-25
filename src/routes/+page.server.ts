@@ -5,7 +5,8 @@ export const load = async () => {
      select: {
           word: true,
           difficulty: true,
-          hintDb: true
+          hintDb: true,
+          id: true
      },
         orderBy: {
             day: 'desc'
