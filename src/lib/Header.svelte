@@ -22,6 +22,7 @@
 	}
 
 	const handleWebShare = async () => {
+	return 	shareActivated = !shareActivated;
 		try {
 			navigator.share({
 				title: 'hintable',
