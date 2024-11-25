@@ -14,7 +14,7 @@ export const load = async () => {
 export const actions = {
 	manual: async ({ request }) => {
         const data = await request.formData();
-        const games: Game[] = JSON.parse(data.get('words') as string) ?? error(400, "Invalid form data");
+        const games: Game[] = JSON.parse(data.get('words') as string) ?? error(400, "Invalid Form Data");
         processSubmission(games);
         
     }
@@ -26,7 +26,7 @@ import type { Game } from '@prisma/client';
 import { error } from '@sveltejs/kit';
 
 const processSubmission = async (games: Game[]): Promise<void> => {
-    if (!games) return error(400, "Invalid form data");
+    if (!games) return error(400, "Invalid Form Data");
     const latest = await prisma.game.findFirst({
         orderBy: {
             id: 'desc'
@@ -53,6 +53,6 @@ const processSubmission = async (games: Game[]): Promise<void> => {
     });
 } catch (e) {
     console.error(e);
-    return error(400, "Invalid form data");
+    return error(400, "Invalid Form Data");
 }
 }

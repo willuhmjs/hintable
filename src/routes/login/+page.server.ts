@@ -12,7 +12,7 @@ export const actions = {
 
         const legitUser = username === ADMIN_LOGIN.split(":")[0] && password === ADMIN_LOGIN.split(":")[1];
         if (!legitUser) {
-            return error(401, "Invalid credentials");
+            return error(401, "Invalid Credentials");
         } else {
             const session_token = jwt.sign({ username }, JWT_SECRET, { expiresIn: '1d' });
             cookies.set("session", session_token, { path: "/", httpOnly: true, secure: true, sameSite: "strict" });
