@@ -2,6 +2,7 @@
         export let data;
 </script>
 <a href="/admin/bulk">Bulk</a>
+<a href="/admin/backup">Backup</a>
 
 <form method="POST" action="?/manual">
     <input type="text" name="word" id="word" placeholder="word">

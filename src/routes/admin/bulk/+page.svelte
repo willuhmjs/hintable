@@ -2,6 +2,7 @@
     export let data;
 </script>
 <a href="/admin/">Regular</a>
+<a href="/admin/backup">Backup</a>
 
 <form method="POST" action="?/manual">
     <textarea name="words" id="words" placeholder="words" cols="30" rows="10"></textarea>
