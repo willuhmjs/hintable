@@ -8,7 +8,8 @@ export const GET: RequestHandler = async ({ request }) => {
                 word: true,
                 difficulty: true,
                 hintDb: true,
-                day: true
+                day: true,
+                id: true
             },
             orderBy: {
                 day: 'desc'

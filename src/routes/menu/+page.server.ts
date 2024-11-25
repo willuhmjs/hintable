@@ -31,6 +31,7 @@ export const load = async () => {
 			day: true,
 			difficulty: true,
 			hintDb: true,
+			id: true
 },
 		orderBy: {
 			day: 'desc'
