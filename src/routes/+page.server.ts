@@ -29,7 +29,8 @@ export const load = async () => {
 			word: true,
 			day: true,
 			difficulty: true,
-			hintDb: true
+			hintDb: true,
+            id: true
 		},
 		orderBy: {
 			day: 'desc'
@@ -42,11 +43,5 @@ export const load = async () => {
     return {
           game,
           timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-    };
-    if (!game) {
-         return error(404, "Game not found");
-    }
-    return {
-          game
     };
 };
