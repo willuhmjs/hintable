@@ -1,18 +1,12 @@
+# This docker-compose is only here so the database can exist.
 services:
-  web:
-    image: node:20.9.0-alpine3.18
-    container_name: hintable
+  db:
+    image: postgres:13
+    restart: always
+    container_name: rewards-db
     environment:
-      - CODESPACES
-      - ORIGIN=http://localhost:6969
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: db
     ports:
-      - '6969:3000'
-    env_file:
-      - .env
-    volumes:
-      - ./:/app
-      - /app/node_modules/
-      - /app/.pnpm-store/
-      - /app/prisma
-    working_dir: /app
-    command: sh -c "npm i -g pnpm && pnpm install && pnpm npx prisma migrate deploy && pnpm build && pnpm preview"
+      - '5432:5432'
