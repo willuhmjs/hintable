@@ -1,8 +1,11 @@
 import { Difficulty, PrismaClient } from '@prisma/client';
 export const prisma = new PrismaClient();
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+dayjs.extend(utc);
 
 const getPastDate = (fromToday) => {
-  return new Date(Date.now() - (86400000*fromToday));
+  return dayjs(new Date()).utc().startOf('day').subtract(fromToday, 'day').toDate()
 }
 
 const words = [{
