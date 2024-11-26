@@ -3,6 +3,11 @@
 </script>
 <a href="/admin/backup">Backup</a>
 
+<form method="POST" action="?/time">
+    <input name="days" id="days" type="number" placeholder="days">
+    <button>submit</button>
+</form>
+
 <form method="POST" action="?/bulk">
     <textarea name="words" id="words" placeholder="words" cols="30" rows="10"></textarea>
     <button>submit</button>

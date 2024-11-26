@@ -1,18 +1,17 @@
 import { prisma } from '$lib/server/prisma/prismaConnection';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
-import type { Actions } from './bulk/$types';
-import { error } from '@sveltejs/kit';
+import { error, type Actions } from '@sveltejs/kit';
 import type { Difficulty, Game } from '@prisma/client';
 dayjs.extend(utc);
 
 export const load = async () => {
-	const items = await prisma.game.findMany();
+    const items = await prisma.game.findMany();
     return { items };
 };
 
 export const actions = {
-	bulk: async ({ request }) => {
+    bulk: async ({ request }) => {
         const data = await request.formData();
         const games: Game[] = JSON.parse(data.get('words') as string) ?? error(400, "Invalid Form Data");
         await processBulkSubmission(games);
@@ -29,6 +28,27 @@ export const actions = {
             difficulty: data.get('difficulty') as string,
         };
         await processSingleSubmission(formData);
+    },
+    time: async ({ request }) => {
+        try {
+            const data = await request.formData();
+            const daysToGoBack = parseInt(data.get("days") as string) || 1;
+            const games = await prisma.game.findMany();
+            const updatedGames = games.map(game => ({
+            id: game.id,
+            day: dayjs(game.day).subtract(daysToGoBack, 'day').toDate()
+            }));
+            await prisma.$transaction(
+                updatedGames.map(game =>
+                    prisma.game.update({
+                        where: { id: game.id },
+                        data: { day: game.day }
+                    })
+                )
+            );
+        } catch (error) {
+            console.error(error);
+        }
     }
 } satisfies Actions;
 
