@@ -1,10 +1,14 @@
 <script lang="ts">
-        export let data;
+    export let data;
 </script>
-<a href="/admin/bulk">Bulk</a>
 <a href="/admin/backup">Backup</a>
 
-<form method="POST" action="?/manual">
+<form method="POST" action="?/bulk">
+    <textarea name="words" id="words" placeholder="words" cols="30" rows="10"></textarea>
+    <button>submit</button>
+</form>
+
+<form method="POST" action="?/single">
     <input type="text" name="word" id="word" placeholder="word">
     <input type="text" name="hint1" id="hint1" placeholder="hint 1">
     <input type="text" name="hint2" id="hint2" placeholder="hint 2">
@@ -19,7 +23,6 @@
     </select>
     <button>submit</button>
 </form>
-
 <table>
     <thead>
         <tr>
@@ -44,17 +47,6 @@
 </table>
 
 <style>
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    th, td {
-        border: 1px solid black;
-        padding: 8px;
-        text-align: left;
-    }
-
     a {
         padding: 0.5rem;
         border: 1px solid black;
