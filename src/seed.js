@@ -1,7 +1,7 @@
 import { Difficulty, PrismaClient } from '@prisma/client';
 export const prisma = new PrismaClient();
 import dayjs from 'dayjs';
-import utc from 'dayjs/plugin/utc';
+import utc from 'dayjs/plugin/utc.js';
 dayjs.extend(utc);
 
 const getPastDate = (fromToday) => {
