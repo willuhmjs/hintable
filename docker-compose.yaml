@@ -3,7 +3,7 @@ services:
   db:
     image: postgres:13
     restart: always
-    container_name: rewards-db
+    container_name: hintable-db
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: pass
