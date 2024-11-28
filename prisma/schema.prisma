@@ -26,4 +26,5 @@ model Game {
   hintDb       String[]
   difficulty  Difficulty
   day         DateTime @unique
+  closeWords  String[] @default([])
 }
