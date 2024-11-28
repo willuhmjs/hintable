@@ -3,9 +3,10 @@ import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params }: { params: { id: string } }) => {
-    const id = parseInt(params.id);
+    let id = parseInt(params.id);
     if (isNaN(id) && params.id !== "hintable") {
-        throw error(400, "Invalid ID");
+        // throw error(400, "Invalid ID");
+        id = 666
     }
 
     if (params.id === "hintable") {
@@ -25,6 +26,6 @@ export const load: PageLoad = async ({ params }: { params: { id: string } }) => 
             id: true
         }
     });
-    if (!game) throw error(400, "Invalid ID");
+    // if (!game) throw error(400, "Invalid ID");
 	return { game }
 };
