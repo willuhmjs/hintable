@@ -1,7 +1,25 @@
-import type { RequestHandler } from '@sveltejs/kit';
+import { redirect, type RequestHandler } from '@sveltejs/kit';
 import { prisma } from '$lib/server/prisma/prismaConnection';
+import { JWT_SECRET } from '$env/static/private';
+import jwt from 'jsonwebtoken';
 
-export const GET: RequestHandler = async ({ request }) => {
+
+export const GET: RequestHandler = async ({ request, cookies }) => {
+    const user = cookies.get("session");
+
+	if (!user) {
+		throw redirect(303, '/login');
+	}
+
+    try {
+        const t = jwt.verify(user, JWT_SECRET);
+        if (t.username !== "admin") {
+            throw redirect(303, '/login');
+        }
+    } catch {
+        throw redirect(303, '/login');
+    }
+
     try {
         const games = await prisma.game.findMany({
             select: {

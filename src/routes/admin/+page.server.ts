@@ -49,7 +49,19 @@ export const actions = {
         } catch (error) {
             console.error(error);
         }
-    }
+    },
+    backup: async ({ request }) => {
+        try {
+            const data = await request.formData();
+            const games = JSON.parse(data.get('games') as string) ?? error(400, "Invalid Form Data");
+            await prisma.game.createMany({
+                data: games,
+                skipDuplicates: true,
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    }  
 } satisfies Actions;
 
 interface FormData {

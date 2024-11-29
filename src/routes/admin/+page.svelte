@@ -28,6 +28,11 @@
     </select>
     <button>submit</button>
 </form>
+<form method="POST" action="?/backup">
+    <textarea name="words" id="words" placeholder="words" cols="30" rows="10"></textarea>
+    <button>submit</button>
+</form>
+
 <table>
     <thead>
         <tr>
