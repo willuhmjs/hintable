@@ -53,7 +53,8 @@ export const actions = {
     backup: async ({ request }) => {
         try {
             const data = await request.formData();
-            const games = JSON.parse(data.get('games') as string) ?? error(400, "Invalid Form Data");
+            const games = JSON.parse(data.get('words') as string) ?? error(400, "Invalid Form Data");
+            console.log(games);
             await prisma.game.createMany({
                 data: games,
                 skipDuplicates: true,
