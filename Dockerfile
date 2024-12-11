@@ -1,14 +1,12 @@
-FROM node:18-alpine 
+FROM node:22
 WORKDIR /app
-COPY . .
 RUN npm i -g pnpm
+COPY package*.json .
 RUN pnpm i
+COPY . .
 RUN npx prisma generate
-RUN cp ./.env.example ./.env
+ARG JWT_SECRET="secret"
+ARG ADMIN_LOGIN="secret"
 RUN pnpm build
-ENV NODE_ENV=production
-ENV DATABASE_URL="postgresql://user:pass@localhost:5432/mydb"
-ENV JWT_SECRET="changeme"
-ENV ADMIN_LOGIN="admin:admin"
 EXPOSE 3000
-CMD ["node", "build/index.js"]
+CMD ["node", "build/index.js", "--host", "0.0.0.0"]
