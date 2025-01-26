@@ -9,3 +9,7 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 screenshots
+.idea/dataSources.xml
+.idea/hintable.iml
+.idea/modules.xml
+.idea/vcs.xml
