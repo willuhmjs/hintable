@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit';
-import { JWT_SECRET } from '$env/static/private';
+import { JWT_SECRET, ADMIN_LOGIN } from '$env/static/private';
 
 import jwt from "jsonwebtoken";
 export const load = async ({ cookies }) => {
@@ -11,7 +11,7 @@ export const load = async ({ cookies }) => {
 
     try {
         const t = jwt.verify(user, JWT_SECRET);
-        if (t.username !== "admin") {
+        if (t.username !== ADMIN_LOGIN.split(":")[0]) {
             throw redirect(303, '/login');
         }
     } catch {
