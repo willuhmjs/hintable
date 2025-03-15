@@ -4,7 +4,7 @@ RUN npm i -g pnpm
 COPY package*.json .
 RUN pnpm i
 COPY . .
-RUN npx prisma generate
+RUN pnpm prisma generate
 ARG JWT_SECRET="secret"
 ARG ADMIN_LOGIN="secret"
 ENV JWT_SECRET=${JWT_SECRET}
