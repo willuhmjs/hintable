@@ -13,4 +13,4 @@ COPY . .
 
 RUN pnpm install
 
-CMD ["sh", "-c", "pnpm run db:deploy && pnpm run build && pnpm run preview --host"]
+CMD ["sh", "-c", "pnpm run db:deploy && pnpm run build && ORIGIN=https://hintable.me pnpm run preview --host"]
