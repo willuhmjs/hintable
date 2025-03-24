@@ -24,9 +24,7 @@ services:
       context: .  
       dockerfile: Dockerfile
     ports:
-      - '4173:4173'
-    stdin_open: true
-    tty: true  # Keeps the container running for debugging
+      - '7895:4173'
     depends_on:
       postgres_db:
         condition: service_healthy
