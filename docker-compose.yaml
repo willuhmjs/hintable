@@ -18,6 +18,8 @@ services:
       interval: 5s
       timeout: 2s
       retries: 20
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
   server:
     build: 
@@ -35,3 +37,5 @@ services:
 networks:
   prisma-network:
     name: prisma-network
+volumes:
+  postgres_data:
