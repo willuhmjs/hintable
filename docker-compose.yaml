@@ -24,7 +24,7 @@ services:
       context: .  
       dockerfile: Dockerfile
     ports:
-      - '7895:4173'
+      - '7895:3000'
     depends_on:
       postgres_db:
         condition: service_healthy
