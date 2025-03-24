@@ -1,30 +1,56 @@
 services:
-  web:
-    image: docker.io/node:20.9.0-alpine3.18
-    container_name: hintable-web
-    environment:
-      - ORIGIN=http://localhost:5173
-    ports:
-      - '4173:4173'
-    env_file:
-      - .env
-    volumes:
-      - ./:/app
-      - /app/node_modules/
-      - /app/.pnpm-store/
-    working_dir: /app
-    command: sh -c "npm i -g pnpm@8.12.1 && pnpm install && pnpm run db:deploy && pnpm run build && pnpm run preview --host"
-    depends_on:
-      - db
-  db:
-    image: docker.io/postgres:13
+  postgres_db:
+    image: postgres:15
+    hostname: postgres_db
+    container_name: postgres_db
     restart: always
-    container_name: hintable-postgres
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: pass
-      POSTGRES_DB: db      
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+    env_file:
+      - .env.prod
     ports:
       - '5432:5432'
+    networks:
+      - prisma-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
+      interval: 5s
+      timeout: 2s
+      retries: 20
+
+  server:
+    build: 
+      context: .  
+      dockerfile: Dockerfile
+    ports:
+      - '4173:4173'
+    stdin_open: true
+    tty: true  # Keeps the container running for debugging
+    depends_on:
+      postgres_db:
+        condition: service_healthy
+    env_file:
+      - .env.prod
+    networks:
+      - prisma-network
+  prisma-studio:
+    image: node:lts-alpine3.17
+    working_dir: /usr/src/app
     volumes:
-      - /var/lib/postgresql/data
+      - .:/usr/src/app
+    command: npx prisma studio --port 5555 --browser none
+    ports:
+      - "5555:5555"
+    env_file:
+      - .env.prod
+    networks:
+      - prisma-network
+    depends_on:
+      postgres_db:
+        condition: service_healthy
+      server:
+        condition: service_started
+networks:
+  prisma-network:
+    name: prisma-network

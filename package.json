@@ -7,7 +7,7 @@
 	},
 	"scripts": {
 		"dev": "vite dev",
-		"db:deploy": "prisma migrate deploy",
+		"db:deploy": "prisma migrate deploy && prisma generate",
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "playwright test",
@@ -17,6 +17,7 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"seed": "node src/seed.js"
+		
 	},
 	"devDependencies": {
 		"@fontsource-variable/montserrat": "^5.1.0",

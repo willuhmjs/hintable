@@ -1,14 +1,16 @@
-FROM node:22
-WORKDIR /app
-RUN npm i -g pnpm
-COPY package*.json .
-RUN pnpm i
+FROM node:slim
+
+RUN apt-get update -y \
+&& apt-get install -y openssl
+
+WORKDIR /usr/src/app
+
+COPY package.json pnpm-lock.yaml ./
+
+RUN npm install -g pnpm
+
 COPY . .
-ARG JWT_SECRET="secret"
-ARG ADMIN_LOGIN="secret"
-ENV JWT_SECRET=${JWT_SECRET}
-ENV ADMIN_LOGIN=${ADMIN_LOGIN}
-RUN pnpm npx prisma generate
-RUN pnpm build
-EXPOSE 3000
-CMD ["node", "build/index.js", "--host", "0.0.0.0"]
+
+RUN pnpm install
+
+CMD ["sh", "-c", "pnpm run db:deploy && pnpm run build && pnpm run preview --host"]
